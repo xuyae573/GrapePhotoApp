@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +16,11 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\demo\" />
     <Folder Include="wwwroot\lib\tabler\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GrapePhoto.Application\GrapePhoto.Application.csproj" />
+    <ProjectReference Include="..\GrapePhoto.Domain\GrapePhoto.Domain.csproj" />
   </ItemGroup>
 
 </Project>
