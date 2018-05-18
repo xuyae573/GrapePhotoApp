@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GrapePhoto.Application;
 using GrapePhoto.Domain;
 using GrapePhoto.Models.Account;
 using Microsoft.AspNetCore.Authorization;
@@ -13,6 +14,13 @@ namespace GrapePhoto.Controllers
 {
     public class AccountController : Controller
     {
+
+        private IAccountService _accountService;
+
+        public AccountController(IAccountService accountService)
+        {
+            _accountService = accountService;
+        }
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -36,7 +44,7 @@ namespace GrapePhoto.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                //var result = await _userManager.CreateAsync(user, model.Password);
+                 _accountService.Insert(user);
                 //if (result.Succeeded)
                 //{
 

@@ -17,13 +17,13 @@ namespace GrapePhoto.Infrasturcture.Repoistory
            
         }
 
-        public abstract IQueryable<TEntity> GetAll();
+        public abstract IQueryable<TEntity> GetAllAsync();
 
      
 
         public virtual List<TEntity> GetAllList()
         {
-            return GetAll().ToList();
+            return GetAllAsync().ToList();
         }
 
         public virtual Task<List<TEntity>> GetAllListAsync()
@@ -35,7 +35,7 @@ namespace GrapePhoto.Infrasturcture.Repoistory
 
         public virtual T Query<T>(Func<IQueryable<TEntity>, T> queryMethod)
         {
-            return queryMethod(GetAll());
+            return queryMethod(GetAllAsync());
         }
 
         public virtual TEntity Get(TPrimaryKey id)
@@ -63,7 +63,7 @@ namespace GrapePhoto.Infrasturcture.Repoistory
       
         public virtual TEntity FirstOrDefault(TPrimaryKey id)
         {
-            return GetAll().FirstOrDefault(CreateEqualityExpressionForId(id));
+            return GetAllAsync().FirstOrDefault(CreateEqualityExpressionForId(id));
         }
 
         public virtual Task<TEntity> FirstOrDefaultAsync(TPrimaryKey id)
@@ -159,7 +159,7 @@ namespace GrapePhoto.Infrasturcture.Repoistory
 
         public virtual int Count()
         {
-            return GetAll().Count();
+            return GetAllAsync().Count();
         }
 
         public virtual Task<int> CountAsync()
@@ -169,7 +169,7 @@ namespace GrapePhoto.Infrasturcture.Repoistory
  
         public virtual long LongCount()
         {
-            return GetAll().LongCount();
+            return GetAllAsync().LongCount();
         }
 
         public virtual Task<long> LongCountAsync()

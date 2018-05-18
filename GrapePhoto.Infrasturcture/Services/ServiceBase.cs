@@ -1,14 +1,30 @@
 ﻿using GrapePhoto.Infrasturcture.Entities;
+using GrapePhoto.Infrasturcture.Repoistory;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace GrapePhoto.Infrasturcture.Services
 {
-    public abstract class ServiceBase<TEntity> : IService<TEntity> where TEntity : Entity
+
+    public abstract class ServiceBase<TEntity> : ServiceBase<TEntity, int> where TEntity : Entity<int>
     {
+
+
+    }
+
+    public abstract class ServiceBase<TEntity, TPrimaryKey> 
+        : IService<TEntity, TPrimaryKey> where TEntity : Entity<TPrimaryKey>
+    {
+        IRepository<TEntity, TPrimaryKey> repository;
+
         public ServiceBase()
         {
+        }
+
+        protected ServiceBase(IRepository<TEntity, TPrimaryKey> repository)
+        {
+            this.repository = repository;
         }
 
         public void Delete(object id)

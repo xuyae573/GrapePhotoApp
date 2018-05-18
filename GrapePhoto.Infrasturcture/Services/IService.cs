@@ -5,11 +5,11 @@ using System.Text;
 
 namespace GrapePhoto.Infrasturcture.Services
 {
-    public interface IService<TEntity> : IService<TEntity,int> where TEntity: Entity
+    public interface IService<TEntity> : IService<TEntity,int> where TEntity: Entity<int>
     { 
     }
 
-    public interface IService<TEntity, TPrimaryKey> where TEntity : Entity
+    public interface IService<TEntity, TPrimaryKey> where TEntity : Entity<TPrimaryKey>
     {
         TEntity Get(object id);
         void Insert(TEntity entity);
