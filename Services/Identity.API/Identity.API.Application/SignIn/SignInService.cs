@@ -11,13 +11,13 @@ namespace Identity.API.SignIn
     {
         public UserDto SignIn(UserDto user)
         {
-            if(user.Email == "xuya@ideasky.net"&& user.PasswordHash == "123")
+            if(user.UserName == "xuya" && user.PasswordHash == "123")
             {
                 return user;
             }
             else
             {
-                throw new EntityNotFoundException(typeof(ApplicationUser),123);
+                return null;
             }
         }
     }

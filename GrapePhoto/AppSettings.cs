@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,5 +14,11 @@ namespace GrapePhoto
 
         public string NotificationUrl { get; set; }
 
+    }
+
+    public class Consts
+    {
+        public const string AuthSchemes =
+          CookieAuthenticationDefaults.AuthenticationScheme;
     }
 }

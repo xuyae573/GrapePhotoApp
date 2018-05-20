@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.AspNetCore.Mvc.Controllers;
+using Abp.Web.Models;
 using Identity.API.SignIn;
 using Identity.API.SignUp;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.API.Web.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class AccountController : AbpController
     {
         private ISignInService _signInService;
@@ -33,15 +34,18 @@ namespace Identity.API.Web.Controllers
             return "value";
         }
 
-
         [HttpPost]
-        public bool Post([FromBody]UserDto user)
+        public JsonResult SignIn([FromBody]UserDto user)
         {
-            if (_signInService.SignIn(user) != null)
-            {
-                return true;
-            }
-            return false;
+            var result = _signInService.SignIn(user);
+            if (result == null)
+                return Json(new AjaxResponse()
+                {
+                    Success = false,
+                    Result = null,
+                    Error = new ErrorInfo() { Message="LoginFailed" }
+                });
+            return Json(result);
         }
 
 

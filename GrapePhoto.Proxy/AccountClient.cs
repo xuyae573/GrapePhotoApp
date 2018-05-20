@@ -5,6 +5,7 @@ using GrapePhoto.Web.Models.Account;
 using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using GrapePhoto.Web.Models;
 
 namespace GrapePhoto.Proxy
 {
@@ -23,15 +24,30 @@ namespace GrapePhoto.Proxy
             _baseUri = baseUri;
         }
 
+        public SignInResult SignIn(User user)
+        {
+            var client = new RestClient(_baseUri);
+            var request = new RestRequest(AccountAPI.SignIn);
+      
+            request.AddJsonBody(user);
+            IRestResponse response = client.Post(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+
+            return new SignInResult()
+            {
+                Succeed = json.success,
+                ErrorMessage = json.error
+            };
+        }
+
         public User SignUp(SignUpViewModel signUpViewModel)
         {
             var client = new RestClient(_baseUri);
             var request = new RestRequest(AccountAPI.SignUp);
-            request.AddBody(signUpViewModel);
+            request.AddJsonBody(signUpViewModel);
             IRestResponse response = client.Execute(request);
-            var json = JObject.Parse(response.Content);
-            var userJson = json["result"];
-            var user = JsonConvert.DeserializeObject<User>(userJson.ToString());
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+            var user = JsonConvert.DeserializeObject<User>(json.result.ToString());
             return user;
         }
     }

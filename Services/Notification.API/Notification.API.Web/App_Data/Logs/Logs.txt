@@ -18,3 +18,79 @@ DEBUG 2018-05-20 18:50:50,813 [1    ] Abp.Localization.LocalizationManager     -
 DEBUG 2018-05-20 18:50:50,839 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
 DEBUG 2018-05-20 18:50:51,600 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
 DEBUG 2018-05-20 18:50:51,855 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-05-20 20:25:27,496 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 20:25:28,271 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 20:25:28,375 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.Web.Startup.APIWebModule, Notification.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,379 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.APIApplicationModule, Notification.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.APICoreModule, Notification.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,390 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,390 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Notification.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,391 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:28,398 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 20:25:29,880 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Notification.API.EntityFrameworkCore.APIDbContext, Notification.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:25:34,585 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 20:25:34,808 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 20:25:35,454 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 20:25:35,509 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 20:25:38,546 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 20:25:38,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-05-20 20:25:42,764 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/  
+WARN  2018-05-20 20:25:43,508 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-20 20:25:44,034 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+DEBUG 2018-05-20 20:28:51,564 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 20:28:52,370 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 20:28:53,000 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.Web.Startup.APIWebModule, Notification.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.APIApplicationModule, Notification.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.APICoreModule, Notification.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Notification.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Notification.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,016 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:53,023 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 20:28:54,577 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Notification.API.EntityFrameworkCore.APIDbContext, Notification.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 20:28:54,904 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 20:28:54,973 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 20:28:55,597 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 20:28:55,652 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 20:28:58,865 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 20:28:59,278 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-05-20 20:29:03,920 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/  
+WARN  2018-05-20 20:29:04,884 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-20 20:29:04,963 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-20 20:29:07,121 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Notification.API.Web.Controllers.HomeController.Index (Notification.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-20 20:29:07,179 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Notification.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 203 ms from ::1 IP address with succeed.
+INFO  2018-05-20 20:29:07,232 [9    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-20 20:29:07,282 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Notification.API.Web.Controllers.HomeController.Index (Notification.API.Web) in 454.66ms
+INFO  2018-05-20 20:29:07,593 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4387.7663ms 302 
+INFO  2018-05-20 20:29:08,642 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger  
+INFO  2018-05-20 20:29:09,093 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 335.2626ms 301 
+INFO  2018-05-20 20:29:09,313 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/  
+INFO  2018-05-20 20:29:09,837 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 571.1748ms 200 text/html
+INFO  2018-05-20 20:29:11,268 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui.css  
+INFO  2018-05-20 20:29:11,298 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-bundle.js  
+INFO  2018-05-20 20:29:11,482 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-20 20:29:11,521 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2018-05-20 20:29:11,636 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2018-05-20 20:29:11,909 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2018-05-20 20:29:12,708 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1418.546ms 200 text/css
+INFO  2018-05-20 20:29:13,726 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2400.9295ms 200 application/javascript
+INFO  2018-05-20 20:29:17,339 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5469.4676ms 200 application/javascript
+INFO  2018-05-20 20:29:19,891 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/v1/swagger.json  
+INFO  2018-05-20 20:29:20,228 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 401.0701ms 200 application/json
+INFO  2018-05-20 20:29:21,910 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/favicon-32x32.png  
+INFO  2018-05-20 20:29:22,318 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-05-20 20:29:22,878 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 779.6542ms 200 image/png
+INFO  2018-05-20 20:29:23,608 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-20 20:29:23,931 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/favicon-16x16.png  
+INFO  2018-05-20 20:29:24,359 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2018-05-20 20:29:24,766 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 786.9034ms 200 image/png
+INFO  2018-05-20 20:29:24,815 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5102/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-20 20:29:24,818 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1403.419ms 404 
+INFO  2018-05-20 20:29:24,861 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 278.8165ms 404 
