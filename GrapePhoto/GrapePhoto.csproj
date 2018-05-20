@@ -18,9 +18,4 @@
     <Folder Include="wwwroot\lib\tabler\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\GrapePhoto.Application\GrapePhoto.Proxy.csproj" />
-    <ProjectReference Include="..\GrapePhoto.Domain\GrapePhoto.Web.Models.csproj" />
-  </ItemGroup>
-
 </Project>
