@@ -6,6 +6,7 @@ using System.Text;
 
 namespace GrapePhoto.Application
 {
+
     public interface IAccountService: IService<ApplicationUser, string>
     {
 
