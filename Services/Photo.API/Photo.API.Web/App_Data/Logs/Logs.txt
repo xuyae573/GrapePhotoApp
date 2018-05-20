@@ -296,3 +296,19 @@ INFO  2018-05-20 12:47:01,986 [8    ] soft.AspNetCore.Hosting.Internal.WebHost -
 INFO  2018-05-20 12:47:02,019 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-16x16.png  
 INFO  2018-05-20 12:47:02,023 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
 INFO  2018-05-20 12:47:02,027 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.0105ms 200 image/png
+DEBUG 2018-05-20 18:47:05,233 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 18:47:05,459 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 18:47:05,563 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.Web.Startup.APIWebModule, Photo.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,567 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APIApplicationModule, Photo.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,567 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APICoreModule, Photo.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,568 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,568 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,568 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,569 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,569 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,570 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,572 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:05,579 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 18:47:06,185 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Photo.API.EntityFrameworkCore.APIDbContext, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:47:06,502 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 18:47:06,550 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp

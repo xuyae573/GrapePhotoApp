@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GrapePhoto.Models.Account;
+using GrapePhoto.Proxy;
+using GrapePhoto.Web.Models.Account;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,11 @@ namespace GrapePhoto.Controllers
 {
     public class AccountController : Controller
     {
+        private IAccountClient _accountClient;
+        public AccountController(IAccountClient accountClient)
+        {
+            _accountClient = accountClient;
+        }
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -29,12 +35,14 @@ namespace GrapePhoto.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        public IActionResult Register(SignUpViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                 
+                var user = _accountClient.SignUp(model);
+                //SignIn and set session User
+
             }
 
             // If we got this far, something failed, redisplay form

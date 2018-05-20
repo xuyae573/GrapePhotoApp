@@ -38,8 +38,9 @@ namespace Identity.API.Core
         // Summary:
         //     Gets or sets the user name for this user.
         public virtual string UserName { get; set; }
-   
 
+        public string ProfilePicUrl { get; set; }
+        public int Gender { get; set; }
 
     }
 }

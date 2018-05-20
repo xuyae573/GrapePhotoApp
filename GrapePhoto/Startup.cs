@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GrapePhoto.Proxy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +23,13 @@ namespace GrapePhoto
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.Configure<AppSettings>(Configuration);
+            var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+
+            services.AddTransient<IAccountClient, AccountClient>(c =>
+            {
+                return new AccountClient(identityUrl);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

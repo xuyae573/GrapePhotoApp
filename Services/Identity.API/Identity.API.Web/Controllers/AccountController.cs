@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Abp.AspNetCore.Mvc.Controllers;
 using Identity.API.SignIn;
+using Identity.API.SignUp;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Identity.API.Web.Controllers
@@ -12,9 +13,11 @@ namespace Identity.API.Web.Controllers
     public class AccountController : AbpController
     {
         private ISignInService _signInService;
-        public AccountController(SignInService signInService)
+        private ISignUpService _signUpService;
+        public AccountController(ISignInService signInService, ISignUpService signUpService)
         {
             _signInService = signInService;
+            _signUpService = signUpService;
         }
      
         [HttpGet]
@@ -42,7 +45,13 @@ namespace Identity.API.Web.Controllers
         }
 
 
-       
+        [HttpPost]
+        public UserDto SignUp([FromBody]SignUpDto user)
+        {
+            var result = _signUpService.SignUp(user);
+            return result;
+        }
+
 
 
         [HttpPut("{id}")]

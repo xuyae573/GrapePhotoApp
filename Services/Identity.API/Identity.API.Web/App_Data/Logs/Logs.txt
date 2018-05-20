@@ -440,3 +440,57 @@ INFO  2018-05-20 11:37:58,935 [8    ] Abp.Auditing.SimpleLogAuditingStore      -
 INFO  2018-05-20 11:37:58,940 [8    ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
 INFO  2018-05-20 11:37:58,953 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.AccountController.Get (Identity.API.Web) in 52.0085ms
 INFO  2018-05-20 11:37:58,971 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 138.3829ms 200 application/json; charset=utf-8
+DEBUG 2018-05-20 18:46:30,358 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 18:46:30,613 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-20 18:46:30,772 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,776 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,777 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,777 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,778 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,778 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,778 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:30,785 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-20 18:46:32,028 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 18:46:32,192 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 18:46:33,180 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 18:46:33,207 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 18:46:34,397 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 18:46:34,527 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-20 18:46:34,527 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-20 18:46:40,141 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-20 18:46:40,649 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-20 18:46:40,757 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-20 18:46:42,845 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-20 18:46:42,866 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 109 ms from ::1 IP address with succeed.
+INFO  2018-05-20 18:46:42,890 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-20 18:46:42,960 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 283.8956ms
+INFO  2018-05-20 18:46:43,134 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3425.3104ms 302 
+INFO  2018-05-20 18:46:43,293 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:28474/iisintegration  0
+DEBUG 2018-05-20 18:46:43,308 [8    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-05-20 18:46:43,310 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 18:46:43,311 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 18:46:43,311 [8    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+INFO  2018-05-20 18:46:43,312 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.205ms 202 
+DEBUG 2018-05-20 18:46:57,850 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 18:46:57,910 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-20 18:46:57,937 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,941 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,942 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,943 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,944 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,944 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,945 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 18:46:57,950 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-20 18:46:58,543 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 18:46:58,773 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 18:46:59,103 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 18:46:59,163 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 18:47:00,222 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 18:47:00,308 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-20 18:47:00,308 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-20 18:47:03,568 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://127.0.0.1:21787/iisintegration  0
+DEBUG 2018-05-20 18:47:03,613 [8    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-05-20 18:47:03,615 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 18:47:03,616 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 18:47:03,616 [8    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+INFO  2018-05-20 18:47:03,690 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 167.6549ms 202 
