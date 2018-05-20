@@ -1,0 +1,298 @@
+DEBUG 2018-05-20 11:59:21,588 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 11:59:21,910 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 11:59:21,977 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.Web.Startup.APIWebModule, Photo.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,982 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APIApplicationModule, Photo.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,983 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APICoreModule, Photo.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,984 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,985 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,986 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:21,991 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 11:59:23,197 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Photo.API.EntityFrameworkCore.APIDbContext, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 11:59:23,522 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 11:59:24,092 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 11:59:25,508 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 11:59:25,534 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 11:59:26,172 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 11:59:26,422 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-05-20 11:59:30,015 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/  
+WARN  2018-05-20 11:59:30,517 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-20 11:59:30,600 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-20 11:59:32,192 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Photo.API.Web.Controllers.HomeController.Index (Photo.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-20 11:59:32,262 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Photo.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 91 ms from ::1 IP address with succeed.
+INFO  2018-05-20 11:59:39,968 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-20 11:59:42,524 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Photo.API.Web.Controllers.HomeController.Index (Photo.API.Web) in 10493.325ms
+INFO  2018-05-20 11:59:42,598 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12793.0979ms 200 text/html; charset=utf-8
+INFO  2018-05-20 11:59:43,123 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/css/font-awesome.css  
+INFO  2018-05-20 11:59:43,189 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/css/main.css  
+INFO  2018-05-20 11:59:43,256 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/main.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\css\main.css'
+INFO  2018-05-20 11:59:43,289 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/css/font-awesome.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\font-awesome\css\font-awesome.css'
+INFO  2018-05-20 11:59:43,303 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.css  
+INFO  2018-05-20 11:59:43,310 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\toastr\toastr.css'
+INFO  2018-05-20 11:59:43,363 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.8071ms 200 text/css
+INFO  2018-05-20 11:59:43,373 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 526.8101ms 200 text/css
+INFO  2018-05-20 11:59:43,380 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/json2/json2.js  
+INFO  2018-05-20 11:59:43,386 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap-paper/bootstrap.css  
+INFO  2018-05-20 11:59:43,394 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/json2/json2.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\json2\json2.js'
+INFO  2018-05-20 11:59:43,481 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap-paper/bootstrap.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\bootstrap-paper\bootstrap.css'
+INFO  2018-05-20 11:59:43,516 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 109.8103ms 200 application/javascript
+INFO  2018-05-20 11:59:43,564 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css  
+INFO  2018-05-20 11:59:43,569 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/bootstrap/dist/js/bootstrap.js  
+INFO  2018-05-20 11:59:43,625 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.css'
+INFO  2018-05-20 11:59:43,718 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+INFO  2018-05-20 11:59:43,847 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert.css  
+INFO  2018-05-20 11:59:43,857 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\sweetalert\dist\sweetalert.css'
+INFO  2018-05-20 11:59:43,886 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 107.5318ms 200 text/css
+INFO  2018-05-20 11:59:43,900 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/moment/min/moment-with-locales.js  
+INFO  2018-05-20 11:59:43,904 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/moment/min/moment-with-locales.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\moment\min\moment-with-locales.js'
+INFO  2018-05-20 11:59:44,017 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 83.2436ms 200 text/css
+INFO  2018-05-20 11:59:44,056 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery-validation/dist/jquery.validate.js  
+INFO  2018-05-20 11:59:44,077 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/jquery/dist/jquery.js  
+INFO  2018-05-20 11:59:44,080 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\jquery\dist\jquery.js'
+INFO  2018-05-20 11:59:44,084 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+INFO  2018-05-20 11:59:44,107 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44.3667ms 200 application/javascript
+INFO  2018-05-20 11:59:44,161 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/blockUI/jquery.blockUI.js  
+INFO  2018-05-20 11:59:44,212 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/blockUI/jquery.blockUI.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\blockUI\jquery.blockUI.js'
+INFO  2018-05-20 11:59:44,253 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 136.9252ms 200 application/javascript
+INFO  2018-05-20 11:59:44,294 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 108.7252ms 200 application/javascript
+INFO  2018-05-20 11:59:44,310 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 755.5834ms 200 application/javascript
+INFO  2018-05-20 11:59:44,446 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/toastr/toastr.js  
+INFO  2018-05-20 11:59:44,451 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/toastr/toastr.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\toastr\toastr.js'
+INFO  2018-05-20 11:59:44,511 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 574.8384ms 200 application/javascript
+INFO  2018-05-20 11:59:44,559 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/jquery.spin.js  
+INFO  2018-05-20 11:59:44,598 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 141.3663ms 200 application/javascript
+INFO  2018-05-20 11:59:44,640 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/jquery.spin.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\spin.js\jquery.spin.js'
+INFO  2018-05-20 11:59:44,700 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/abp.js  
+INFO  2018-05-20 11:59:44,708 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/abp.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\abp.js'
+INFO  2018-05-20 11:59:44,731 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 169.5147ms 200 application/javascript
+INFO  2018-05-20 11:59:44,746 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js  
+INFO  2018-05-20 11:59:44,765 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.jquery.js'
+INFO  2018-05-20 11:59:44,799 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 78.8064ms 200 application/javascript
+INFO  2018-05-20 11:59:44,933 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 103.2401ms 200 application/javascript
+INFO  2018-05-20 11:59:44,943 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js  
+INFO  2018-05-20 11:59:44,957 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js  
+INFO  2018-05-20 11:59:44,969 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.toastr.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.toastr.js'
+INFO  2018-05-20 11:59:44,981 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.blockUI.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.blockUI.js'
+INFO  2018-05-20 11:59:45,047 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 98.8802ms 200 application/javascript
+INFO  2018-05-20 11:59:45,060 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js  
+INFO  2018-05-20 11:59:45,070 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 52.7545ms 200 application/javascript
+INFO  2018-05-20 11:59:45,084 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js  
+INFO  2018-05-20 11:59:45,089 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.sweet-alert.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.sweet-alert.js'
+INFO  2018-05-20 11:59:45,094 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.spin.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\abp-web-resources\Abp\Framework\scripts\libs\abp.spin.js'
+INFO  2018-05-20 11:59:45,110 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 36.6535ms 200 application/javascript
+INFO  2018-05-20 11:59:45,153 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636624143823261567  
+INFO  2018-05-20 11:59:45,154 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 41.659ms 200 application/javascript
+INFO  2018-05-20 11:59:45,185 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636624143823276195  
+INFO  2018-05-20 11:59:45,496 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-05-20 11:59:45,683 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-05-20 11:59:45,878 [9    ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-05-20 11:59:46,028 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 491.316ms
+INFO  2018-05-20 11:59:46,062 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 903.564ms 200 application/x-javascript
+INFO  2018-05-20 11:59:46,096 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/js/views/home/index.js  
+INFO  2018-05-20 11:59:46,130 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/views/home/index.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\js\views\home\index.js'
+INFO  2018-05-20 11:59:46,229 [8    ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-05-20 11:59:46,276 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 145.8368ms 200 application/javascript
+INFO  2018-05-20 11:59:46,352 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3447.4734ms 200 text/css
+INFO  2018-05-20 11:59:46,529 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/spin.js/spin.js  
+INFO  2018-05-20 11:59:46,814 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/spin.js/spin.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\spin.js\spin.js'
+INFO  2018-05-20 11:59:47,247 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/sweetalert/dist/sweetalert-dev.js  
+INFO  2018-05-20 11:59:47,270 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert/dist/sweetalert-dev.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\sweetalert\dist\sweetalert-dev.js'
+INFO  2018-05-20 11:59:47,398 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 963.7761ms
+INFO  2018-05-20 11:59:47,403 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 590.1485ms 200 application/javascript
+INFO  2018-05-20 11:59:47,451 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2970.57ms 200 text/css
+INFO  2018-05-20 11:59:47,541 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 845.8296ms 200 application/javascript
+INFO  2018-05-20 11:59:47,589 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2224.0494ms 200 application/x-javascript; charset=utf-8
+INFO  2018-05-20 11:59:47,639 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png  
+INFO  2018-05-20 11:59:47,659 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/famfamfam-flags/dist/sprite/famfamfam-flags.png'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\famfamfam-flags\dist\sprite\famfamfam-flags.png'
+INFO  2018-05-20 11:59:47,693 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3  
+INFO  2018-05-20 11:59:47,737 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/font-awesome/fonts/fontawesome-webfont.woff2'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\Services\Photo.API\Photo.API.Web\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2'
+INFO  2018-05-20 11:59:47,779 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 107.5764ms 200 image/png
+INFO  2018-05-20 11:59:47,823 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 152.0904ms 200 font/woff2
+INFO  2018-05-20 11:59:48,592 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/favicon.ico  
+INFO  2018-05-20 11:59:48,606 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14.3046ms 404 
+INFO  2018-05-20 12:06:30,149 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/Home/About  
+INFO  2018-05-20 12:06:30,182 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Photo.API.Web.Controllers.HomeController.About (Photo.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-20 12:06:30,182 [17   ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Photo.API.Web.Controllers.HomeController.About is executed by an anonymous user in 30 ms from ::1 IP address with succeed.
+INFO  2018-05-20 12:06:30,457 [17   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/About.cshtml.
+INFO  2018-05-20 12:06:31,086 [17   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Photo.API.Web.Controllers.HomeController.About (Photo.API.Web) in 536.1975ms
+INFO  2018-05-20 12:06:31,258 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpScripts/GetScripts?v=636624147905048288  
+INFO  2018-05-20 12:06:31,476 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) with arguments () - ModelState is Valid
+INFO  2018-05-20 12:06:31,771 [19   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2018-05-20 12:06:31,953 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 517.5743ms
+INFO  2018-05-20 12:06:32,005 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 868.8446ms 200 application/x-javascript; charset=utf-8
+INFO  2018-05-20 12:06:32,227 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:62114/AbpServiceProxies/GetAll?v=636624147905048064  
+INFO  2018-05-20 12:06:32,243 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) with arguments (Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) - ModelState is Valid
+INFO  2018-05-20 12:06:32,279 [20   ] tCore.Mvc.Internal.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2018-05-20 12:06:32,449 [20   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 52.3709ms
+INFO  2018-05-20 12:06:32,540 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1364.0566ms 200 application/x-javascript
+INFO  2018-05-20 12:06:32,617 [17   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 998.0929ms 200 text/html; charset=utf-8
+DEBUG 2018-05-20 12:40:33,399 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 12:40:33,569 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 12:40:33,621 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.Web.Startup.APIWebModule, Photo.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,624 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APIApplicationModule, Photo.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APICoreModule, Photo.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,625 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,626 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,626 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,627 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,627 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,627 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,628 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:33,631 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 12:40:34,375 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Photo.API.EntityFrameworkCore.APIDbContext, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:40:34,621 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 12:40:34,738 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 12:40:35,206 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 12:40:35,244 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 12:40:35,792 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 12:40:35,876 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2018-05-20 12:43:57,060 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 12:43:57,182 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 12:43:57,252 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.Web.Startup.APIWebModule, Photo.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,257 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APIApplicationModule, Photo.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,258 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APICoreModule, Photo.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,259 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,259 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,260 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,261 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:57,265 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 12:43:57,879 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Photo.API.EntityFrameworkCore.APIDbContext, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:43:58,138 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 12:43:58,266 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 12:43:58,504 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 12:43:58,522 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 12:43:58,956 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 12:43:59,010 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-05-20 12:44:10,492 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+WARN  2018-05-20 12:44:10,802 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-20 12:44:10,982 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-20 12:44:13,099 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Photo.API.Web.Controllers.HomeController.Index (Photo.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-20 12:44:13,132 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Photo.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 177 ms from ::1 IP address with succeed.
+ERROR 2018-05-20 12:44:13,234 [8    ] ViewFeatures.Internal.ViewResultExecutor - The view 'Index' was not found. Searched locations: /Views/Home/Index.cshtml, /Views/Shared/Index.cshtml
+INFO  2018-05-20 12:44:13,392 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Photo.API.Web.Controllers.HomeController.Index (Photo.API.Web) in 539.7508ms
+ERROR 2018-05-20 12:44:14,012 [8    ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Home/Index.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIIndexMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2018-05-20 12:44:14,681 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4626.7915ms 500 text/html; charset=utf-8
+INFO  2018-05-20 12:44:17,673 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+INFO  2018-05-20 12:44:17,688 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11.5555ms 404 
+DEBUG 2018-05-20 12:46:46,260 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-20 12:46:46,405 [1    ] Abp.Modules.AbpModuleManager             - Found 10 ABP modules in total.
+DEBUG 2018-05-20 12:46:46,450 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.Web.Startup.APIWebModule, Photo.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,453 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APIApplicationModule, Photo.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.APICoreModule, Photo.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,454 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Photo.API.EntityFrameworkCore.APIEntityFrameworkCoreModule, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,455 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,456 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,456 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:46,459 [1    ] Abp.Modules.AbpModuleManager             - 10 modules loaded.
+DEBUG 2018-05-20 12:46:46,840 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Photo.API.EntityFrameworkCore.APIDbContext, Photo.API.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-20 12:46:47,010 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-20 12:46:47,068 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-20 12:46:47,279 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-20 12:46:47,296 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-20 12:46:47,722 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-20 12:46:47,793 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+INFO  2018-05-20 12:46:53,430 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/  
+WARN  2018-05-20 12:46:53,538 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-20 12:46:53,608 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-20 12:46:54,680 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Photo.API.Web.Controllers.HomeController.Index (Photo.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-20 12:46:54,712 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Photo.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 79 ms from ::1 IP address with succeed.
+INFO  2018-05-20 12:46:54,736 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-20 12:46:54,756 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Photo.API.Web.Controllers.HomeController.Index (Photo.API.Web) in 244.389ms
+INFO  2018-05-20 12:46:54,830 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1507.2094ms 302 
+INFO  2018-05-20 12:46:54,903 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger  
+INFO  2018-05-20 12:46:54,914 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 23.7881ms 301 
+INFO  2018-05-20 12:46:54,949 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/  
+INFO  2018-05-20 12:46:55,038 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 100.0554ms 200 text/html
+INFO  2018-05-20 12:46:55,116 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css  
+INFO  2018-05-20 12:46:55,186 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js  
+INFO  2018-05-20 12:46:55,365 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-20 12:46:55,385 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2018-05-20 12:46:55,391 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2018-05-20 12:46:55,427 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2018-05-20 12:46:55,579 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 471.2608ms 200 text/css
+INFO  2018-05-20 12:46:55,734 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 543.3336ms 200 application/javascript
+INFO  2018-05-20 12:46:56,933 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1804.6849ms 200 application/javascript
+INFO  2018-05-20 12:46:59,122 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json  
+INFO  2018-05-20 12:46:59,599 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 481.2094ms 200 application/json
+INFO  2018-05-20 12:47:00,556 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-20 12:47:00,582 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25.8959ms 404 
+INFO  2018-05-20 12:47:00,700 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-20 12:47:00,705 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6.862ms 404 
+INFO  2018-05-20 12:47:01,897 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png  
+INFO  2018-05-20 12:47:01,981 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-05-20 12:47:01,986 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 233.8106ms 200 image/png
+INFO  2018-05-20 12:47:02,019 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-16x16.png  
+INFO  2018-05-20 12:47:02,023 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2018-05-20 12:47:02,027 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.0105ms 200 image/png

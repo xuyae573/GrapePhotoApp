@@ -1,6 +1,6 @@
-﻿using Amazon.DynamoDBv2.DataModel;
-using GrapePhoto.Infrasturcture.Entities;
-using GrapePhoto.Infrasturcture.Repoistory;
+﻿using Abp.Domain.Entities;
+using Abp.Domain.Repositories;
+using Amazon.DynamoDBv2.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace GrapePhoto.DynamoDB
         {
         }
     }
-    public abstract class DynamoDBRepoistoryBase<TEntity, TPrimaryKey> : RepositoryBase<TEntity, TPrimaryKey> 
+    public abstract class DynamoDBRepoistoryBase<TEntity, TPrimaryKey> : AbpRepositoryBase<TEntity,TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
     {
 

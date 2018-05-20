@@ -19,8 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GrapePhoto.Application\GrapePhoto.Application.csproj" />
-    <ProjectReference Include="..\GrapePhoto.Domain\GrapePhoto.Domain.csproj" />
+    <ProjectReference Include="..\GrapePhoto.Application\GrapePhoto.Proxy.csproj" />
+    <ProjectReference Include="..\GrapePhoto.Domain\GrapePhoto.Web.Models.csproj" />
   </ItemGroup>
 
 </Project>
