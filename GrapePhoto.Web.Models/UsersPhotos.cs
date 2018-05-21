@@ -4,13 +4,13 @@ using System.Text;
 
 namespace GrapePhoto.Web.Models
 {
-    public class UsersPhotos
+    public class UsersPicture
     {
-        public UsersPhotos()
+        public UsersPicture()
         {
-            Photos = new List<Photo>();
+            Photos = new List<Picture>();
         }
         public string UserName { get; set; }
-        public List<Photo> Photos { get; set; } 
+        public List<Picture> Photos { get; set; } 
     }
 }

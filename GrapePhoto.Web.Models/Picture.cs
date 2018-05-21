@@ -5,16 +5,23 @@ using GrapePhoto.Web.Models.Account;
 
 namespace GrapePhoto.Web.Models
 {
-    public class Photo
+    public class Picture
     {
-        public string Caption { get; set; }
+        public int Id { get; set; }
+
         public string ThumbnailSrc { get; set; }
         //Full HD
         public string Src { get; set; }
-        public Dimensions Dimensions { get; set; }
+
         public int LikeCount { get; set; }
-        public User Owner { get; set; }
+        public int UserId { get; set; }
 
         public DateTime PostDate { get; set; }
+
+        public string MimeType { get; set; }
+
+        public string AltAttribute { get; set; }
+ 
+        public string TitleAttribute { get; set; }
     }
 }
