@@ -10,7 +10,19 @@ namespace GrapePhoto.Controllers
     {
         public IActionResult Index()
         {
+            //Get Username and followers, following 
+
+            //load the posts by username
+
             return View();
         }
+
+
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
+        
     }
 }
