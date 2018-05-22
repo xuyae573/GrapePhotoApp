@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Amazon;
+using Amazon.Runtime.CredentialManagement;
+using Amazon.S3;
 using GrapePhoto.Proxy;
 using GrapePhoto.Web.Models.Account;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -29,12 +32,24 @@ namespace GrapePhoto
 
             services.AddDistributedMemoryCache();
 
-            //services.AddSession(options =>
-            //{
-            //    options.Cookie.Name = ".grapephoto.Session";
-            //    options.IdleTimeout = TimeSpan.FromSeconds(60 * 20);
-            //    options.Cookie.HttpOnly = true;
-            //});
+            var accessKey = Configuration.GetValue<string>("AccessKey");
+            var secretKey = Configuration.GetValue<string>("SecretKey");
+
+            var keys = new CredentialProfileOptions
+            {
+                AccessKey = accessKey,
+                SecretKey = secretKey
+            };
+            var profile = new CredentialProfile("basic_profile", keys)
+            {
+                Region = RegionEndpoint.USEast1
+            };
+            var netSDKFile = new NetSDKCredentialsFile();
+            netSDKFile.RegisterProfile(profile);
+
+
+            services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonS3>();
 
             services.AddIdentity<User, IdentityRole>();
             services.Configure<AppSettings>(Configuration);
