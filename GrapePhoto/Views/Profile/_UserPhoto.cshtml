@@ -1,0 +1,14 @@
+﻿@model GrapePhoto.Web.Models.Picture
+
+<div class="col-sm-6 col-lg-4">
+    <div class="card">
+        <div class="hovereffect">
+            <img src="@Model.ThumbnailSrc"  data-imgsrc="@Model.Src"
+                 alt="@Model.TitleAttribute" class="rounded">
+            <div class="overlay">
+                <h2>@Model.TitleAttribute</h2>
+                <a class="info" href="#"><i class="fe fe-heart mr-1"></i>@Model.LikeCount</a>
+            </div>
+        </div>
+    </div>
+</div>

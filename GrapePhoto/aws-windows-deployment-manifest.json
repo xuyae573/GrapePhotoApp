@@ -1,0 +1,25 @@
+{
+  "manifestVersion": 1,
+  "iisConfig": {
+    "appPools": [
+      {
+        "name": "App pool",
+        "recycling": {
+          "regularTimeInterval": 10
+        }
+      }
+    ]
+  },
+  "deployments": {
+    "aspNetCoreWeb": [
+      {
+        "name": "myweb",
+        "parameters": {
+          "appBundle": ".",
+          "iisPath": "/",
+          "iisWebSite": "Default Web Site"
+        }
+      }
+    ]
+  }
+}

@@ -29,4 +29,10 @@
     <ProjectReference Include="..\GrapePhoto.Web.Models\GrapePhoto.Web.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="aws-windows-deployment-manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

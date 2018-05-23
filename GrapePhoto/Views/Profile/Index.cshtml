@@ -9,39 +9,39 @@
 <div class="row">
     <div class="col-lg-12">
 
-     
+
         <div class="card">
             <div class="card-body">
                 <div class="media">
                     <span class="avatar avatar-xxl m-3 mr-5" style="background-image: url(https://scontent-sin6-2.cdninstagram.com/vp/8f425a265d195c855f2006a669d51ff6/5B9F708E/t51.2885-19/s150x150/12545291_1703852753218671_231309445_a.jpg)"></span>
                     <div class="media-body">
-                       
-                            <div class="row">
-                                <h1 class="col-12">
-                                    Xu Ya
-                                    @if (x == 1)
-    {
-                                <button class="btn btn-outline-primary btn-sm ml-3"><span class="fe fe-user-plus"></span> Follow</button>
-}
-else if (x == 2)
-{
-                                <button class="btn btn-success btn-sm ml-3"><i class="fe fe-user-check mr-2"></i>Following</button>
-}
-else if (x == 3)
-{
-                                <a class="btn btn-secondary  btn-sm ml-3" href="@Url.Action("Edit")" >Edit Profile</a>
-}
-                                </h1> 
+
+                        <div class="row">
+                            <h1 class="col-12">
+                                Xu Ya
+                                @if (x == 1)
+                                {
+                                    <button class="btn btn-outline-primary btn-sm ml-3"><span class="fe fe-user-plus"></span> Follow</button>
+                                }
+                                else if (x == 2)
+                                {
+                                    <button class="btn btn-success btn-sm ml-3"><i class="fe fe-user-check mr-2"></i>Following</button>
+                                }
+                                else if (x == 3)
+                                {
+                                    <a class="btn btn-secondary  btn-sm ml-3" href="@Url.Action("Edit")">Edit Profile</a>
+                                }
+                            </h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-8 h4">
+                                <a class="col-sm-2 col-lg-4">100</a><span class="font-weight-light">posts</span>
+                                <a class="col-sm-2 col-lg-4">50</a><span class="font-weight-light">followers</span>
+                                <a class="col-sm-2 col-lg-4">500</a><span class="font-weight-light">following</span>
                             </div>
-                      
-                            <div class="row">
-                                <div class="col-sm-6 col-lg-8 h4">
-                                    <a class="col-sm-2 col-lg-4">100</a><span class="font-weight-light">posts</span>
-                                    <a class="col-sm-2 col-lg-4">50</a><span class="font-weight-light">followers</span>
-                                    <a class="col-sm-2 col-lg-4">500</a><span class="font-weight-light">following</span>
-                                </div>
-                           
-                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,23 +55,12 @@ else if (x == 3)
             Posts
         </h1>
         <div class="page-options">
-            <button type="button"  data-toggle="modal" data-target="#exampleModalLong" class="btn  btn-pill  btn-info">Add Post</button>
+            @Html.Partial("_AddPost")
         </div>
     </div>
     <div class="row row-cards">
 
-        <div class="col-sm-6 col-lg-4">
-            <div class="card">
-               <div class="hovereffect">
-                    <img src="@Url.Content("lib/tabler/dist/demo/photos/grant-ritchie-338179-500.jpg")" alt="Photo by Nathan Guerrero" class="rounded">
-                    <div class="overlay">
-                        <h2>Photo by Nathan Guerrero</h2>
-                        <a class="info" href="#"><i class="fe fe-heart mr-1"></i>50k</a>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
+       
         <div class="col-sm-6 col-lg-4">
             <div class="card">
                 <div class="hovereffect">
@@ -82,7 +71,7 @@ else if (x == 3)
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
         <div class="col-sm-6 col-lg-4">
             <div class="card">
                 <div class="hovereffect">
@@ -91,52 +80,38 @@ else if (x == 3)
                         <h2>Photo by Rose Bradley</h2>
                         <a class="info" href="#"><i class="fe fe-heart mr-1"></i>5</a>
                     </div>
-                   
+
                 </div>
-                </div>
+            </div>
         </div>
     </div>
 
     <div class="form-footer">
-        <button class="btn btn-outline-primary btn-block" ><i class="fe fe-plus mr-2"></i>Load More</button>
+        <button class="btn btn-outline-primary btn-block"><i class="fe fe-plus mr-2"></i>Load More</button>
     </div>
 </div>
 
 
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Add Post</h5>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label class="form-label">Comments</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                </div>
-                <div class="form-group">
 
-                    <div class="form-label">Choose your Photo:</div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="example-file-input-custom">
-                        <label class="custom-file-label"></label>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4">
-                    <label class="imagecheck mb-4">
-                        <input name="imagecheck" type="checkbox" value="5" class="imagecheck-input">
-                        <figure class="imagecheck-figure">
-                            <img src="@Url.Content("lib/tabler/dist/demo/photos/priscilla-du-preez-181896-500.jpg")" alt="}" class="imagecheck-image">
-                        </figure>
-                    </label>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Post</button>
-            </div>
-        </div>
-    </div>
-</div>
+@section Scripts{
+    @*<script>
+        require(['jquery'], function () {
+            $(document).ready(function () {
+                $('.btn-post').click(function () {
+                    var formData = new FormData($("#addPostForm")[0]);
+                    $.ajax({
+                        method: 'post',
+                        url: 'Common/AsyncUpload',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (data) {
+
+                        }
+                    });
+
+                });
+            });
+        });
+    </script>*@
+}

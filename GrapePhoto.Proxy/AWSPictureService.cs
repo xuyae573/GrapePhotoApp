@@ -1,4 +1,5 @@
 ﻿using Amazon.S3;
+using Amazon.S3.Model;
 using GrapePhoto.Web.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Internal;
@@ -21,17 +22,17 @@ namespace GrapePhoto.Proxy
 
         IAmazonS3 S3Client { get; set; }
         IHostingEnvironment _hostingEnvironment;
-        private static readonly string bucketName = "";
+        private static readonly string bucketName = "image01-824831449792";
         #endregion
 
 
 
         #region Ctor
 
-        public AWSPictureService(IHostingEnvironment hostingEnvironment, IAmazonS3 amazonS3)
+        public AWSPictureService(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
-            this.S3Client = amazonS3;
+           // this.S3Client = amazonS3;
         }
 
         public void DeletePicture(Picture picture)
@@ -66,7 +67,48 @@ namespace GrapePhoto.Proxy
 
         public Picture InsertPicture(byte[] pictureBinary, string mimeType, string titleAttribute = null)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Stream stream = new MemoryStream(pictureBinary);
+                var pictureId = Guid.NewGuid();
+                // simple object put
+                PutObjectRequest request = new PutObjectRequest()
+                {
+                    InputStream = stream,
+                    BucketName = bucketName,
+                    ContentType = mimeType,
+                    Key = pictureId.ToString()
+                };
+
+                var response = S3Client.PutObjectAsync(request);
+
+                // put a more complex object with some metadata and http headers.
+                PutObjectRequest titledRequest = new PutObjectRequest()
+                {
+                    BucketName = bucketName,
+                    Key = pictureId.ToString()
+                };
+                titledRequest.Metadata.Add("title", titleAttribute);
+
+                S3Client.PutObjectAsync(titledRequest);
+
+              
+            }
+            catch (AmazonS3Exception amazonS3Exception)
+            {
+                if (amazonS3Exception.ErrorCode != null &&
+                    (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
+                    amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
+                {
+                    Console.WriteLine("Please check the provided AWS Credentials.");
+                    Console.WriteLine("If you haven't signed up for Amazon S3, please visit http://aws.amazon.com/s3");
+                }
+                else
+                {
+                    Console.WriteLine("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message);
+                }
+            }
+            return new Picture();
         }
 
         public byte[] LoadPictureBinary(Picture picture)

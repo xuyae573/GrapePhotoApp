@@ -10,6 +10,7 @@ using GrapePhoto.Web.Models.Account;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,11 @@ namespace GrapePhoto
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.Configure<FormOptions>(x =>
+            {
+                x.ValueLengthLimit = int.MaxValue;
+                x.MultipartBodyLengthLimit = int.MaxValue; // In case of multipart
+            });
 
             services.AddDistributedMemoryCache();
 
@@ -70,6 +76,8 @@ namespace GrapePhoto
             {
                 return new AccountClient(identityUrl);
             });
+
+            services.AddTransient<IPictureService, AWSPictureService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

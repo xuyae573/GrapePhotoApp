@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -9,25 +11,17 @@ using System.Threading.Tasks;
 namespace GrapePhoto.Extensions
 {
 
-    public class CustomClaimsCookieSignInHelper<TIdentityUser> where TIdentityUser : IdentityUser
+    public static class Extension
     {
-        private readonly SignInManager<TIdentityUser> _signInManager;
-
-        public CustomClaimsCookieSignInHelper(SignInManager<TIdentityUser> signInManager)
+        public static byte[] GetDownloadBits(this IFormFile file)
         {
-            _signInManager = signInManager;
-        }
-
-        public async Task SignInUserAsync(TIdentityUser user, bool isPersistent, IEnumerable<Claim> customClaims)
-        {
-            var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(user);
-            if (customClaims != null && claimsPrincipal?.Identity is ClaimsIdentity claimsIdentity)
+            using (var fileStream = file.OpenReadStream())
+            using (var ms = new MemoryStream())
             {
-                claimsIdentity.AddClaims(customClaims);
+                fileStream.CopyTo(ms);
+                var fileBytes = ms.ToArray();
+                return fileBytes;
             }
-            await _signInManager.Context.SignInAsync(IdentityConstants.ApplicationScheme,
-                claimsPrincipal,
-                new AuthenticationProperties { IsPersistent = isPersistent });
         }
     }
 }

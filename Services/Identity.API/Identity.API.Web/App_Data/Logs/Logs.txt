@@ -2237,3 +2237,371 @@ INFO  2018-05-22 00:49:45,347 [8    ] Abp.Auditing.SimpleLogAuditingStore      -
 INFO  2018-05-22 00:49:45,352 [8    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
 INFO  2018-05-22 00:49:45,364 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) in 22.1038ms
 INFO  2018-05-22 00:49:45,379 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 72.6417ms 200 application/json; charset=utf-8
+DEBUG 2018-05-22 23:46:58,343 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-22 23:46:58,846 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-22 23:46:58,910 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:46:58,919 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-22 23:46:59,567 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-22 23:46:59,766 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-22 23:47:00,787 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-22 23:47:00,836 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-22 23:47:02,660 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-22 23:47:02,875 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-22 23:47:02,875 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-22 23:47:41,030 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-22 23:47:41,391 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-22 23:47:41,443 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-22 23:47:44,287 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-22 23:47:44,363 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 113 ms from ::1 IP address with succeed.
+INFO  2018-05-22 23:47:44,425 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-22 23:47:44,456 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 590.063ms
+INFO  2018-05-22 23:47:44,661 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4173.2928ms 302 
+INFO  2018-05-22 23:47:44,715 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-22 23:47:44,831 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 115.6279ms 200 text/html
+INFO  2018-05-22 23:47:44,984 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-22 23:47:44,987 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-22 23:47:45,042 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-22 23:47:45,143 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-22 23:47:45,146 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-22 23:47:45,153 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-22 23:47:45,173 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 185.641ms 304 application/javascript
+INFO  2018-05-22 23:47:45,180 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 231.7978ms 304 text/css
+INFO  2018-05-22 23:47:45,194 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 208.5467ms 304 application/javascript
+INFO  2018-05-22 23:47:47,782 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-22 23:47:48,349 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 561.185ms 200 application/json
+INFO  2018-05-22 23:47:49,193 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-22 23:47:49,236 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 45.1461ms 404 
+INFO  2018-05-22 23:47:49,415 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-22 23:47:49,421 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.7961ms 404 
+DEBUG 2018-05-22 23:52:50,031 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-22 23:52:50,259 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-22 23:52:50,410 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,415 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,416 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,417 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,417 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,418 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,418 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-22 23:52:50,424 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-22 23:52:51,032 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-22 23:52:51,145 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-22 23:52:51,684 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-22 23:52:51,757 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-22 23:52:54,077 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-22 23:52:54,220 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-22 23:52:54,221 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-22 23:53:08,952 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-22 23:53:09,404 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-22 23:53:09,523 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-22 23:53:11,303 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-22 23:53:11,360 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 163 ms from ::1 IP address with succeed.
+INFO  2018-05-22 23:53:11,409 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-22 23:53:11,453 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 505.5843ms
+INFO  2018-05-22 23:53:11,654 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2956.2279ms 302 
+INFO  2018-05-22 23:53:11,707 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-22 23:53:12,063 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 75.0811ms 200 text/html
+INFO  2018-05-22 23:53:12,098 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-22 23:53:12,197 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-22 23:53:12,251 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-22 23:53:12,490 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 540.0379ms 304 application/javascript
+INFO  2018-05-22 23:53:13,187 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-22 23:53:13,457 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1311.3601ms 304 application/javascript
+INFO  2018-05-22 23:53:13,556 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-22 23:53:13,578 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-22 23:53:13,663 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 30.2863ms 304 text/css
+INFO  2018-05-22 23:53:16,016 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-22 23:53:16,509 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 215.2421ms 404 
+INFO  2018-05-22 23:53:16,556 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-22 23:53:16,621 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-22 23:53:16,726 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 68.2802ms 404 
+INFO  2018-05-22 23:53:17,620 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1079.5981ms 200 application/json
+DEBUG 2018-05-23 22:06:44,734 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 22:06:45,917 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 22:06:46,090 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,096 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,097 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:06:46,104 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 22:06:47,321 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 22:06:47,455 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 22:06:48,776 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 22:06:48,802 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 22:06:50,126 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 22:06:50,262 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 22:06:50,262 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+DEBUG 2018-05-23 22:29:33,993 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 22:29:34,240 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 22:29:34,309 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,315 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,316 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:29:34,326 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 22:29:35,530 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 22:29:36,194 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 22:29:36,890 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 22:29:36,955 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 22:29:40,475 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 22:29:40,885 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 22:29:40,886 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-23 22:30:02,964 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-23 22:30:03,841 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-23 22:30:04,003 [7    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-23 22:30:09,565 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-23 22:30:09,608 [7    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 99 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:30:09,732 [7    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-23 22:30:10,020 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 779.1239ms
+INFO  2018-05-23 22:30:10,643 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8222.8421ms 302 
+INFO  2018-05-23 22:30:11,061 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-23 22:30:11,475 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 614.1192ms 200 text/html
+INFO  2018-05-23 22:30:13,093 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-23 22:30:13,276 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-23 22:30:14,070 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-23 22:30:14,138 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-23 22:30:14,646 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1055.9501ms 304 application/javascript
+INFO  2018-05-23 22:30:15,686 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-23 22:30:16,671 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1535.0028ms 304 text/css
+INFO  2018-05-23 22:30:17,466 [7    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-23 22:30:19,677 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2937.6407ms 304 application/javascript
+INFO  2018-05-23 22:30:50,093 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-23 22:30:51,464 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1179.4626ms 404 
+INFO  2018-05-23 22:30:53,210 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-23 22:30:54,273 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-23 22:30:54,941 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1367.077ms 404 
+INFO  2018-05-23 22:30:57,797 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4226.8628ms 200 application/json
+INFO  2018-05-23 22:31:20,428 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5105/api/account/signin application/json 432
+INFO  2018-05-23 22:31:21,889 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) with arguments (Identity.API.UserDto) - ModelState is Valid
+INFO  2018-05-23 22:31:21,932 [7    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.SignIn.SignInService.SignIn is executed by an anonymous user in 2 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:31:21,935 [7    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.AccountController.SignIn is executed by an anonymous user in 114 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:31:21,955 [7    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-05-23 22:31:21,976 [7    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) in 1433.8752ms
+INFO  2018-05-23 22:31:22,036 [7    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1577.339ms 200 application/json; charset=utf-8
+DEBUG 2018-05-23 22:45:52,151 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 22:45:52,489 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 22:45:52,544 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,552 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,553 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,556 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,557 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,557 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,558 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:45:52,564 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 22:45:53,682 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 22:45:53,806 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 22:45:54,336 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 22:45:54,360 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 22:45:55,287 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 22:45:55,495 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 22:45:55,495 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-23 22:46:11,242 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-23 22:46:11,584 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-23 22:46:11,879 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-23 22:46:13,599 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-23 22:46:13,642 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 150 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:46:13,726 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-23 22:46:13,899 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 638.3808ms
+INFO  2018-05-23 22:46:14,061 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4671.4278ms 302 
+INFO  2018-05-23 22:46:14,359 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-23 22:46:15,383 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-23 22:46:15,385 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1041.773ms 200 text/html
+INFO  2018-05-23 22:46:15,565 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-23 22:46:15,753 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-23 22:46:15,973 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-23 22:46:15,993 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 600.3473ms 304 application/javascript
+INFO  2018-05-23 22:46:16,140 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-23 22:46:16,505 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-23 22:46:16,540 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 499.7589ms 304 application/javascript
+INFO  2018-05-23 22:46:16,902 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1012.4206ms 304 text/css
+INFO  2018-05-23 22:46:19,325 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-23 22:46:19,973 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-23 22:46:20,145 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 720.7571ms 404 
+INFO  2018-05-23 22:46:20,319 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-23 22:46:20,498 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.3167ms 404 
+INFO  2018-05-23 22:46:21,740 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1748.2792ms 200 application/json
+DEBUG 2018-05-23 22:50:21,116 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 22:50:21,658 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 22:50:21,855 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,864 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,864 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,865 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,865 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,865 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,866 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:50:21,870 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 22:50:23,757 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 22:50:23,851 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 22:50:24,600 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 22:50:24,632 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 22:50:26,886 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 22:50:27,232 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 22:50:27,232 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-23 22:50:49,107 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-23 22:50:50,906 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-23 22:50:51,378 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-23 22:51:04,154 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-23 22:51:04,257 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 255 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:51:04,313 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-23 22:51:04,363 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 789.196ms
+INFO  2018-05-23 22:51:04,656 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 19758.1088ms 302 
+INFO  2018-05-23 22:51:04,778 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-23 22:51:05,258 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-23 22:51:05,320 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-23 22:51:05,388 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 484.2568ms 200 text/html
+INFO  2018-05-23 22:51:05,426 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-23 22:51:05,441 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-23 22:51:05,622 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-23 22:51:05,817 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 205.7221ms 304 text/css
+INFO  2018-05-23 22:51:05,843 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 397.4419ms 304 application/javascript
+INFO  2018-05-23 22:51:05,860 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-23 22:51:05,881 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 616.8631ms 304 application/javascript
+INFO  2018-05-23 22:51:08,090 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-23 22:51:08,578 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-23 22:51:08,825 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 317.7761ms 404 
+INFO  2018-05-23 22:51:10,657 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2169.982ms 200 application/json
+DEBUG 2018-05-23 22:54:08,615 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 22:54:08,747 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 22:54:08,821 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,826 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,826 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,827 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,828 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,828 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,829 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 22:54:08,836 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 22:54:09,495 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 22:54:09,619 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 22:54:10,046 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 22:54:10,071 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 22:54:10,900 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 22:54:11,045 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 22:54:11,046 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-23 22:54:25,426 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-23 22:54:26,121 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-23 22:54:26,209 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-23 22:54:28,684 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-23 22:54:28,721 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 128 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:54:28,879 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-23 22:54:29,007 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 753.018ms
+INFO  2018-05-23 22:54:29,349 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4255.0376ms 302 
+INFO  2018-05-23 22:54:29,472 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-23 22:54:29,867 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-23 22:54:29,946 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-23 22:54:30,201 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-23 22:54:30,553 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 629.2901ms 304 application/javascript
+INFO  2018-05-23 22:54:30,842 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-23 22:54:30,980 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 226.8561ms 200 text/html
+INFO  2018-05-23 22:54:31,372 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-23 22:54:31,380 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-23 22:54:31,563 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 657.5641ms 304 application/javascript
+INFO  2018-05-23 22:54:32,055 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1741.8899ms 304 text/css
+INFO  2018-05-23 22:54:34,015 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-23 22:54:34,182 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 148.041ms 404 
+INFO  2018-05-23 22:54:34,364 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-23 22:54:36,443 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1253.6143ms 200 application/json
+INFO  2018-05-23 22:55:18,680 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5105/api/account/signin application/json 432
+INFO  2018-05-23 22:55:22,800 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) with arguments (Identity.API.UserDto) - ModelState is Valid
+INFO  2018-05-23 22:55:22,910 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.SignIn.SignInService.SignIn is executed by an anonymous user in 26 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:55:22,913 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.AccountController.SignIn is executed by an anonymous user in 155 ms from ::1 IP address with succeed.
+INFO  2018-05-23 22:55:23,020 [9    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-05-23 22:55:23,047 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) in 4089.981ms
+INFO  2018-05-23 22:55:23,061 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4408.0958ms 200 application/json; charset=utf-8
+DEBUG 2018-05-23 23:00:29,425 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 23:00:29,666 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 23:00:29,756 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,764 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,765 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,765 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,765 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:00:29,769 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 23:00:30,481 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 23:00:30,656 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 23:00:31,006 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 23:00:31,038 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 23:00:32,039 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 23:00:32,186 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 23:00:32,186 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-23 23:00:45,093 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-23 23:00:45,259 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-23 23:00:45,566 [9    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-23 23:00:49,129 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-23 23:00:49,155 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 178 ms from ::1 IP address with succeed.
+INFO  2018-05-23 23:00:49,297 [9    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-23 23:00:49,334 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 588.6797ms
+INFO  2018-05-23 23:00:49,606 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4524.2229ms 302 
+INFO  2018-05-23 23:00:52,456 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-23 23:00:53,362 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-23 23:00:53,388 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 820.4361ms 200 text/html
+INFO  2018-05-23 23:00:53,721 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-23 23:00:53,928 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-23 23:00:53,933 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-23 23:00:53,937 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-23 23:00:53,947 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-23 23:00:53,965 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 775.8459ms 304 text/css
+INFO  2018-05-23 23:00:54,354 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 424.4718ms 304 application/javascript
+INFO  2018-05-23 23:00:54,664 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 689.302ms 304 application/javascript
+INFO  2018-05-23 23:00:55,419 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-23 23:00:56,183 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 817.6638ms 200 application/json
+INFO  2018-05-23 23:00:56,978 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-23 23:00:57,070 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8.0312ms 404 
+INFO  2018-05-23 23:00:57,081 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-23 23:00:57,608 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 116.962ms 404 
+INFO  2018-05-23 23:02:24,597 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:5105/api/account/signin application/json 432
+INFO  2018-05-23 23:02:29,118 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) with arguments (Identity.API.UserDto) - ModelState is Valid
+INFO  2018-05-23 23:02:29,302 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.SignIn.SignInService.SignIn is executed by an anonymous user in 18 ms from ::1 IP address with succeed.
+INFO  2018-05-23 23:02:29,305 [9    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.AccountController.SignIn is executed by an anonymous user in 1387 ms from ::1 IP address with succeed.
+INFO  2018-05-23 23:02:29,466 [9    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value Abp.Web.Models.AjaxResponse.
+INFO  2018-05-23 23:02:30,964 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.AccountController.SignIn (Identity.API.Web) in 5126.25ms
+INFO  2018-05-23 23:02:31,161 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6505.3007ms 200 application/json; charset=utf-8
+DEBUG 2018-05-23 23:08:03,087 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-05-23 23:08:03,324 [1    ] Abp.Modules.AbpModuleManager             - Found 7 ABP modules in total.
+DEBUG 2018-05-23 23:08:03,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.Web.Startup.APIWebModule, Identity.API.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APIApplicationModule, Identity.API.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,393 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Identity.API.APICoreModule, Identity.API.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,394 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,395 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,396 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-05-23 23:08:03,404 [1    ] Abp.Modules.AbpModuleManager             - 7 modules loaded.
+DEBUG 2018-05-23 23:08:05,672 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-05-23 23:08:05,934 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-05-23 23:08:10,243 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: API
+DEBUG 2018-05-23 23:08:10,292 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-05-23 23:08:15,159 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-05-23 23:08:15,486 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 1 classes define auto mapping attributes
+DEBUG 2018-05-23 23:08:15,486 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Identity.API.UserDto
+INFO  2018-05-23 23:08:28,779 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/  
+WARN  2018-05-23 23:08:29,278 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2018-05-23 23:08:29,392 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+INFO  2018-05-23 23:08:33,614 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-23 23:08:33,657 [8    ] Abp.Auditing.SimpleLogAuditingStore      - AUDIT LOG: Identity.API.Web.Controllers.HomeController.Index is executed by an anonymous user in 382 ms from ::1 IP address with succeed.
+INFO  2018-05-23 23:08:33,974 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2018-05-23 23:08:34,170 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action Identity.API.Web.Controllers.HomeController.Index (Identity.API.Web) in 1397.0879ms
+INFO  2018-05-23 23:08:34,507 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6173.3308ms 302 
+INFO  2018-05-23 23:08:35,163 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/  
+INFO  2018-05-23 23:08:35,753 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui.css  
+INFO  2018-05-23 23:08:35,889 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js  
+INFO  2018-05-23 23:08:36,157 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1033.9819ms 200 text/html
+INFO  2018-05-23 23:08:36,289 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-23 23:08:36,302 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-standalone-preset.js was not modified
+INFO  2018-05-23 23:08:36,387 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui-bundle.js was not modified
+INFO  2018-05-23 23:08:36,613 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger-ui.css was not modified
+INFO  2018-05-23 23:08:36,626 [11   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1037.3489ms 304 text/css
+INFO  2018-05-23 23:08:36,657 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 761.7711ms 304 application/javascript
+INFO  2018-05-23 23:08:36,802 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 360.2143ms 304 application/javascript
+INFO  2018-05-23 23:08:38,853 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-23 23:08:39,386 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 352.1409ms 404 
+INFO  2018-05-23 23:08:41,280 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:5105/swagger/v1/swagger.json  
+INFO  2018-05-23 23:08:43,990 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2286.3879ms 200 application/json

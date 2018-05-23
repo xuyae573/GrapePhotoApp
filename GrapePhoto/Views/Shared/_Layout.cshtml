@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     Layout = "_LayoutRoot";
 }
 <div class="header py-4">
@@ -8,7 +8,7 @@
                 <img src='@Url.Content("/images/logo.jpg")' class="header-brand-img" alt="grapephoto logo">
             </a>
             <div class="d-flex order-lg-2 ml-auto">
-               @Html.Partial("_LoginPartial")
+                @Html.Partial("_LoginPartial")
             </div>
             <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
                 <span class="header-toggler-icon"></span>
@@ -30,7 +30,14 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="/explore" class="nav-link active"><i class="fe fe-home"></i> Explore</a>
+                        <a href="/Index" class="nav-link" id="homelink"><i class="fe fe-home"></i> Index</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg order-lg-first">
+                <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                    <li class="nav-item">
+                        <a href="/explore" class="nav-link" id="explorelink"><i class="fe fe-eye"></i> Explore</a>
                     </li>
                 </ul>
             </div>
@@ -42,3 +49,8 @@
         @RenderBody()
     </div>
 </div>
+
+
+@section Scripts{
+    @RenderSection("Scripts", required: false)
+}

@@ -26,17 +26,17 @@ namespace GrapePhoto.Proxy
 
         public SignInResult SignIn(User user)
         {
-            var client = new RestClient(_baseUri);
-            var request = new RestRequest(AccountAPI.SignIn);
+          //  var client = new RestClient(_baseUri);
+           // var request = new RestRequest(AccountAPI.SignIn);
       
-            request.AddJsonBody(user);
-            IRestResponse response = client.Post(request);
-            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+           // request.AddJsonBody(user);
+           // IRestResponse response = client.Post(request);
+            //var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
 
             return new SignInResult()
             {
-                Succeed = json.success,
-                ErrorMessage = json.error
+                Succeed = true,
+                ErrorMessage = ""
             };
         }
 
