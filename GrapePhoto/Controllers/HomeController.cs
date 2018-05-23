@@ -20,7 +20,10 @@ namespace GrapePhoto.Controllers
             return View();
         }
 
-      
+        public IActionResult Explore()
+        {
+            return View();
+        }
 
         public IActionResult Error()
         {
