@@ -14,7 +14,7 @@ namespace GrapePhoto.Web.Models.Account
         /// Username , unique key field
         /// </summary>
         public string FullName { get; set; }
-        public string ProfilePicUrl { get; set; }
+        public string AvatarPicUrl { get; set; }
         public Gender Gender { get; set; }
     }
 

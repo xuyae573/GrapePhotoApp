@@ -1,25 +1,21 @@
-﻿
+﻿@model IndexViewModel
 <div class="row">
     <div class="col-lg-8">
-        @for (int i = 0; i < 20; i++)
+        @foreach (var item in Model.Posts)
         {
-            @Html.Partial("_FollowingPost")
+           @Html.Partial("_FollowingPost", item)
         }
-
     </div>
     <div class="col-lg-4 parent-container">
-
-
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Following</h3>
             </div>
             <div class="card-body o-auto" style="height: 30rem">
                 <ul class="list-unstyled list-separated">
-
-                    @for (int i = 0; i < 20; i++)
+                    @foreach(var user in Model.FollowingUsers)
                     {
-                        @Html.Partial("_FollowingUserItems")
+                        @Html.Partial("_FollowingUserItems", user)
                     }
                 </ul>
             </div>

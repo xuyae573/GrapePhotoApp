@@ -24,6 +24,47 @@ namespace GrapePhoto.Proxy
             _baseUri = baseUri;
         }
 
+        public List<User> GetAllFollowingUsersByUserName(string username)
+        {
+            var userId = GetUserIdByUsername(username).Id;
+            //callAPI get all following users;
+
+            var followingUsers = new List<User>();
+
+            followingUsers.Add(new User()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = "Txxni",
+                AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
+                Gender = Gender.Female,
+            });
+
+            return followingUsers;
+
+        }
+
+        public User GetUserByUserId(string userId)
+        {
+            return new User()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = "Txxni",
+                AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
+                Gender = Gender.Female,
+            };
+        }
+
+        public User GetUserIdByUsername(string username)
+        {
+            return new User()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = "My Name",
+                AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
+                Gender = Gender.Male,
+            };
+        }
+ 
         public SignInResult SignIn(User user)
         {
           //  var client = new RestClient(_baseUri);

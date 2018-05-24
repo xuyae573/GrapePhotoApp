@@ -40,22 +40,60 @@ namespace GrapePhoto.Proxy
             throw new NotImplementedException();
         }
 
-        public Picture GetPictureById(int pictureId)
+        public Picture GetPictureById(string pictureId)
         {
             throw new NotImplementedException();
         }
 
-        public IPagedList<Picture> GetPictures(int pageIndex = 0, int pageSize = int.MaxValue)
+        public IPagedList<Picture> GetPictures(string userid, int pageIndex = 0, int pageSize = int.MaxValue)
+        {
+            var results = new List<Picture>();
+            //call aws api get pictures
+            results.Add(new Picture()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserId = Guid.NewGuid().ToString(),
+                AltAttribute = "test",
+                PostDate = DateTime.Now.AddDays(-10),
+                Src = "https://scontent-sin6-2.cdninstagram.com/vp/0eb0099e34e5165c65b794f07e7f83d0/5BA2A7F3/t51.2885-15/e35/32070141_2020559538261493_1656320628367556608_n.jpg",
+                ThumbnailSrc = "https://scontent-sin6-2.cdninstagram.com/vp/ec7397053ca611fcb4982101e86c7388/5B9107D9/t51.2885-15/s640x640/sh0.08/e35/32070141_2020559538261493_1656320628367556608_n.jpg",
+                TitleAttribute = "this is the title",
+                LikeCount = 100,
+            });
+            results.Add(new Picture()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserId = Guid.NewGuid().ToString(),
+                AltAttribute = "test 3",
+                PostDate = DateTime.Now.AddDays(-10),
+                Src = "https://scontent-sin6-2.cdninstagram.com/vp/e12b44e9b10392910fc55258b2c0cd64/5B833062/t51.2885-15/e35/32243789_205152516760720_3057022588736765952_n.jpg",
+                ThumbnailSrc = "https://scontent-sin6-2.cdninstagram.com/vp/dee299f8649386dbd5192f8141cffda7/5B9FBB94/t51.2885-15/sh0.08/e35/p640x640/32243789_205152516760720_3057022588736765952_n.jpg",
+                TitleAttribute = "this is the title",
+                LikeCount = 100,
+            });
+            results.Add(new Picture()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserId = Guid.NewGuid().ToString(),
+                AltAttribute = "test 3",
+                PostDate = DateTime.Now.AddDays(-10),
+                Src = "https://scontent-sin6-2.cdninstagram.com/vp/e12b44e9b10392910fc55258b2c0cd64/5B833062/t51.2885-15/e35/32243789_205152516760720_3057022588736765952_n.jpg",
+                ThumbnailSrc = "https://scontent-sin6-2.cdninstagram.com/vp/dee299f8649386dbd5192f8141cffda7/5B9FBB94/t51.2885-15/sh0.08/e35/p640x640/32243789_205152516760720_3057022588736765952_n.jpg",
+                TitleAttribute = "this is the title",
+                LikeCount = 100,
+            });
+            IPagedList<Picture> pictures = new PagedList<Picture>(results,pageIndex,pageSize);
+            return pictures;
+        }
+
+        public IList<Picture> GetPicturesByUserId(string userId, int recordsToReturn = 0)
         {
             throw new NotImplementedException();
         }
 
-        public IList<Picture> GetPicturesByUserId(int userId, int recordsToReturn = 0)
-        {
-            throw new NotImplementedException();
-        }
 
-        public string GetPictureUrl(int pictureId, int targetSize = 0, PictureType defaultPictureType = PictureType.Post)
+
+        public string GetPictureUrl(string pictureId, int targetSize = 0, PictureType defaultPictureType = PictureType.Post)
         {
             throw new NotImplementedException();
         }
@@ -149,9 +187,46 @@ namespace GrapePhoto.Proxy
             return lastPart;
         }
 
-        #endregion
- 
+        public IList<Picture> GetFollowingPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue)
+        {
+            List<Picture> pictures = new List<Picture>();
 
-         
+            //call aws api get pictures
+            pictures.Add(new Picture()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserId = Guid.NewGuid().ToString(),
+                AltAttribute = "test",
+                PostDate = DateTime.Now.AddDays(-10),
+                Src = "https://scontent-sin6-2.cdninstagram.com/vp/0eb0099e34e5165c65b794f07e7f83d0/5BA2A7F3/t51.2885-15/e35/32070141_2020559538261493_1656320628367556608_n.jpg",
+                ThumbnailSrc = "https://scontent-sin6-2.cdninstagram.com/vp/ec7397053ca611fcb4982101e86c7388/5B9107D9/t51.2885-15/s640x640/sh0.08/e35/32070141_2020559538261493_1656320628367556608_n.jpg",
+                TitleAttribute= "this is the title",
+                LikeCount = 100,
+            });
+
+            pictures.Add(new Picture()
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserId = Guid.NewGuid().ToString(),
+                AltAttribute = "test 3",
+                PostDate = DateTime.Now.AddDays(-10),
+                Src = "https://scontent-sin6-2.cdninstagram.com/vp/e12b44e9b10392910fc55258b2c0cd64/5B833062/t51.2885-15/e35/32243789_205152516760720_3057022588736765952_n.jpg",
+                ThumbnailSrc = "https://scontent-sin6-2.cdninstagram.com/vp/dee299f8649386dbd5192f8141cffda7/5B9FBB94/t51.2885-15/sh0.08/e35/p640x640/32243789_205152516760720_3057022588736765952_n.jpg",
+                TitleAttribute = "this is the title",
+                LikeCount = 100,
+            });
+            return pictures;
+
+        }
+
+        public IList<Picture> GetUserPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+
+
     }
 }

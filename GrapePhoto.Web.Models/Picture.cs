@@ -7,14 +7,14 @@ namespace GrapePhoto.Web.Models
 {
     public class Picture
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string ThumbnailSrc { get; set; }
         //Full HD
         public string Src { get; set; }
 
         public int LikeCount { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public DateTime PostDate { get; set; }
 

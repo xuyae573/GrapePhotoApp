@@ -1,15 +1,16 @@
-﻿@{ 
+﻿@model PostViewModel
+@{ 
     Layout = null;
 }
 <div class="col-sm-6 col-lg-4">
     <div class="card">
-        <a href="javascript:void(0)" class="mb-0">
-            <img src="https://scontent-sin6-2.cdninstagram.com/vp/2d3a72f85f29b781e702cc9b79eb97cd/5B7D657C/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/32493451_173439413344649_5031864009024864256_n.jpg" alt="Photo by Alice Mason">
+        <a href="@Model.Picture.Src" class="mb-0">
+            <img src="@Model.Picture.ThumbnailSrc" alt="Photo by Alice Mason">
         </a>
         <div class="d-flex align-items-center px-2">
-            <div class="avatar avatar-md m-3" style="background-image: url(@Url.Content("../lib/tabler/dist/demo/faces/female/1.jpg")"></div>
+            <div class="avatar avatar-md m-3" style="background-image: url(@Model.User.AvatarPicUrl)"></div>
             <div>
-                <div>Alice Mason</div>
+                <div>@Model.User.UserName</div>
                 <small class="d-block text-muted">12 days ago</small>
             </div>
             <div class="ml-auto text-muted">
