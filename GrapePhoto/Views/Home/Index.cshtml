@@ -3,17 +3,20 @@
     <div class="col-lg-8">
         @foreach (var item in Model.Posts)
         {
-           @Html.Partial("_FollowingPost", item)
+            @Html.Partial("_FollowingPost", item)
         }
     </div>
-    <div class="col-lg-4 parent-container">
+    <div class="col-lg-4 parent-container" id="index-right">
+
+
+
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Following</h3>
             </div>
             <div class="card-body o-auto" style="height: 30rem">
                 <ul class="list-unstyled list-separated">
-                    @foreach(var user in Model.FollowingUsers)
+                    @foreach (var user in Model.FollowingUsers)
                     {
                         @Html.Partial("_FollowingUserItems", user)
                     }
@@ -24,24 +27,26 @@
     </div>
 
 </div>
+
+ @Html.Partial("_FloatingButton")
+
+
 @section Scripts{
     <script>
 
 
-        require(['jquery'], function(){
-           $(document).ready(function () {
+        require(['jquery'], function () {
+            $(document).ready(function () {
                 $("#homelink").addClass("active");
             });
+
+
         });
 
 
-        require(['magnific-popup'], function(){
-          $('.parent-magnific-popup').magnificPopup({
-              delegate: 'a', // child items selector, by clicking on it popup will open
-              type: 'image'
-              // other options
-            });
+        require(['magnific-popup'], function () {
+
         });
- 
+
     </script>
 }

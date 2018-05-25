@@ -1,8 +1,9 @@
-﻿
+﻿ 
 @{
     Layout = null;
+   
 }
-<button type="button" data-toggle="modal" data-target="#exampleModalLong" class="btn  btn-pill  btn-info">Add Post</button>
+<button type="button" data-toggle="modal" data-target="#exampleModalLong" class="btn btn-lg btn-pill  btn-info"><i class="fe fe-image mr-2"></i> Add Post </button>
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -13,30 +14,24 @@
                 <form id="addPostForm" method="post">
                     <div class="form-group">
                         <label class="form-label">Comments</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="" name="comments" aria-describedby="basic-addon1">
-                        </div>
+                        <textarea rows="3" class="form-control"  name="comments"  placeholder="Here can be your description" value="Mike" style="margin-top: 0px; margin-bottom: 0px; height: 165px;"></textarea>
+          
                     </div>
                     <div class="form-group">
                         <div class="form-label">Choose your Photo:</div>
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="qqfile">
-                            <label class="custom-file-label">Picture name</label>
+                            <input type="file" class="custom-file-input" name="qqfile" onchange="previewImage(this,[1000],4);">
+                            <label class="custom-file-label"></label>
+                            <div class="imagePreview"></div>
                         </div>
                     </div>
                     <div class="col-6 col-sm-4">
-                        <label class="imagecheck mb-4">
-                            <input name="imagecheck" type="checkbox" value="5" class="imagecheck-input">
-                            <figure class="imagecheck-figure">
-                                <img src="@Url.Content("lib/tabler/dist/demo/photos/priscilla-du-preez-181896-500.jpg")" alt="}" class="imagecheck-image">
-                            </figure>
-                        </label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-post">Post</button>
+                <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-lg btn-primary btn-post disabled" disabled="disabled"><i class="fe fe-upload mr-2"></i>Post</button>
             </div>
         </div>
     </div>
@@ -46,6 +41,7 @@
         require(['jquery'], function () {
             $(document).ready(function () {
                 $('.btn-post').click(function () {
+                    console.log("adding post.");
                     var formData = new FormData($("#addPostForm")[0]);
                     $.ajax({
                         method: 'post',

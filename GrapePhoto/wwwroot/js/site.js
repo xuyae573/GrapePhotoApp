@@ -1,4 +1,9 @@
-﻿// Write your JavaScript code.
+﻿
+
+
+
+
+// Write your JavaScript code.
 
 require(['jquery'], function(){
    $(document).ready(function () {

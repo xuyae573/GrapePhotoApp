@@ -16,34 +16,29 @@
     <title>@ViewData["Title"] - GrapePhoto</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-        <link href="~/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <script src="~/lib/tabler/dist/assets/js/require.min.js" asp-append-version="true"></script>
-        <script>
-            requirejs.config({
-                baseUrl: '@Url.Content("/lib/tabler/dist/")'
-            });
-        </script>
-
-        <link href="~/lib/tabler/dist/assets/css/dashboard.css" rel="stylesheet" />
     </environment>
     <environment exclude="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
         <link rel="stylesheet" href="~/css/site.min.css" />
-        <script src="~/lib/tabler/dist/assets/js/require.min.js" asp-append-version="true"></script>
-        <script>
+    </environment>
+
+    <link href="~/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400' rel='stylesheet' type='text/css'>
+    <script src="~/lib/tabler/dist/assets/js/require.min.js" asp-append-version="true"></script>
+    <script>
             requirejs.config({
                 baseUrl: '@Url.Content("/lib/tabler/dist/")'
             });
-        </script>
+    </script>
 
-        <link href="~/lib/tabler/dist/assets/css/dashboard.css" rel="stylesheet" />
-    </environment>
+    <link href="~/lib/tabler/dist/assets/css/dashboard.css" rel="stylesheet" />
+    <link href="~/lib/floatingbutton/mfb.css" rel="stylesheet" />
+
 </head>
 <body>
   
@@ -74,15 +69,17 @@
 
 
     <environment include="Development">
-
         <script src="~/lib/tabler/dist/assets/js/dashboard.js" asp-append-version="true"></script>
-
         <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/html5.image.preview.js" asp-append-version="true"></script>
+        <script src="~/lib/floatingbutton/mfb.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="~/lib/tabler/dist/assets/js/dashboard.js" asp-append-version="true"></script>
-
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/html5.image.preview.min.js" asp-append-version="true"></script>
+
+        <script src="~/lib/floatingbutton/mfb.js"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
