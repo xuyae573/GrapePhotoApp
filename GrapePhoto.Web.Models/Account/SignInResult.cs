@@ -10,4 +10,13 @@ namespace GrapePhoto.Web.Models.Account
 
         public string ErrorMessage { get; set; }
     }
+
+    public class SignUpResult
+    {
+        public bool Succeed { get; set; }
+
+        public User user { get; set; }
+
+        public string ErrorMessage { get; set; }
+    }
 }

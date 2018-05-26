@@ -8,7 +8,7 @@ namespace GrapePhoto.Proxy
 {
     public interface IAccountClient
     {
-        User SignUp(SignUpViewModel signUpViewModel);
+        SignUpResult SignUp(SignUpViewModel signUpViewModel);
 
         SignInResult SignIn(User user);
 

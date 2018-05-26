@@ -11,8 +11,8 @@ namespace GrapePhoto.Proxy
 {
     public static class AccountAPI
     {
-        public static string SignIn => $"api/account/signin";
-        public static string SignUp => $"api/account/signup";
+        public static string SignIn => $"/user/login";
+        public static string SignUp => $"/user/register";
     }
 
     public class AccountClient : IAccountClient
@@ -36,7 +36,6 @@ namespace GrapePhoto.Proxy
                 Id = Guid.NewGuid().ToString(),
                 UserName = "Txxni",
                 AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
-                Gender = Gender.Female,
             });
 
             return followingUsers;
@@ -50,7 +49,6 @@ namespace GrapePhoto.Proxy
                 Id = Guid.NewGuid().ToString(),
                 UserName = "Txxni",
                 AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
-                Gender = Gender.Female,
             };
         }
 
@@ -58,38 +56,57 @@ namespace GrapePhoto.Proxy
         {
             return new User()
             {
-                Id = Guid.NewGuid().ToString(),
-                UserName = "My Name",
-                AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
-                Gender = Gender.Male,
+                Id = username
             };
         }
  
         public SignInResult SignIn(User user)
         {
-          //  var client = new RestClient(_baseUri);
-           // var request = new RestRequest(AccountAPI.SignIn);
-      
-           // request.AddJsonBody(user);
-           // IRestResponse response = client.Post(request);
-            //var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
-
+            var client = new RestClient(_baseUri);
+            var request = new RestRequest(AccountAPI.SignIn);
+            request.AddQueryParameter("userid", user.UserName);
+            request.AddQueryParameter("pwd", user.PasswordHash);
+            request.AddHeader("Auth", "allow");
+            IRestResponse response = client.Get(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+           
             return new SignInResult()
             {
-                Succeed = true,
-                ErrorMessage = ""
+                Succeed = json.success,
+                ErrorMessage = json.error
             };
         }
 
-        public User SignUp(SignUpViewModel signUpViewModel)
+        public SignUpResult SignUp(SignUpViewModel signUpViewModel)
         {
             var client = new RestClient(_baseUri);
             var request = new RestRequest(AccountAPI.SignUp);
-            request.AddJsonBody(signUpViewModel);
-            IRestResponse response = client.Execute(request);
+            request.AddHeader("Auth", "allow");
+            request.AddHeader("userid", signUpViewModel.UserName);
+            request.AddHeader("pwd", signUpViewModel.Password);
+            request.AddHeader("username", signUpViewModel.FullName);
+            request.AddHeader("email", signUpViewModel.Email);
+            var user = new User();
+            IRestResponse response = client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
-            var user = JsonConvert.DeserializeObject<User>(json.result.ToString());
-            return user;
+            if (json.success)
+            {
+                user = new User()
+                {
+                    FullName = signUpViewModel.FullName,
+                    PasswordHash = signUpViewModel.Password,
+                    Email = signUpViewModel.Email,
+                    UserName = signUpViewModel.UserName
+                }; 
+              
+            }
+          
+            return new SignUpResult()
+            {
+                Succeed = json.success,
+                ErrorMessage = json.error,
+                user = user
+            };
         }
     }
 }

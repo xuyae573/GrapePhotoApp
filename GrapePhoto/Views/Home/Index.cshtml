@@ -28,8 +28,8 @@
 
 </div>
 
- @Html.Partial("_FloatingButton")
-
+@Html.Partial("_FloatingButton")
+@Html.Partial("_AddPostDialog")
 
 @section Scripts{
     <script>
@@ -39,11 +39,8 @@
             $(document).ready(function () {
                 $("#homelink").addClass("active");
             });
-
-
         });
-
-
+        
         require(['magnific-popup'], function () {
 
         });

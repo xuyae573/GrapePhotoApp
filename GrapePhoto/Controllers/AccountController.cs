@@ -47,38 +47,50 @@ namespace GrapePhoto.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             // HttpContext.Session.SetString("_Username","123");'
             // call our database,verify username and password;
-
-            var user = new User() {
-                UserName = model.UserName,
-                PasswordHash = model.Password
-            };
-            var result = _accountClient.SignIn(user);
-            if (result.Succeed)
+            if (ModelState.IsValid)
             {
-                var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserName) }, "Basic");
-                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                await HttpContext.SignInAsync(claimsPrincipal);
-
-                return RedirectToLocal(returnUrl);
+                var user = new User()
+                {
+                    UserName = model.UserName,
+                    PasswordHash = model.Password
+                };
+                var result = _accountClient.SignIn(user);
+                if (result.Succeed)
+                {
+                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserName) }, "Basic");
+                    var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                    await HttpContext.SignInAsync(claimsPrincipal);
+                    return RedirectToLocal(returnUrl);
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, result.ErrorMessage);
+                }
             }
-            else
-            {
-                return View(model);
-            }
+            return View(model);
         }
 
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult Register(SignUpViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Register(SignUpViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = _accountClient.SignUp(model);
-                //SignIn and set session User
+                var result = _accountClient.SignUp(model);
 
+                //SignIn and set session User
+                if (result.Succeed)
+                {
+                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserName) }, "Basic");
+                    var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                    await HttpContext.SignInAsync(claimsPrincipal);
+                    return RedirectToLocal(returnUrl);
+                }
+                {
+                    ModelState.AddModelError(string.Empty, result.ErrorMessage);
+                }
             }
 
             // If we got this far, something failed, redisplay form
