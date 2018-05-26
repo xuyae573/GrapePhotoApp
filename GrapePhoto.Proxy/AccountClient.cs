@@ -6,6 +6,8 @@ using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using GrapePhoto.Web.Models;
+using Amazon.APIGateway;
+using Amazon.APIGateway.Model;
 
 namespace GrapePhoto.Proxy
 {
@@ -17,11 +19,13 @@ namespace GrapePhoto.Proxy
 
     public class AccountClient : IAccountClient
     {
+        public AmazonAPIGatewayClient _client;
         private string _baseUri;
 
         public AccountClient(string baseUri)
         {
             _baseUri = baseUri;
+            _client = new AmazonAPIGatewayClient();
         }
 
         public List<User> GetAllFollowingUsersByUserName(string username)
@@ -62,12 +66,15 @@ namespace GrapePhoto.Proxy
  
         public SignInResult SignIn(User user)
         {
+            string requestDate = DateTime.UtcNow.ToString("yyyyMMddTHHmmss") + "Z";
             var client = new RestClient(_baseUri);
             var request = new RestRequest(AccountAPI.SignIn);
-            request.AddQueryParameter("userid", user.UserName);
-            request.AddQueryParameter("pwd", user.PasswordHash);
-            request.AddHeader("Auth", "allow");
-            IRestResponse response = client.Get(request);
+            request.AddJsonBody(user);
+            //request.AddQueryParameter("userid", user.UserName);
+            //request.AddQueryParameter("pwd", user.PasswordHash);
+            request.AddHeader("Authorisation","No Auth");
+            request.AddHeader("X-Amz-date", requestDate);
+            IRestResponse response = client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
            
             return new SignInResult()
@@ -79,8 +86,9 @@ namespace GrapePhoto.Proxy
 
         public SignUpResult SignUp(SignUpViewModel signUpViewModel)
         {
+             
+            var request = new RestRequest();
             var client = new RestClient(_baseUri);
-            var request = new RestRequest(AccountAPI.SignUp);
             request.AddHeader("Auth", "allow");
             request.AddHeader("userid", signUpViewModel.UserName);
             request.AddHeader("pwd", signUpViewModel.Password);

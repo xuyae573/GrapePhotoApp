@@ -57,7 +57,7 @@ namespace Notification.API.Web.Startup
             {
                 app.UseExceptionHandler("/Error");
             }
-
+           
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
