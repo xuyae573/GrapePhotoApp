@@ -6,8 +6,7 @@ using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using GrapePhoto.Web.Models;
-using Amazon.APIGateway;
-using Amazon.APIGateway.Model;
+ 
 
 namespace GrapePhoto.Proxy
 {
@@ -19,13 +18,13 @@ namespace GrapePhoto.Proxy
 
     public class AccountClient : IAccountClient
     {
-        public AmazonAPIGatewayClient _client;
+     
         private string _baseUri;
 
         public AccountClient(string baseUri)
         {
             _baseUri = baseUri;
-            _client = new AmazonAPIGatewayClient();
+            
         }
 
         public List<User> GetAllFollowingUsersByUserName(string username)
@@ -66,17 +65,15 @@ namespace GrapePhoto.Proxy
  
         public SignInResult SignIn(User user)
         {
-            string requestDate = DateTime.UtcNow.ToString("yyyyMMddTHHmmss") + "Z";
             var client = new RestClient(_baseUri);
             var request = new RestRequest(AccountAPI.SignIn);
-            request.AddJsonBody(user);
+            request.AddJsonBody(JsonConvert.SerializeObject(user));
             //request.AddQueryParameter("userid", user.UserName);
             //request.AddQueryParameter("pwd", user.PasswordHash);
-            request.AddHeader("Authorisation","No Auth");
-            request.AddHeader("X-Amz-date", requestDate);
+       
             IRestResponse response = client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
-           
+
             return new SignInResult()
             {
                 Succeed = json.success,
@@ -87,13 +84,13 @@ namespace GrapePhoto.Proxy
         public SignUpResult SignUp(SignUpViewModel signUpViewModel)
         {
              
-            var request = new RestRequest();
+            var request = new RestRequest(AccountAPI.SignUp);
             var client = new RestClient(_baseUri);
-            request.AddHeader("Auth", "allow");
-            request.AddHeader("userid", signUpViewModel.UserName);
-            request.AddHeader("pwd", signUpViewModel.Password);
-            request.AddHeader("username", signUpViewModel.FullName);
-            request.AddHeader("email", signUpViewModel.Email);
+            request.AddJsonBody(JsonConvert.SerializeObject(signUpViewModel));
+            //request.AddHeader("userid", signUpViewModel.UserName);
+            //request.AddHeader("pwd", signUpViewModel.Password);
+            //request.AddHeader("username", signUpViewModel.FullName);
+            //request.AddHeader("email", signUpViewModel.Email);
             var user = new User();
             IRestResponse response = client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
