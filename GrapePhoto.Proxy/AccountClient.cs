@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using GrapePhoto.Web.Models;
 using RestSharp.Serializers.Newtonsoft.Json;
+using System.Linq;
 
 namespace GrapePhoto.Proxy
 {
@@ -32,9 +33,9 @@ namespace GrapePhoto.Proxy
             _client = new RestClient(_baseUri);
         }
 
-        public List<User> GetAllFollowingUsersByUserName(string username)
+        public List<User> GetAllFollowingUsersByUserName(string userid)
         {
-            var userId = GetUserIdByUsername(username).Id;
+      
             //callAPI get all following users;
 
             var followingUsers = new List<User>();
@@ -57,35 +58,26 @@ namespace GrapePhoto.Proxy
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
             var user = new User { UserName = userId };
-            request.AddJsonBody(user);
+            request.AddJsonBody(new
+            {
+                key = "UserId",
+                value = userId
+            });
+             
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
             if (json.success)
             {
-                user = JsonConvert.DeserializeObject<User>(json.result.ToString());
-                return user;
-                //return new User()
-                //{
-                //    UserName = userId,
-                //    AvatarPicUrl = 
-                //   // AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
-                //};
+                var users = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
+                return users.First();
             }
             else
             {
                 return null;
             }
         }
-
-        public User GetUserIdByUsername(string username)
-        {
-            return new User()
-            {
-                Id = username
-            };
-        }
  
-        public SignInResult SignIn(User user)
+        public SignInResult SignIn(SignInViewModel user)
         {
             var request = new RestSharp.RestRequest(AccountAPI.SignIn)
             {
@@ -111,10 +103,6 @@ namespace GrapePhoto.Proxy
             };
 
             request.AddJsonBody(signUpViewModel);
-            //request.AddHeader("userid", signUpViewModel.UserName);
-            //request.AddHeader("pwd", signUpViewModel.Password);
-            //request.AddHeader("username", signUpViewModel.FullName);
-            //request.AddHeader("email", signUpViewModel.Email);
             var user = new User();
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
@@ -122,10 +110,10 @@ namespace GrapePhoto.Proxy
             {
                 user = new User()
                 {
-                    FullName = signUpViewModel.FullName,
+                    UserName = signUpViewModel.UserName,
                     PasswordHash = signUpViewModel.Password,
                     Email = signUpViewModel.Email,
-                    UserName = signUpViewModel.UserName
+                    UserId = signUpViewModel.UserId
                 }; 
               
             }

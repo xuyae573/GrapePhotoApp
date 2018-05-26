@@ -45,19 +45,13 @@ namespace GrapePhoto.Controllers
         public async Task<IActionResult> Login(SignInViewModel model,string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-            // HttpContext.Session.SetString("_Username","123");'
-            // call our database,verify username and password;
+ 
             if (ModelState.IsValid)
             {
-                var user = new User()
-                {
-                    UserName = model.UserName,
-                    PasswordHash = model.Password
-                };
-                var result = _accountClient.SignIn(user);
+                var result = _accountClient.SignIn(model);
                 if (result.Succeed)
                 {
-                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserName) }, "Basic");
+                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserId) }, "Basic");
                     var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                     await HttpContext.SignInAsync(claimsPrincipal);
                     return RedirectToLocal(returnUrl);
@@ -83,14 +77,12 @@ namespace GrapePhoto.Controllers
                 //SignIn and set session User
                 if (result.Succeed)
                 {
-                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserName) }, "Basic");
+                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserId) }, "Basic");
                     var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                     await HttpContext.SignInAsync(claimsPrincipal);
                     return RedirectToLocal(returnUrl);
                 }
-                {
-                    ModelState.AddModelError(string.Empty, result.ErrorMessage);
-                }
+                ModelState.AddModelError(string.Empty, result.ErrorMessage);
             }
 
             // If we got this far, something failed, redisplay form

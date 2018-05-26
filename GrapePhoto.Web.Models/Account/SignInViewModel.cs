@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -9,10 +10,12 @@ namespace GrapePhoto.Web.Models.Account
     {
         [Required]
         [Display(Name = "Username")]
-        public string UserName { get; set; }
+        [JsonProperty("userid")]
+        public string UserId { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
+        [JsonProperty("pwd")]
         public string Password { get; set; }
     }
 }

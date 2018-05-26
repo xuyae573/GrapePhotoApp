@@ -10,13 +10,12 @@ namespace GrapePhoto.Proxy
     {
         SignUpResult SignUp(SignUpViewModel signUpViewModel);
 
-        SignInResult SignIn(User user);
-
-        User GetUserIdByUsername(string username);
+        SignInResult SignIn(SignInViewModel user);
+ 
 
         User GetUserByUserId(string userId);
 
-        List<User> GetAllFollowingUsersByUserName(string username);
+        List<User> GetAllFollowingUsersByUserName(string userid);
     }
 
 }

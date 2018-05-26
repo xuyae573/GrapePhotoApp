@@ -3,7 +3,7 @@
     Layout = null;
     var user = userManager.GetUserByUserId(User.Identity.Name);
     var hasAvatar = !string.IsNullOrEmpty(user?.AvatarPicUrl);
-    var nameCaptialLetter = user?.FullName.Substring(0, 2);
+    var nameCaptialLetter = user?.UserId.Substring(0, 2).ToUpper();
 }
 @inject IAccountClient userManager
 <div class="dropdown d-none d-md-flex">
@@ -41,15 +41,15 @@
     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
         @if (hasAvatar)
         {
-        <span class="avatar" style="background-image: url('@user.AvatarPicUrl' )">
+        <span class="avatar" style="background-image: url('@user.AvatarPicUrl' )"><span class="avatar-status bg-green"></span>
         </span>
         }
         else
         {
-            <span class="avatar avatar-azure">@nameCaptialLetter</span>
+            <span class="avatar avatar-azure">@nameCaptialLetter<span class="avatar-status bg-green"></span></span>
         }
         <span class="ml-2 d-none d-lg-block">
-            <span class="text-default">@user.UserName</span>
+            <span class="text-default">@user.UserId</span>
             <small class="text-muted d-block mt-1"></small>
         </span>
     </a>

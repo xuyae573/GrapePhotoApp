@@ -45,9 +45,9 @@
         private List<PostViewModel> GetAllPictures(int pageIndex)
         {
             List<PostViewModel> list = new List<PostViewModel>();
-            var user = _accountService.GetUserIdByUsername(HttpContext.User.Identity.Name);
+            var userid =  HttpContext.User.Identity.Name;
 
-            var pictures = this._pictureService.GetPictures(user.Id, pageIndex, PaginationConsts.PageSize);
+            var pictures = this._pictureService.GetPictures(userid, pageIndex, PaginationConsts.PageSize);
             foreach (Picture picture in pictures)
             {
                 PostViewModel model1 = new PostViewModel
@@ -73,16 +73,15 @@
 
         private List<PostViewModel> GetRecentFollowingPosts(int page)
         {
-            string name = this.HttpContext.User.Identity.Name;
-            User userIdByUsername = this._accountService.GetUserIdByUsername(name);
+            string userid = this.HttpContext.User.Identity.Name;
             List<PostViewModel> list = new List<PostViewModel>();
-            IList<Picture> list2 = this._pictureService.GetFollowingPostsByUserId(userIdByUsername.Id, page, PaginationConsts.PageSize);
+            IList<Picture> list2 = this._pictureService.GetFollowingPostsByUserId(userid, page, PaginationConsts.PageSize);
             foreach (Picture picture in list2)
             {
                 PostViewModel model1 = new PostViewModel
                 {
                     Picture = picture,
-                    User = this._accountService.GetUserIdByUsername(picture.UserId)
+                    User = this._accountService.GetUserByUserId(picture.UserId)
                 };
                 list.Add(model1);
             }
