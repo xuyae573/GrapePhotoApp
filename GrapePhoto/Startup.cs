@@ -42,17 +42,17 @@ namespace GrapePhoto
             var accessKey = Configuration.GetValue<string>("AccessKey");
             var secretKey = Configuration.GetValue<string>("SecretKey");
 
-            var keys = new CredentialProfileOptions
-            {
-                AccessKey = accessKey,
-                SecretKey = secretKey
-            };
-            var profile = new CredentialProfile("basic_profile", keys)
-            {
-                Region = RegionEndpoint.USEast1
-            };
-            var netSDKFile = new NetSDKCredentialsFile();
-            netSDKFile.RegisterProfile(profile);
+            //var keys = new CredentialProfileOptions
+            //{
+            //    AccessKey = accessKey,
+            //    SecretKey = secretKey
+            //};
+            //var profile = new CredentialProfile("basic_profile", keys)
+            //{
+            //    Region = RegionEndpoint.USEast1
+            //};
+            //var netSDKFile = new NetSDKCredentialsFile();
+            //netSDKFile.RegisterProfile(profile);
 
 
             services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
@@ -94,7 +94,7 @@ namespace GrapePhoto
                 app.UseExceptionHandler("/Home/Error");
             }
             loggerFactory.AddLog4Net();
-            //app.UseSession();
+           
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc(routes =>

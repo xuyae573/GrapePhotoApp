@@ -1,8 +1,11 @@
-﻿
+﻿@using GrapePhoto.Proxy
 @{
     Layout = null;
+    var user = userManager.GetUserByUserId(User.Identity.Name);
+    var hasAvatar = !string.IsNullOrEmpty(user?.AvatarPicUrl);
+    var nameCaptialLetter = user?.FullName.Substring(0, 2);
 }
-
+@inject IAccountClient userManager
 <div class="dropdown d-none d-md-flex">
     <a class="nav-link icon" data-toggle="dropdown">
         <i class="fe fe-bell"></i>
@@ -36,10 +39,18 @@
 </div>
 <div class="dropdown">
     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-        <span class="avatar" style="background-image: url('@Url.Content("/images/demo/female/1.jpg")' )"></span>
+        @if (hasAvatar)
+        {
+        <span class="avatar" style="background-image: url('@user.AvatarPicUrl' )">
+        </span>
+        }
+        else
+        {
+            <span class="avatar avatar-azure">@nameCaptialLetter</span>
+        }
         <span class="ml-2 d-none d-lg-block">
-            <span class="text-default">@User.Identity.Name</span>
-            <small class="text-muted d-block mt-1">Administrator</small>
+            <span class="text-default">@user.UserName</span>
+            <small class="text-muted d-block mt-1"></small>
         </span>
     </a>
     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
