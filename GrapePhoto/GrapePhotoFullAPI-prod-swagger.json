@@ -1,0 +1,443 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2018-05-26T15:39:14Z",
+    "title": "GrapePhotoFullAPI"
+  },
+  "host": "xwgwg2b0yi.execute-api.us-east-1.amazonaws.com",
+  "basePath": "/prod",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/post/add": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "PostAddInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PostAddInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/post/feeds": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "FeedRecentInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FeedRecentInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/post/full": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "PostFullInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PostFullInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/post/like": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "PostLikeInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PostLikeInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/post/recent": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "PostRecentInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PostRecentInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/user/follow": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserFollowInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserFollowInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/user/login": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserLoginInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLoginInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/register": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserRegisterInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserRegisterInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/user/search": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserSearchInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserSearchInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/user/update": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserUpdateInputModel",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserUpdateInputModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
+    },
+    "PostFullInputModel": {
+      "type": "object",
+      "properties": {
+        "postid": {
+          "type": "string"
+        },
+        "userid": {
+          "type": "string"
+        }
+      },
+      "title": "PostFullInputModel"
+    },
+    "UserUpdateInputModel": {
+      "type": "object",
+      "properties": {
+        "userid": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "pwd": {
+          "type": "string"
+        }
+      },
+      "title": "UserUpdateInputModel"
+    },
+    "UserRegisterInputModel": {
+      "type": "object",
+      "properties": {
+        "userid": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "pwd": {
+          "type": "string"
+        }
+      },
+      "title": "UserRegisterInputModel"
+    },
+    "FeedRecentInputModel": {
+      "type": "object",
+      "properties": {
+        "userid": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer"
+        }
+      },
+      "title": "FeedRecentInputModel"
+    },
+    "PostRecentInputModel": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "integer"
+        }
+      },
+      "title": "PostRecentInputModel"
+    },
+    "UserLoginInputModel": {
+      "type": "object",
+      "properties": {
+        "userid": {
+          "type": "string"
+        },
+        "pwd": {
+          "type": "string"
+        }
+      },
+      "title": "UserLoginInputModel"
+    },
+    "UserSearchInputModel": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "title": "UserSearchInputModel"
+    },
+    "PostAddInputModel": {
+      "type": "object",
+      "properties": {
+        "note": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "userid": {
+          "type": "string"
+        }
+      },
+      "title": "PostAddInputModel"
+    },
+    "UserFollowInputModel": {
+      "type": "object",
+      "properties": {
+        "follower": {
+          "type": "string"
+        },
+        "followee": {
+          "type": "string"
+        },
+        "follow": {
+          "type": "integer"
+        }
+      },
+      "title": "UserFollowInputModel"
+    },
+    "PostLikeInputModel": {
+      "type": "object",
+      "properties": {
+        "userid": {
+          "type": "string"
+        },
+        "postid": {
+          "type": "string"
+        },
+        "like": {
+          "type": "integer"
+        }
+      },
+      "title": "PostLikeInputModel"
+    }
+  }
+}
