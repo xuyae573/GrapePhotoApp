@@ -93,7 +93,7 @@
             IndexViewModel model = new IndexViewModel
             {
                 Posts = this.GetRecentFollowingPosts(1),
-                FollowingUsers = this._accountService.GetAllFollowingUsersByUserName(base.HttpContext.User.Identity.Name)
+                FollowingUsers = this._accountService.GetAllFollowingUsersByUserId(base.HttpContext.User.Identity.Name)
             };
             return this.View(model);
         }

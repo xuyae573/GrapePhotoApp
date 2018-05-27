@@ -224,6 +224,11 @@ namespace GrapePhoto.Proxy
             throw new NotImplementedException();
         }
 
+        public bool LikePicture(Picture picture)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
 

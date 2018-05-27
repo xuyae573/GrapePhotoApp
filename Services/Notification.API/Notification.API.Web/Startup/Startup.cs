@@ -61,7 +61,7 @@ namespace Notification.API.Web.Startup
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "GrapePhoto Notification API V1");
+                options.SwaggerEndpoint("../swagger/v1/swagger.json", "GrapePhoto Notification API V1");
             }); // URL: /swagger
             app.UseStaticFiles();
 

@@ -12,14 +12,7 @@ namespace GrapePhoto.Web.Models.Account
         {
         }
 
-        [JsonProperty("UserId")]
         public string UserId { get; set; }
-        /// <summary>
-        /// Username , unique key field
-        /// </summary>
-        /// 
-        [JsonProperty("UserName")]
-        public new string UserName { get; set; }
 
         public string AvatarPicUrl { get; set; }
 

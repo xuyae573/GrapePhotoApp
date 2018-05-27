@@ -9,13 +9,13 @@ namespace GrapePhoto.Web.Models.Account
     public class SignInViewModel
     {
         [Required]
-        [Display(Name = "Username")]
-        [JsonProperty("userid")]
+        [Display(Name = "UserId")]
+        [JsonProperty("UserId")]
         public string UserId { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [JsonProperty("pwd")]
+        [JsonProperty("Password")]
         public string Password { get; set; }
     }
 }

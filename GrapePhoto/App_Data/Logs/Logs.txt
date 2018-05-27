@@ -1359,3 +1359,412 @@ INFO  2018-05-27 01:13:07,928 [14   ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2018-05-27 01:13:11,280 [14   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
 INFO  2018-05-27 01:13:12,626 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) in 4839.0674ms
 INFO  2018-05-27 01:13:12,652 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4984.013ms 200 text/html; charset=utf-8
+INFO  2018-05-27 23:59:12,624 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-27 23:59:14,092 [8    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-27 23:59:14,104 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-27 23:59:14,141 [8    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-27 23:59:14,193 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-27 23:59:14,219 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 169.0394ms
+INFO  2018-05-27 23:59:14,264 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1858.4172ms 302 
+INFO  2018-05-27 23:59:14,377 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-27 23:59:14,734 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-27 23:59:31,356 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-27 23:59:32,877 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 18358.9211ms
+INFO  2018-05-27 23:59:32,915 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 18567.8687ms 200 text/html; charset=utf-8
+INFO  2018-05-27 23:59:33,686 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/magnific-popup/dist/magnific-popup.css  
+INFO  2018-05-27 23:59:33,723 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/css/site.css  
+INFO  2018-05-27 23:59:33,731 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/bootstrap/dist/css/bootstrap.css  
+INFO  2018-05-27 23:59:33,925 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/magnific-popup/dist/magnific-popup.css was not modified
+INFO  2018-05-27 23:59:33,937 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-27 23:59:33,945 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+INFO  2018-05-27 23:59:34,006 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 464.6115ms 304 text/css
+INFO  2018-05-27 23:59:34,114 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 469.4946ms 304 text/css
+INFO  2018-05-27 23:59:34,196 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/css/dashboard.css  
+INFO  2018-05-27 23:59:34,214 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/js/require.min.js?v=VXI-ZPQrF1FBmAN5miFlH9z6n7HfAlNEoH9bYZ_AkVU  
+INFO  2018-05-27 23:59:34,225 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 522.2764ms 304 text/css
+INFO  2018-05-27 23:59:34,280 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/css/dashboard.css was not modified
+INFO  2018-05-27 23:59:34,310 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 194.9246ms 304 text/css
+INFO  2018-05-27 23:59:34,318 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/require.min.js was not modified
+INFO  2018-05-27 23:59:34,331 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 144.849ms 304 application/javascript
+INFO  2018-05-27 23:59:34,630 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/js/dashboard.js?v=nKEt5hZueG0sHeqFqkbf_CkCEdQeAjHYQwYEHvgNPvY  
+INFO  2018-05-27 23:59:34,641 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/dashboard.js was not modified
+INFO  2018-05-27 23:59:34,728 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 22.2849ms 304 application/javascript
+INFO  2018-05-27 23:59:34,779 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/images/logo.jpg  
+INFO  2018-05-27 23:59:34,795 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /images/logo.jpg was not modified
+INFO  2018-05-27 23:59:34,855 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/js/site.js?v=ffDcgBH3dBAoy-FcNhB-UOwwhsbh9n0F2lHEVhj_cj0  
+INFO  2018-05-27 23:59:34,905 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/js/html5.image.preview.js?v=W_N3e2MgR0FcRbgHgfMtFsDgIHu5X0wJZy54uJL79Wg  
+INFO  2018-05-27 23:59:34,912 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/site.js was not modified
+INFO  2018-05-27 23:59:34,929 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 56.8428ms 304 image/jpeg
+INFO  2018-05-27 23:59:34,933 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/html5.image.preview.js was not modified
+INFO  2018-05-27 23:59:34,954 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 212.4584ms 304 application/javascript
+INFO  2018-05-27 23:59:34,973 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 252.9873ms 304 application/javascript
+INFO  2018-05-27 23:59:39,672 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js  
+INFO  2018-05-27 23:59:39,686 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js was not modified
+INFO  2018-05-27 23:59:39,852 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.1497ms 304 application/javascript
+INFO  2018-05-27 23:59:42,779 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js  
+INFO  2018-05-27 23:59:42,817 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js was not modified
+INFO  2018-05-27 23:59:42,832 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 48.2236ms 304 application/javascript
+INFO  2018-05-27 23:59:43,108 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-27 23:59:43,221 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/js/core.js  
+INFO  2018-05-27 23:59:43,229 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/core.js was not modified
+INFO  2018-05-27 23:59:43,273 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 28.3401ms 304 application/javascript
+INFO  2018-05-27 23:59:43,459 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-27 23:59:47,679 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-27 23:59:47,774 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 4588.9378ms
+INFO  2018-05-27 23:59:48,079 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4806.2632ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:00:29,352 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger  
+INFO  2018-05-28 00:00:29,412 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 72.93ms 301 
+INFO  2018-05-28 00:00:29,459 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/  
+INFO  2018-05-28 00:00:29,612 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 109.56ms 200 text/html
+INFO  2018-05-28 00:00:29,642 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui-standalone-preset.js  
+INFO  2018-05-28 00:00:29,659 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui-bundle.js  
+INFO  2018-05-28 00:00:29,695 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2018-05-28 00:00:29,750 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2018-05-28 00:00:29,977 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui.css  
+INFO  2018-05-28 00:00:30,005 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2018-05-28 00:00:30,716 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 481.7905ms 200 text/css
+INFO  2018-05-28 00:00:31,197 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1407.296ms 200 application/javascript
+INFO  2018-05-28 00:00:31,938 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2141.8072ms 200 application/javascript
+INFO  2018-05-28 00:00:33,450 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/GrapePhotoFullAPI-prod-swagger.json  
+INFO  2018-05-28 00:00:33,490 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 43.4111ms 404 
+INFO  2018-05-28 00:00:33,989 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-28 00:00:33,996 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.0803ms 404 
+INFO  2018-05-28 00:00:34,121 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-28 00:00:34,150 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10.4329ms 404 
+INFO  2018-05-28 00:00:34,941 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/favicon-32x32.png  
+INFO  2018-05-28 00:00:35,060 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2018-05-28 00:00:35,080 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 323.9685ms 200 image/png
+INFO  2018-05-28 00:00:35,215 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/favicon-16x16.png  
+INFO  2018-05-28 00:00:35,236 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+INFO  2018-05-28 00:00:35,314 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 88.7466ms 200 image/png
+INFO  2018-05-28 00:00:46,839 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/GrapePhotoFullAPI-prod-swagger.json  
+INFO  2018-05-28 00:00:46,849 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9.9748ms 404 
+INFO  2018-05-28 00:02:13,000 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:02:13,854 [10   ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-28 00:02:13,865 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-28 00:02:13,882 [10   ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-28 00:02:13,934 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-28 00:02:13,950 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 156.2173ms
+INFO  2018-05-28 00:02:13,994 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1040.0739ms 302 
+INFO  2018-05-28 00:02:14,039 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-28 00:02:14,335 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-28 00:02:19,498 [10   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 00:02:20,734 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 6429.5451ms
+INFO  2018-05-28 00:02:20,817 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6772.3342ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:02:23,972 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-28 00:02:24,186 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-28 00:02:27,179 [10   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 00:02:27,443 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 3143.1239ms
+INFO  2018-05-28 00:02:27,997 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3668.4866ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:02:38,851 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/  
+INFO  2018-05-28 00:02:39,180 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 60.3533ms 200 text/html
+INFO  2018-05-28 00:02:39,853 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui-bundle.js.map  
+INFO  2018-05-28 00:02:39,910 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20.6484ms 404 
+INFO  2018-05-28 00:02:40,027 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger.json  
+INFO  2018-05-28 00:02:40,161 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 122.1679ms 404 
+INFO  2018-05-28 00:02:40,199 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2018-05-28 00:02:40,216 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7.0796ms 404 
+INFO  2018-05-28 00:28:12,738 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:28:14,438 [8    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-28 00:28:14,446 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-28 00:28:14,465 [8    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-28 00:28:14,518 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-28 00:28:14,541 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 210.8853ms
+INFO  2018-05-28 00:28:14,618 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2103.1772ms 302 
+INFO  2018-05-28 00:28:14,683 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-28 00:28:15,191 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-28 00:28:26,658 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 00:28:28,276 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 13290.782ms
+INFO  2018-05-28 00:28:28,324 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13620.632ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:29:19,649 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-28 00:29:23,304 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-28 00:29:26,814 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-28 00:29:26,832 [10   ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-28 00:29:26,839 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 7103.842ms
+INFO  2018-05-28 00:29:26,852 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7223.1147ms 302 
+INFO  2018-05-28 00:29:26,869 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:29:26,883 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:29:26,895 [14   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:29:26,902 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 00:29:30,766 [14   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-28 00:29:32,280 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 5319.8763ms
+ERROR 2018-05-28 00:29:32,679 [14   ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore._Views_Home__FollowingPost_cshtml.<ExecuteAsync>d__0.MoveNext() in C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\Views\Home\_FollowingPost.cshtml:line 11
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.<RenderPartialCoreAsync>d__60.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.<PartialAsync>d__57.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions.Partial(IHtmlHelper htmlHelper, String partialViewName, Object model, ViewDataDictionary viewData)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperPartialExtensions.Partial(IHtmlHelper htmlHelper, String partialViewName, Object model)
+   at AspNetCore._Views_Home_Index_cshtml.<ExecuteAsync>d__0.MoveNext() in C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\Views\Home\Index.cshtml:line 6
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageCoreAsync>d__16.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeResultAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResultFilterAsync>d__24.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+INFO  2018-05-28 00:29:33,601 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6686.7436ms 500 text/html; charset=utf-8
+INFO  2018-05-28 00:30:32,175 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-28 00:30:32,195 [19   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:30:32,208 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-28 00:30:32,233 [19   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 00:30:32,420 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 65.7184ms
+INFO  2018-05-28 00:30:32,744 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 270.2698ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:30:40,883 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 257
+INFO  2018-05-28 00:30:40,911 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:30:40,936 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-28 00:30:43,060 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-28 00:30:43,356 [21   ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-28 00:30:43,601 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 2444.4405ms
+INFO  2018-05-28 00:30:43,769 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2795.3738ms 302 
+INFO  2018-05-28 00:30:44,165 [21   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:30:44,258 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:30:44,267 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 257
+INFO  2018-05-28 00:30:44,281 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:30:44,293 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-28 00:30:44,304 [21   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:30:44,343 [21   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 00:31:09,519 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-28 00:31:09,527 [13   ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-28 00:31:09,535 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 25245.8923ms
+INFO  2018-05-28 00:31:09,546 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 25289.2802ms 302 
+INFO  2018-05-28 00:31:09,561 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:31:09,568 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:31:09,576 [13   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:31:09,593 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 00:32:16,314 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:32:17,069 [8    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-28 00:32:17,091 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-28 00:32:17,203 [8    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-28 00:32:17,354 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-28 00:32:17,370 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 368.1732ms
+INFO  2018-05-28 00:32:17,394 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1128.2171ms 302 
+INFO  2018-05-28 00:32:17,430 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-28 00:32:17,671 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-28 00:32:23,355 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 00:32:24,486 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 6672.3681ms
+INFO  2018-05-28 00:32:24,567 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7072.1982ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:32:28,024 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-28 00:32:28,246 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-28 00:32:31,362 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-28 00:32:31,394 [9    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-28 00:32:31,406 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 3292.6701ms
+INFO  2018-05-28 00:32:31,422 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3414.8518ms 302 
+INFO  2018-05-28 00:32:31,438 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 00:32:31,453 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:32:31,473 [9    ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:32:31,492 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+WARN  2018-05-28 00:32:34,882 [12   ] Microsoft.AspNetCore.Server.Kestrel      - Heartbeat took longer than "00:00:01" at "05/27/2018 16:32:34 +00:00".
+INFO  2018-05-28 00:32:53,358 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-28 00:33:05,036 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 33224.9083ms
+INFO  2018-05-28 00:33:05,113 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 33605.6209ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:33:05,128 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff?t=1501841394106  
+INFO  2018-05-28 00:33:05,638 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/fonts/feather/feather-webfont.woff was not modified
+INFO  2018-05-28 00:33:05,670 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 582.2461ms 304 application/font-woff
+INFO  2018-05-28 00:33:06,283 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/magnific-popup/dist/jquery.magnific-popup.min.js  
+INFO  2018-05-28 00:33:06,409 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/magnific-popup/dist/jquery.magnific-popup.min.js was not modified
+INFO  2018-05-28 00:33:06,769 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 445.4566ms 304 application/javascript
+INFO  2018-05-28 00:33:12,092 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/home/explore  
+INFO  2018-05-28 00:33:12,115 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:33:12,134 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:33:12,154 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 00:33:17,224 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
+INFO  2018-05-28 00:33:19,326 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) in 7007.8448ms
+INFO  2018-05-28 00:33:19,492 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7268.291ms 200 text/html; charset=utf-8
+INFO  2018-05-28 00:33:19,959 [16   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/home/explore  
+INFO  2018-05-28 00:33:20,124 [16   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:33:20,170 [16   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:33:20,210 [16   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 00:33:22,009 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/home/Index  
+INFO  2018-05-28 00:33:22,029 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 00:33:22,058 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 00:33:22,070 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 00:33:26,402 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-28 00:33:26,809 [16   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
+INFO  2018-05-28 01:12:28,455 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 01:12:29,028 [8    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-28 01:12:29,035 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-28 01:12:29,048 [8    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-28 01:12:29,087 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-28 01:12:29,098 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 111.7125ms
+INFO  2018-05-28 01:12:29,118 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 709.713ms 302 
+INFO  2018-05-28 01:12:29,142 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-28 01:12:29,419 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-28 01:12:38,550 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 01:12:39,760 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 10376.7791ms
+INFO  2018-05-28 01:12:39,797 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10653.633ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:13:41,548 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-28 01:13:41,727 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-28 01:13:44,051 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-28 01:13:44,068 [12   ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-28 01:13:44,074 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 2470.7148ms
+INFO  2018-05-28 01:13:44,094 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2549.6681ms 302 
+INFO  2018-05-28 01:13:44,112 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 01:13:44,125 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:13:44,143 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 01:13:44,151 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:13:47,966 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-28 01:13:51,329 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 7139.192ms
+INFO  2018-05-28 01:13:51,643 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7226.2966ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:14:07,037 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/home/explore  
+INFO  2018-05-28 01:14:07,045 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:14:07,057 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 01:14:07,065 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:14:11,983 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
+INFO  2018-05-28 01:14:13,852 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) in 6598.6318ms
+INFO  2018-05-28 01:14:13,918 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6842.0484ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:14:14,448 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/home/explore  
+INFO  2018-05-28 01:14:14,462 [12   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:14:14,481 [12   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 01:14:14,514 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:14:15,706 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/home/Index  
+INFO  2018-05-28 01:14:15,715 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:14:15,722 [9    ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-28 01:14:15,737 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:14:18,512 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-28 01:14:18,894 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
+INFO  2018-05-28 01:14:20,298 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 4572.2744ms
+INFO  2018-05-28 01:14:20,307 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4628.1327ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:14:20,573 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) in 5953.2698ms
+INFO  2018-05-28 01:14:20,583 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6529.5214ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:14:23,321 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Profile  
+INFO  2018-05-28 01:14:23,333 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:14:23,349 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:14:23,617 [14   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-28 01:14:26,140 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/demo/photos/ilnur-kalimullin-218996-500.jpg  
+INFO  2018-05-28 01:14:26,291 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/lib/tabler/dist/demo/photos/jakob-owens-224352-500.jpg  
+INFO  2018-05-28 01:14:26,356 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 2597.7673ms
+INFO  2018-05-28 01:14:26,841 [22   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/demo/photos/jakob-owens-224352-500.jpg was not modified
+INFO  2018-05-28 01:14:26,887 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3272.4703ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:14:26,917 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/demo/photos/ilnur-kalimullin-218996-500.jpg was not modified
+INFO  2018-05-28 01:14:26,966 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 896.5651ms 304 image/jpeg
+INFO  2018-05-28 01:14:26,986 [22   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 736.92ms 304 image/jpeg
+INFO  2018-05-28 01:14:35,298 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Profile/Edit  
+INFO  2018-05-28 01:14:35,313 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:14:35,326 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Edit (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:14:35,525 [14   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Edit.cshtml.
+INFO  2018-05-28 01:14:37,218 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Edit (GrapePhoto) in 1864.6894ms
+INFO  2018-05-28 01:14:37,325 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2023.4613ms 200 text/html; charset=utf-8
+INFO  2018-05-28 01:14:45,243 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:49331/Account/SignOut application/x-www-form-urlencoded 225
+INFO  2018-05-28 01:14:45,259 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-28 01:14:45,282 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.SignOut (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-28 01:14:45,329 [14   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed out.
+INFO  2018-05-28 01:14:45,352 [14   ] ft.AspNetCore.Mvc.RedirectToActionResult - Executing RedirectResult, redirecting to /.
+INFO  2018-05-28 01:14:45,360 [14   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.SignOut (GrapePhoto) in 83.3881ms
+INFO  2018-05-28 01:14:45,374 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 136.0553ms 302 
+INFO  2018-05-28 01:14:45,386 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/  
+INFO  2018-05-28 01:14:45,394 [9    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-28 01:14:45,403 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-28 01:14:45,413 [9    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-28 01:14:45,430 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-28 01:14:45,444 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 43.5336ms
+INFO  2018-05-28 01:14:45,458 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 73.2597ms 302 
+INFO  2018-05-28 01:14:45,470 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:49331/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-28 01:14:45,482 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-28 01:14:45,491 [12   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-28 01:14:45,616 [12   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 25.0498ms
+INFO  2018-05-28 01:14:46,005 [12   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 167.5999ms 200 text/html; charset=utf-8

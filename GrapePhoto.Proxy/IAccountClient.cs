@@ -15,7 +15,11 @@ namespace GrapePhoto.Proxy
 
         User GetUserByUserId(string userId);
 
-        List<User> GetAllFollowingUsersByUserName(string userid);
+        List<User> GetAllFollowingUsersByUserId(string userId);
+
+        List<User> GetAllFollowersUsersByUserId(string userId);
+
+        User UpdateProfile(User user);
     }
 
 }

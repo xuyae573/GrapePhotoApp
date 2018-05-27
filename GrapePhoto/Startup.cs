@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace GrapePhoto
 {
@@ -39,8 +40,12 @@ namespace GrapePhoto
 
             services.AddDistributedMemoryCache();
 
+         
+
             var accessKey = Configuration.GetValue<string>("AccessKey");
             var secretKey = Configuration.GetValue<string>("SecretKey");
+
+
 
             //var keys = new CredentialProfileOptions
             //{
@@ -94,7 +99,7 @@ namespace GrapePhoto
                 app.UseExceptionHandler("/Home/Error");
             }
             loggerFactory.AddLog4Net();
-           
+         
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc(routes =>

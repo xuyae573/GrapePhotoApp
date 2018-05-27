@@ -30,5 +30,7 @@ namespace GrapePhoto.Proxy
 
         void DeletePicture(Picture picture);
 
+
+        bool LikePicture(Picture picture);
     }
 }
