@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2018-05-27T03:53:28Z",
+    "version": "2018-05-27T23:18:58Z",
     "title": "GrapePhotoFullAPI"
   },
   "host": "xwgwg2b0yi.execute-api.us-east-1.amazonaws.com",
@@ -206,6 +206,33 @@
         }
       }
     },
+    "/user/follower": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserFollowerInputModel",
+            "required": true,
+            "schema": {
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
     "/user/login": {
       "post": {
         "consumes": [
@@ -325,6 +352,72 @@
     }
   },
   "definitions": {
+    "UserRegisterInputModel": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "string"
+        },
+        "UserName": {
+          "type": "string"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        }
+      },
+      "title": "UserRegisterInputModel"
+    },
+    "FeedRecentInputModel": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "string"
+        },
+        "Limit": {
+          "type": "integer"
+        }
+      },
+      "title": "FeedRecentInputModel"
+    },
+    "UserLoginInputModel": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "string"
+        },
+        "Password": {
+          "type": "string"
+        }
+      },
+      "title": "UserLoginInputModel"
+    },
+    "UserFolloweeInputModel": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "string"
+        }
+      },
+      "title": "UserFolloweeInputModel"
+    },
+    "PostLikeInputModel": {
+      "type": "object",
+      "properties": {
+        "UserId": {
+          "type": "string"
+        },
+        "PostId": {
+          "type": "string"
+        },
+        "Like": {
+          "type": "integer"
+        }
+      },
+      "title": "PostLikeInputModel"
+    },
     "Empty": {
       "type": "object",
       "title": "Empty Schema"
@@ -359,36 +452,6 @@
       },
       "title": "UserUpdateInputModel"
     },
-    "UserRegisterInputModel": {
-      "type": "object",
-      "properties": {
-        "UserId": {
-          "type": "string"
-        },
-        "UserName": {
-          "type": "string"
-        },
-        "Email": {
-          "type": "string"
-        },
-        "Password": {
-          "type": "string"
-        }
-      },
-      "title": "UserRegisterInputModel"
-    },
-    "FeedRecentInputModel": {
-      "type": "object",
-      "properties": {
-        "UserId": {
-          "type": "string"
-        },
-        "Limit": {
-          "type": "integer"
-        }
-      },
-      "title": "FeedRecentInputModel"
-    },
     "PostRecentInputModel": {
       "type": "object",
       "properties": {
@@ -397,18 +460,6 @@
         }
       },
       "title": "PostRecentInputModel"
-    },
-    "UserLoginInputModel": {
-      "type": "object",
-      "properties": {
-        "UserId": {
-          "type": "string"
-        },
-        "Password": {
-          "type": "string"
-        }
-      },
-      "title": "UserLoginInputModel"
     },
     "UserSearchInputModel": {
       "type": "object",
@@ -437,14 +488,14 @@
       },
       "title": "PostAddInputModel"
     },
-    "UserFolloweeInputModel": {
+    "UserFollowerInputModel": {
       "type": "object",
       "properties": {
         "UserId": {
           "type": "string"
         }
       },
-      "title": "UserFolloweeInputModel"
+      "title": "UserFollowerInputModel"
     },
     "UserFollowInputModel": {
       "type": "object",
@@ -460,21 +511,6 @@
         }
       },
       "title": "UserFollowInputModel"
-    },
-    "PostLikeInputModel": {
-      "type": "object",
-      "properties": {
-        "UserId": {
-          "type": "string"
-        },
-        "PostId": {
-          "type": "string"
-        },
-        "Like": {
-          "type": "integer"
-        }
-      },
-      "title": "PostLikeInputModel"
     }
   }
 }
