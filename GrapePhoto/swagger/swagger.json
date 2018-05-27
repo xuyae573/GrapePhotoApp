@@ -220,6 +220,7 @@
             "name": "UserFollowerInputModel",
             "required": true,
             "schema": {
+              "$ref": "#/definitions/UserFollowerInputModel"
             }
           }
         ],
