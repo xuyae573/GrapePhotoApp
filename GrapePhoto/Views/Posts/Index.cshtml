@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Send a Post</title>
+</head>
+<body>
+    <div>
+        <form action="/Posts/Create" method="post">
+            UserName: <input type="text" id="UserName" name="UserName" value="" /><br />
+            Message: <input type="text" id="Content" name="Content" value="" /><br />
+            <input type="submit" name="BtnSave" value="Save Post" />
+        </form>
+    </div>
+</body>
+</html>
