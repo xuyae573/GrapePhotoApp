@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using GrapePhoto.Web.Models.Account;
 
@@ -19,10 +20,15 @@ namespace GrapePhoto.Web.Models
 
         public DateTime PostDate { get; set; }
 
+        public Stream PictureStream{ get; set; }
+        public byte[] Bytes { get; set; }
+
         public string MimeType { get; set; }
 
         public string AltAttribute { get; set; }
  
         public string TitleAttribute { get; set; }
+
+        public string S3FileName { get; set; }
     }
 }

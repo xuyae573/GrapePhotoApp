@@ -7,9 +7,6 @@ namespace GrapePhoto.Proxy
 {
     public interface IPictureService
     {
-
-        byte[] LoadPictureBinary(Picture picture);
-  
         string GetPictureUrl(string pictureId,
             int targetSize = 0,
             PictureType defaultPictureType = PictureType.Post);
@@ -26,10 +23,9 @@ namespace GrapePhoto.Proxy
 
         IList<Picture> GetUserPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue);
 
-        Picture InsertPicture(byte[] pictureBinary, string mimeType, string titleAttribute = null);
+        Picture InsertPicture(Picture picture);
 
         void DeletePicture(Picture picture);
-
 
         bool LikePicture(Picture picture);
     }

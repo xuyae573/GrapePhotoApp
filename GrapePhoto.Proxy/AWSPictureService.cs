@@ -1,12 +1,19 @@
-﻿using Amazon.S3;
+﻿using Amazon;
+using Amazon.Runtime;
+using Amazon.S3;
 using Amazon.S3.Model;
+using Amazon.S3.Transfer;
 using GrapePhoto.Web.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Internal;
 using System;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
+using System.Drawing;
+using ImageMagick;
 
 namespace GrapePhoto.Proxy
 {
@@ -21,17 +28,23 @@ namespace GrapePhoto.Proxy
         #region Fields
 
         IAmazonS3 S3Client { get; set; }
-        IHostingEnvironment _hostingEnvironment;
-        private static readonly string bucketName = "image01-824831449792";
+        IConfiguration Configuration { get; set; }
+
+        private static readonly string bucketName = "grapephoto";
+
+        private static readonly string ThumbFolerPath = bucketName + @"/Thumbs";
+
+        private static readonly string s3WebUrl = "https://s3.amazonaws.com/{0}/{1}";
         #endregion
 
 
 
         #region Ctor
 
-        public AWSPictureService(IHostingEnvironment hostingEnvironment)
+        public AWSPictureService(IConfiguration configuration)
         {
-            _hostingEnvironment = hostingEnvironment;
+            this.Configuration = configuration;
+
            // this.S3Client = amazonS3;
         }
 
@@ -103,89 +116,10 @@ namespace GrapePhoto.Proxy
             throw new NotImplementedException();
         }
 
-        public Picture InsertPicture(byte[] pictureBinary, string mimeType, string titleAttribute = null)
-        {
-            try
-            {
-                Stream stream = new MemoryStream(pictureBinary);
-                var pictureId = Guid.NewGuid();
-                // simple object put
-                PutObjectRequest request = new PutObjectRequest()
-                {
-                    InputStream = stream,
-                    BucketName = bucketName,
-                    ContentType = mimeType,
-                    Key = pictureId.ToString()
-                };
-
-                var response = S3Client.PutObjectAsync(request);
-
-                // put a more complex object with some metadata and http headers.
-                PutObjectRequest titledRequest = new PutObjectRequest()
-                {
-                    BucketName = bucketName,
-                    Key = pictureId.ToString()
-                };
-                titledRequest.Metadata.Add("title", titleAttribute);
-
-                S3Client.PutObjectAsync(titledRequest);
-
-              
-            }
-            catch (AmazonS3Exception amazonS3Exception)
-            {
-                if (amazonS3Exception.ErrorCode != null &&
-                    (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
-                    amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
-                {
-                    Console.WriteLine("Please check the provided AWS Credentials.");
-                    Console.WriteLine("If you haven't signed up for Amazon S3, please visit http://aws.amazon.com/s3");
-                }
-                else
-                {
-                    Console.WriteLine("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message);
-                }
-            }
-            return new Picture();
-        }
-
-        public byte[] LoadPictureBinary(Picture picture)
-        {
-            throw new NotImplementedException();
-        }
-
+ 
         #endregion
 
         #region Utilities
-
-        /// <summary>
-        /// Returns the file extension from mime type.
-        /// </summary>
-        /// <param name="mimeType">Mime type</param>
-        /// <returns>File extension</returns>
-        protected virtual string GetFileExtensionFromMimeType(string mimeType)
-        {
-            if (mimeType == null)
-                return null;
-
-            //TODO use FileExtensionContentTypeProvider to get file extension
-
-            var parts = mimeType.Split('/');
-            var lastPart = parts[parts.Length - 1];
-            switch (lastPart)
-            {
-                case "pjpeg":
-                    lastPart = "jpg";
-                    break;
-                case "x-png":
-                    lastPart = "png";
-                    break;
-                case "x-icon":
-                    lastPart = "ico";
-                    break;
-            }
-            return lastPart;
-        }
 
         public IList<Picture> GetFollowingPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue)
         {
@@ -229,9 +163,79 @@ namespace GrapePhoto.Proxy
             throw new NotImplementedException();
         }
 
+        public Picture InsertPicture(Picture picture)
+        {
+            var awsConfig = Configuration.GetAWSOptions();
+            S3Client = new AmazonS3Client(awsConfig.Credentials,RegionEndpoint.USEast1);
+            try
+            {
+                var fileTransferUtility = new TransferUtility(S3Client);
+          
+                picture.PictureStream = new MemoryStream(picture.Bytes);
+                var transferrequest = new TransferUtilityUploadRequest
+                {
+                    InputStream = picture.PictureStream,
+                    BucketName = bucketName,
+                    ContentType = picture.MimeType,
+                    Key = picture.S3FileName,
+                    CannedACL = S3CannedACL.PublicRead
+                };
+                fileTransferUtility.Upload(transferrequest);
+                picture.Src = string.Format(s3WebUrl, transferrequest.BucketName, transferrequest.Key);
+
+
+                var thumbStream = new MemoryStream();
+                int _size = 300;
+                using (MagickImage image = new MagickImage(picture.Bytes))
+                {
+                    int width, height;
+                    if (image.Width > image.Height)
+                    {
+                        width = _size;
+                        height = image.Height * _size / image.Width;
+                    }
+                    else
+                    {
+                        width = image.Width * _size / image.Height;
+                        height = _size;
+                    }
+                    MagickGeometry size = new MagickGeometry(width, height);
+                    size.IgnoreAspectRatio = true;
+                    image.Resize(size);
+                    image.Write(thumbStream);
+                }
+
+
+
+                var transferThumbs = new TransferUtilityUploadRequest
+                {
+                    InputStream = thumbStream,
+                    BucketName = ThumbFolerPath,
+                    ContentType = picture.MimeType,
+                    Key = picture.S3FileName,
+                    CannedACL = S3CannedACL.PublicRead
+                };
+                fileTransferUtility.Upload(transferThumbs);
+
+                picture.ThumbnailSrc = string.Format(s3WebUrl, transferThumbs.BucketName, transferrequest.Key);
+                return picture;
+            }
+            catch (AmazonS3Exception amazonS3Exception)
+            {
+                if (amazonS3Exception.ErrorCode != null &&
+                    (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
+                    amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
+                {
+                    throw new Exception("Please check the provided AWS Credentials.");
+                }
+                else
+                {
+                    throw new Exception(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
+                }
+            }
+        }
+
         #endregion
-
-
 
     }
 }

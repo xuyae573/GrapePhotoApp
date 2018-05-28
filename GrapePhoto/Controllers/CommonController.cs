@@ -7,6 +7,8 @@ using GrapePhoto.Extensions;
 using GrapePhoto.Proxy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
+using Amazon.S3;
+using GrapePhoto.Web.Models;
 
 namespace GrapePhoto.Controllers
 {
@@ -25,9 +27,9 @@ namespace GrapePhoto.Controllers
 
         [HttpPost]
         //do not validate request token (XSRF)
-        public IActionResult AsyncUpload(string comments)
+        public JsonResult AsyncUpload(string comments)
         {
-            var pictureComments = comments != null ? comments.Trim(): "";
+            var pictureComments = comments != null ? comments.Trim() : "";
             var httpPostedFile = Request.Form.Files.FirstOrDefault();
             if (httpPostedFile == null)
             {
@@ -39,17 +41,13 @@ namespace GrapePhoto.Controllers
                 });
             }
 
-            var fileBinary = httpPostedFile.GetDownloadBits();
-
             var qqFileNameParameter = "qqfile";
             var fileName = httpPostedFile.FileName;
             if (string.IsNullOrEmpty(fileName) && Request.Form.ContainsKey(qqFileNameParameter))
                 fileName = Request.Form[qqFileNameParameter].ToString();
             //remove path (passed in IE)
             fileName = Path.GetFileName(fileName);
-
             var contentType = httpPostedFile.ContentType;
-
             var fileExtension = Path.GetExtension(fileName);
             if (!string.IsNullOrEmpty(fileExtension))
                 fileExtension = fileExtension.ToLowerInvariant();
@@ -60,16 +58,27 @@ namespace GrapePhoto.Controllers
                 contentType = provider.Mappings[fileExtension];
             }
 
-           // var picture = _pictureService.InsertPicture(fileBinary, contentType, null);
-            //when returning JSON the mime-type must be set to text/plain
-            //otherwise some browsers will pop-up a "Save As" dialog.
+       
+            var id = Guid.NewGuid().ToString();
+            string s3FileName = $"{id}{fileExtension}";
+
+            var bytes = httpPostedFile.GetDownloadBits();
+
+            var picture = new Picture()
+            {
+                Id = id,
+                S3FileName = s3FileName,
+                Bytes = bytes,
+                MimeType = contentType
+            };
+
+            _pictureService.InsertPicture(picture);
+
             return Json(new
             {
                 success = true,
-                //pictureId = picture.Id,
-                //imageUrl =  picture.Src
+                result = picture
             });
         }
-
     }
 }

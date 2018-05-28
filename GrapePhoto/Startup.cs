@@ -42,8 +42,8 @@ namespace GrapePhoto
 
          
 
-            var accessKey = Configuration.GetValue<string>("AccessKey");
-            var secretKey = Configuration.GetValue<string>("SecretKey");
+            //var accessKey = Configuration.GetValue<string>("AccessKey");
+            //var secretKey = Configuration.GetValue<string>("SecretKey");
 
 
 
