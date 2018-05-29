@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 using Amazon.S3;
 using GrapePhoto.Web.Models;
+using GrapePhoto.Models;
+using GrapePhoto.Helper;
 
 namespace GrapePhoto.Controllers
 {
@@ -17,10 +19,13 @@ namespace GrapePhoto.Controllers
         private IPictureService _pictureService;
         private IPostService _postService;
 
-        public CommonController(IPictureService pictureService, IPostService postService)
+        private IAccountClient _accountClient;
+
+        public CommonController(IPictureService pictureService, IPostService postService, IAccountClient accountClient)
         {
             _pictureService = pictureService;
             _postService = postService;
+            _accountClient = accountClient;
         }
         public IActionResult Index()
         {
@@ -29,7 +34,7 @@ namespace GrapePhoto.Controllers
 
 
         [HttpPost]
-        public JsonResult AsyncUpload(string comments)
+        public async Task<JsonResult>  AsyncUpload(string comments)
         {
 
                 var pictureComments = comments != null ? comments.Trim() : "";
@@ -86,7 +91,24 @@ namespace GrapePhoto.Controllers
 
                 _postService.AddPost(post);
 
-                return Json(new
+
+            var result = _accountClient.GetAllFollowersUsersByUserId(HttpContext.User.Identity.Name.ToString());
+
+            var m = new Message()
+            {
+                UserName = HttpContext.User.Identity.Name.ToString(),
+                Content = comments,
+                ImageUrl = picture.Src,
+                Followers = new string[] { "liucao", "allen" }
+            };
+
+
+            // context.indentity.userid  is in the list of database 
+
+            await Channel.Trigger(m, "feed", "new_feed");
+
+
+            return Json(new
                 {
                     success = true,
                     result = picture,
