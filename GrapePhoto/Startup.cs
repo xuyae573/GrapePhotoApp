@@ -40,26 +40,6 @@ namespace GrapePhoto
 
             services.AddDistributedMemoryCache();
 
-         
-
-            //var accessKey = Configuration.GetValue<string>("AccessKey");
-            //var secretKey = Configuration.GetValue<string>("SecretKey");
-
-
-
-            //var keys = new CredentialProfileOptions
-            //{
-            //    AccessKey = accessKey,
-            //    SecretKey = secretKey
-            //};
-            //var profile = new CredentialProfile("basic_profile", keys)
-            //{
-            //    Region = RegionEndpoint.USEast1
-            //};
-            //var netSDKFile = new NetSDKCredentialsFile();
-            //netSDKFile.RegisterProfile(profile);
-
-
             services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
             services.AddAWSService<IAmazonS3>();
 
@@ -76,14 +56,18 @@ namespace GrapePhoto
                 options.LoginPath = "/Account/Login/";
                 options.AccessDeniedPath = "/Account/Forbidden/";
             });
-            var identityUrl = Configuration.GetValue<string>("IdentityUrl");
+            var apiRootUrl = Configuration.GetValue<string>("ApiRootUrl");
 
             services.AddTransient<IAccountClient, AccountClient>(c =>
             {
-                return new AccountClient(identityUrl);
+                return new AccountClient(apiRootUrl);
             });
 
             services.AddTransient<IPictureService, AWSPictureService>();
+            services.AddTransient<IPostService, PostService>(c =>
+            {
+                return new PostService(apiRootUrl);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

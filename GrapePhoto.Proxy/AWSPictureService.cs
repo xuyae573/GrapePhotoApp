@@ -17,6 +17,11 @@ using ImageMagick;
 
 namespace GrapePhoto.Proxy
 {
+    public static class PictureAPI
+    {
+  
+    }
+
     public class AWSPictureService : IPictureService
     {
         #region Const
@@ -30,11 +35,13 @@ namespace GrapePhoto.Proxy
         IAmazonS3 S3Client { get; set; }
         IConfiguration Configuration { get; set; }
 
-        private static readonly string bucketName = "grapephoto";
+        private static readonly string bucketName = "image-us-east-1-824831449792";
 
         private static readonly string ThumbFolerPath = bucketName + @"/Thumbs";
 
         private static readonly string s3WebUrl = "https://s3.amazonaws.com/{0}/{1}";
+
+        private static readonly int _size = 300; // thumb size
         #endregion
 
 
@@ -44,8 +51,6 @@ namespace GrapePhoto.Proxy
         public AWSPictureService(IConfiguration configuration)
         {
             this.Configuration = configuration;
-
-           // this.S3Client = amazonS3;
         }
 
         public void DeletePicture(Picture picture)
@@ -185,7 +190,7 @@ namespace GrapePhoto.Proxy
 
 
                 var thumbStream = new MemoryStream();
-                int _size = 300;
+               
                 using (MagickImage image = new MagickImage(picture.Bytes))
                 {
                     int width, height;
@@ -204,8 +209,6 @@ namespace GrapePhoto.Proxy
                     image.Resize(size);
                     image.Write(thumbStream);
                 }
-
-
 
                 var transferThumbs = new TransferUtilityUploadRequest
                 {

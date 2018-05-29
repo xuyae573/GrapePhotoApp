@@ -15,9 +15,12 @@ namespace GrapePhoto.Controllers
     public class CommonController : Controller
     {
         private IPictureService _pictureService;
-        public CommonController(IPictureService pictureService)
+        private IPostService _postService;
+
+        public CommonController(IPictureService pictureService, IPostService postService)
         {
             _pictureService = pictureService;
+            _postService = postService;
         }
         public IActionResult Index()
         {
@@ -26,59 +29,69 @@ namespace GrapePhoto.Controllers
 
 
         [HttpPost]
-        //do not validate request token (XSRF)
         public JsonResult AsyncUpload(string comments)
         {
-            var pictureComments = comments != null ? comments.Trim() : "";
-            var httpPostedFile = Request.Form.Files.FirstOrDefault();
-            if (httpPostedFile == null)
-            {
+
+                var pictureComments = comments != null ? comments.Trim() : "";
+                var httpPostedFile = Request.Form.Files.FirstOrDefault();
+                if (httpPostedFile == null)
+                {
+                    return Json(new
+                    {
+                        success = false,
+                        message = "No file uploaded",
+                        downloadGuid = Guid.Empty,
+                    });
+                }
+
+                var qqFileNameParameter = "qqfile";
+                var fileName = httpPostedFile.FileName;
+                if (string.IsNullOrEmpty(fileName) && Request.Form.ContainsKey(qqFileNameParameter))
+                    fileName = Request.Form[qqFileNameParameter].ToString();
+                //remove path (passed in IE)
+                fileName = Path.GetFileName(fileName);
+                var contentType = httpPostedFile.ContentType;
+                var fileExtension = Path.GetExtension(fileName);
+                if (!string.IsNullOrEmpty(fileExtension))
+                    fileExtension = fileExtension.ToLowerInvariant();
+
+                var provider = new FileExtensionContentTypeProvider();
+                if (string.IsNullOrEmpty(contentType))
+                {
+                    contentType = provider.Mappings[fileExtension];
+                }
+
+
+                var id = Guid.NewGuid().ToString();
+                string s3FileName = $"{id}{fileExtension}";
+
+                var bytes = httpPostedFile.GetDownloadBits();
+
+                var picture = new Picture()
+                {
+                    Id = id,
+                    S3FileName = s3FileName,
+                    Bytes = bytes,
+                    MimeType = contentType
+                };
+
+                _pictureService.InsertPicture(picture);
+
+                var post = new PostDto()
+                {
+                    Title = comments,
+                    ImgUrl = picture.Src,
+                    UserId = HttpContext.User.Identity.Name
+                };
+
+                _postService.AddPost(post);
+
                 return Json(new
                 {
-                    success = false,
-                    message = "No file uploaded",
-                    downloadGuid = Guid.Empty,
+                    success = true,
+                    result = picture,
+
                 });
-            }
-
-            var qqFileNameParameter = "qqfile";
-            var fileName = httpPostedFile.FileName;
-            if (string.IsNullOrEmpty(fileName) && Request.Form.ContainsKey(qqFileNameParameter))
-                fileName = Request.Form[qqFileNameParameter].ToString();
-            //remove path (passed in IE)
-            fileName = Path.GetFileName(fileName);
-            var contentType = httpPostedFile.ContentType;
-            var fileExtension = Path.GetExtension(fileName);
-            if (!string.IsNullOrEmpty(fileExtension))
-                fileExtension = fileExtension.ToLowerInvariant();
-
-            var provider = new FileExtensionContentTypeProvider();
-            if (string.IsNullOrEmpty(contentType))
-            {
-                contentType = provider.Mappings[fileExtension];
-            }
-
-       
-            var id = Guid.NewGuid().ToString();
-            string s3FileName = $"{id}{fileExtension}";
-
-            var bytes = httpPostedFile.GetDownloadBits();
-
-            var picture = new Picture()
-            {
-                Id = id,
-                S3FileName = s3FileName,
-                Bytes = bytes,
-                MimeType = contentType
-            };
-
-            _pictureService.InsertPicture(picture);
-
-            return Json(new
-            {
-                success = true,
-                result = picture
-            });
         }
     }
 }

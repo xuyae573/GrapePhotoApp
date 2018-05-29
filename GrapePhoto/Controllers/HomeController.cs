@@ -15,12 +15,14 @@
     public class HomeController : Controller
     {
         private IPictureService _pictureService;
+        private IPostService _postService;
         private IAccountClient _accountService;
 
-        public HomeController(IPictureService pictureService, IAccountClient client)
+        public HomeController(IPictureService pictureService, IAccountClient client, IPostService postService)
         {
             this._pictureService = pictureService;
             this._accountService = client;
+            this._postService = postService;
         }
 
         public IActionResult Error()
@@ -41,28 +43,21 @@
             };
             return this.View(model);
         }
-
-        private List<PostViewModel> GetAllPictures(int pageIndex)
-        {
-            List<PostViewModel> list = new List<PostViewModel>();
-            var userid =  HttpContext.User.Identity.Name;
-
-            var pictures = this._pictureService.GetPictures(userid, pageIndex, PaginationConsts.PageSize);
-            foreach (Picture picture in pictures)
-            {
-                PostViewModel model1 = new PostViewModel
-                {
-                    Picture = picture,
-                    User = this._accountService.GetUserByUserId(picture.UserId)
-                };
-                list.Add(model1);
-            }
-            return list;
-        }
-
+   
         [HttpPost]
         public JsonResult GetExploreJson(int pageIndex) =>
             this.Json(this.GetAllPictures(pageIndex));
+
+
+        public IActionResult Index()
+        {
+            IndexViewModel model = new IndexViewModel
+            {
+                Posts = this.GetRecentFollowingPosts(0),
+                FollowingUsers = this._accountService.GetAllFollowingUsersByUserId(base.HttpContext.User.Identity.Name)
+            };
+            return this.View(model);
+        }
 
         [HttpPost]
         public JsonResult GetPosts(int pageIndex)
@@ -70,32 +65,47 @@
             List<PostViewModel> recentFollowingPosts = this.GetRecentFollowingPosts(pageIndex);
             return this.Json(recentFollowingPosts);
         }
+      
 
+        #region Prepare ViewModel
+        private List<PostViewModel> GetAllPictures(int pageIndex)
+        {
+            List<PostViewModel> list = new List<PostViewModel>();
+            var userid = HttpContext.User.Identity.Name;
+            var posts = this._postService.GetPosts(userid, pageIndex, PaginationConsts.PageSize);
+            PreparePostViewModel(list, posts);
+            return list;
+        }
         private List<PostViewModel> GetRecentFollowingPosts(int page)
         {
             string userid = this.HttpContext.User.Identity.Name;
             List<PostViewModel> list = new List<PostViewModel>();
-            IList<Picture> list2 = this._pictureService.GetFollowingPostsByUserId(userid, page, PaginationConsts.PageSize);
-            foreach (Picture picture in list2)
+            var followingPosts = this._postService.GetFollowingPostsByUserId(userid, page, PaginationConsts.PageSize);
+            PreparePostViewModel(list, followingPosts);
+            return list;
+        }
+        private void PreparePostViewModel(List<PostViewModel> list, IPagedList<PostDto> posts)
+        {
+            foreach (var post in posts)
             {
                 PostViewModel model1 = new PostViewModel
                 {
-                    Picture = picture,
-                    User = this._accountService.GetUserByUserId(picture.UserId)
+                    Picture = new Picture()
+                    {
+                        Src = post.ImgUrl,
+                        ThumbnailSrc = post.ImgUrl, // to do replace
+                        TitleAttribute = post.Title,
+                        PostDate = post.PostDate,
+                        LikeCount = post.LikeCount,
+                        Id = post.Id,
+                        UserId = post.UserId,
+                        AltAttribute = post.Title,
+                    },
+                    User = this._accountService.GetUserByUserId(post.UserId)
                 };
                 list.Add(model1);
             }
-            return list;
         }
-
-        public IActionResult Index()
-        {
-            IndexViewModel model = new IndexViewModel
-            {
-                Posts = this.GetRecentFollowingPosts(1),
-                FollowingUsers = this._accountService.GetAllFollowingUsersByUserId(base.HttpContext.User.Identity.Name)
-            };
-            return this.View(model);
-        }
+        #endregion
     }
 }

@@ -19,8 +19,10 @@ namespace GrapePhoto.Proxy
         public static string UpdateUser => $"/user/update";
         public static string SearchUsers => $"/user/search";
 
-        public static string Following => $"/user/follow";
-        public static string Followers => $"/user/followee";
+        public static string FollowingUser => $"/user/follow";
+
+        public static string Followee => $"/user/followee";
+        public static string Followers => $"/user/follower";
     }
 
     public class AccountClient : IAccountClient
@@ -64,55 +66,25 @@ namespace GrapePhoto.Proxy
             //callAPI get all following users;
 
             var followingUsers = new List<User>();
-
-            followingUsers.Add(new User()
+ 
+            var request = new RestSharp.RestRequest(AccountAPI.Followee)
             {
-                Id = Guid.NewGuid().ToString(),
-                UserName = "Txxni",
-                AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
+                JsonSerializer = new NewtonsoftJsonSerializer()
+            };
+
+            request.AddJsonBody(new
+            {
+                UserId = userId
             });
 
-            return followingUsers;
-
-            //var request = new RestSharp.RestRequest(AccountAPI.SearchUsers)
-            //{
-            //    JsonSerializer = new NewtonsoftJsonSerializer()
-            //};
-            //var user = new User { UserName = userId };
-            //request.AddJsonBody(new
-            //{
-            //    UserId = userId
-            //});
-
-            //IRestResponse response = _client.Post(request);
-            //var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
-            //if (json.success)
-            //{
-            //    var users = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
-            //    return users;
-            //}
-            //else
-            //{
-            //    return new List<User>();
-            //}
-        }
-
-        public List<User> GetAllFollowingUsersByUserName(string userid)
-        {
-      
-            //callAPI get all following users;
-
-            var followingUsers = new List<User>();
-
-            followingUsers.Add(new User()
+            IRestResponse response = _client.Post(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+            if (json.success)
             {
-                Id = Guid.NewGuid().ToString(),
-                UserName = "Txxni",
-                AvatarPicUrl = "https://scontent-sin6-2.cdninstagram.com/vp/3086c8b2f4efef61ad662a821c60e09d/5B8153DF/t51.2885-19/s150x150/29403266_193822707890209_7859898672618668032_n.jpg",
-            });
+                followingUsers = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
+            }
 
             return followingUsers;
-
         }
 
         public User GetUserByUserId(string userId)

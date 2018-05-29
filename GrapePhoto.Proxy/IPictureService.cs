@@ -19,10 +19,7 @@ namespace GrapePhoto.Proxy
 
         IList<Picture> GetPicturesByUserId(string userId, int recordsToReturn = 0);
 
-        IList<Picture> GetFollowingPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue);
-
-        IList<Picture> GetUserPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue);
-
+    
         Picture InsertPicture(Picture picture);
 
         void DeletePicture(Picture picture);
