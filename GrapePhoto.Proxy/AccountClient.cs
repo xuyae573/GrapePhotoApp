@@ -38,7 +38,21 @@ namespace GrapePhoto.Proxy
 
         public void FollowOtherUser(string userId, string otherUserId)
         {
-            throw new NotImplementedException();
+            var request = new RestSharp.RestRequest(AccountAPI.SearchUsers)
+            {
+                JsonSerializer = new NewtonsoftJsonSerializer()
+            };
+            var user = new User { UserName = userId };
+
+            request.AddJsonBody(new
+            {
+                Key = "UserId",
+                Value = userId
+            });
+
+            IRestResponse response = _client.Post(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+          
         }
 
         public List<User> GetAllFollowersUsersByUserId(string userId)
@@ -119,18 +133,17 @@ namespace GrapePhoto.Proxy
             }
         }
 
-        public List<User> SerachUsersByUserId(string userId)
+        public List<User> SerachUsers(string keyword)
         {
             var request = new RestSharp.RestRequest(AccountAPI.SearchUsers)
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
-            var user = new User { UserName = userId };
 
             request.AddJsonBody(new
             {
-                Key = "UserId",
-                Value = userId
+                Key = "UserName",
+                Value = keyword     
             });
 
             IRestResponse response = _client.Post(request);

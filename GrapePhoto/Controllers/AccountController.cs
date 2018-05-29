@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using GrapePhoto.Extensions;
+using GrapePhoto.Models;
 using GrapePhoto.Proxy;
 using GrapePhoto.Web.Models.Account;
 using Microsoft.AspNetCore.Authentication;
@@ -127,9 +128,20 @@ namespace GrapePhoto.Controllers
                 ViewBag.Message = "Please provide a keyword for searching";
             }
             ViewBag.SearchQuery = q;
-            var model=  _accountClient.SerachUsersByUserId(q);
-            if(!model.Any()) ViewBag.Message = "Not found";
-            return View(model);
+            var model=  _accountClient.SerachUsers(q);
+            var currentUserId = HttpContext.User.Identity.Name;
+
+            var list = new List<SearchUserViewModel>();
+            foreach (var item in model)
+            {
+                var viewModel = new SearchUserViewModel(_accountClient);
+                viewModel.User = item;
+                viewModel.GetRelationship(currentUserId);
+                list.Add(viewModel);
+            }
+
+            if(!list.Any()) ViewBag.Message = "Not found";
+            return View(list);
         }
     }
 }

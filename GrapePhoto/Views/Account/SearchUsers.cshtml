@@ -1,6 +1,6 @@
 ﻿@using GrapePhoto.Web.Models.Account
 
-@model List<User> 
+@model List<SearchUserViewModel> 
  
 
 <div class="row">
@@ -10,23 +10,95 @@
         {
             <div class="col-4">
                 <div class="card">
-                <div class="card-body text-center">
- 
-                <span class="avatar  avatar-azure avatar-lg ">@item.UserId.Substring(0, 2).ToUpper()</span>
+                    <div class="card-body text-center">
+                        <div class="dimmer userinfobody" id="">
+                            <div class="loader"></div>
+                            <div class="dimmer-content">
+                                <span class="avatar  avatar-azure avatar-lg ">@item.User.UserId.Substring(0, 2).ToUpper()</span>
 
-                <h3 class="mb-3">@item.UserId (@item.UserName)</h3>
+                                <h3 class="mb-3">@item.User.UserName (@item.User.UserId)</h3>
 
-                <button class="btn btn-outline-primary btn-sm">
-                    <span class="fe fe-user-plus"></span> Follow
-                </button>
-                </div>
-                </div>
+                                @if (item.Relationship == Relationship.FollowingEachOther || item.Relationship == Relationship.Following)
+                                 {
+                                    <button class="btn btn-secondary useraction unfollow" data-id="@item.User">
+                                        <span class="fe fe-user-minus"></span> Unfollow
+                                    </button>
+                                }
+                                else if (item.Relationship == Relationship.Unfollowed)
+                                {
+                                    <button class="btn btn-outline-primary useraction follow" data-id="@item.User">
+                                        <span class="fe fe-user-plus"></span> Follow
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         }}
     else
     {
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-primary col-lg-12" role="alert">
            @ViewBag.Message
         </div>
     }
 </div>
+
+@section Scripts{ 
+    <script>
+
+          require(['jquery','../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
+            $(document).ready(function () {
+
+                bindingFollowEvent();
+
+               
+            });
+
+
+              function bindingFollowEvent() {
+                   $('.useraction').click(function () {
+                    var url = "";
+                    var isFollow = $(this).hasClass("follow");
+                    if (isFollow) {
+                        url = '@Url.Action("Follow","Common")';
+                    } else {
+                        url = '@Url.Action("Unfollow","Common")';
+                    }
+                    var self = this;
+                    var followUserId = $(this).data("id");
+                    $(this).closest(".userinfobody").addClass("active");
+                    $.ajax({
+                        method: 'post',
+                        url: url,
+                        data: { id: followUserId },
+                        dataType: "json",
+                        success: function (data) {
+                            $(this).closest(".userinfobody").removeClass("active");
+                            if (data.success) {
+                                if (isFollow) {
+                                    $(self).removeClass("follow").addClass("unfollow");
+                                }
+                                else {
+                                    $(self).removeClass("unfollow").addClass("follow");
+                                }
+                            }
+                            else {
+                                Swal('Oops...', data.message, 'error')
+                            }
+                        }, //End of AJAX Success function  
+
+                        failure: function (data) {
+                            console.log(data);
+                        }, //End of AJAX failure function  
+                        error: function (data) {
+                            console.log(data);
+                        } //End of AJAX error function  
+                    });
+                });
+
+              }
+        });
+
+    </script>
+}

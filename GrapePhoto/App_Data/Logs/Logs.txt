@@ -8445,3 +8445,109 @@ INFO  2018-05-29 21:38:40,635 [18   ] soft.AspNetCore.Hosting.Internal.WebHost -
 INFO  2018-05-29 21:38:50,454 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/SearchUsers?q=liu  
 INFO  2018-05-29 21:38:50,465 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
 INFO  2018-05-29 21:38:50,482 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) with arguments (liu) - ModelState is Valid
+INFO  2018-05-29 21:47:50,527 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-29 21:47:51,976 [8    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-29 21:47:51,999 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-29 21:47:52,019 [8    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-29 21:47:52,091 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-29 21:47:52,122 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 220.905ms
+INFO  2018-05-29 21:47:52,174 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2047.3457ms 302 
+INFO  2018-05-29 21:47:52,211 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-29 21:47:52,620 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-29 21:47:59,631 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-29 21:48:00,912 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 8623.6408ms
+INFO  2018-05-29 21:48:00,929 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8721.3339ms 200 text/html; charset=utf-8
+INFO  2018-05-29 21:48:02,021 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-29 21:48:02,080 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/dashboard.js?v=OBGuNQOndU60uKvkeL8hkG1uS5I1JQ62586o97WJAzU  
+INFO  2018-05-29 21:48:02,123 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/dashboard.js was not modified
+INFO  2018-05-29 21:48:02,168 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 166.4388ms 304 application/javascript
+INFO  2018-05-29 21:48:02,184 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.min.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.min.css'
+INFO  2018-05-29 21:48:02,477 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 462.097ms 200 text/css
+INFO  2018-05-29 21:50:32,358 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-29 21:50:32,416 [9    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-29 21:50:32,658 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-29 21:50:35,405 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-29 21:50:35,453 [9    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-29 21:50:35,478 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 2991.6047ms
+INFO  2018-05-29 21:50:35,551 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3152.095ms 302 
+INFO  2018-05-29 21:50:35,570 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-29 21:50:35,584 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-29 21:50:35,604 [9    ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-29 21:50:35,621 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-29 21:50:39,726 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-29 21:50:44,069 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-29 21:50:44,164 [18   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert2/dist/sweetalert2.min.css was not modified
+INFO  2018-05-29 21:50:45,314 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 385.1899ms 304 text/css
+INFO  2018-05-29 21:50:45,741 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.all.min.js  
+INFO  2018-05-29 21:50:45,894 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 7818.5622ms
+INFO  2018-05-29 21:50:46,035 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10340.0552ms 200 text/html; charset=utf-8
+INFO  2018-05-29 21:50:46,068 [18   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.all.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.all.min.js'
+INFO  2018-05-29 21:50:46,205 [18   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 537.1231ms 200 application/javascript
+INFO  2018-05-29 21:51:03,421 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/SearchUsers?q=liu  
+INFO  2018-05-29 21:51:03,475 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-29 21:51:03,496 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) with arguments (liu) - ModelState is Valid
+INFO  2018-05-29 21:52:40,164 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/SearchUsers.cshtml.
+INFO  2018-05-29 21:52:43,087 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) in 99063.0917ms
+INFO  2018-05-29 21:52:43,229 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 99693.5772ms 200 text/html; charset=utf-8
+INFO  2018-05-29 21:52:43,537 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-29 21:52:43,823 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert2/dist/sweetalert2.min.css was not modified
+INFO  2018-05-29 21:52:44,320 [14   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 826.488ms 304 text/css
+INFO  2018-05-29 21:53:19,849 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/SearchUsers?q=liu  
+INFO  2018-05-29 21:53:19,863 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-29 21:53:19,878 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) with arguments (liu) - ModelState is Valid
+INFO  2018-05-29 21:53:25,936 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/SearchUsers.cshtml.
+INFO  2018-05-29 21:53:28,172 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) in 7735.1709ms
+INFO  2018-05-29 21:53:28,659 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8341.8169ms 200 text/html; charset=utf-8
+INFO  2018-05-29 22:21:34,856 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-29 22:21:36,234 [9    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-29 22:21:36,252 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-29 22:21:36,270 [9    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-29 22:21:36,369 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-29 22:21:36,388 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 204.9519ms
+INFO  2018-05-29 22:21:36,438 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1650.0808ms 302 
+INFO  2018-05-29 22:21:36,483 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-29 22:21:37,151 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-29 22:21:47,825 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-29 22:21:48,973 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 12360.0188ms
+INFO  2018-05-29 22:21:49,009 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12506.5658ms 200 text/html; charset=utf-8
+INFO  2018-05-29 22:21:49,635 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/dashboard.js?v=OBGuNQOndU60uKvkeL8hkG1uS5I1JQ62586o97WJAzU  
+INFO  2018-05-29 22:21:49,671 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-29 22:21:49,743 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert2/dist/sweetalert2.min.css was not modified
+INFO  2018-05-29 22:21:49,862 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 413.6402ms 304 text/css
+INFO  2018-05-29 22:21:49,921 [8    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/tabler/dist/assets/js/dashboard.js was not modified
+INFO  2018-05-29 22:21:49,946 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 381.6099ms 304 application/javascript
+INFO  2018-05-29 22:22:19,322 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 214
+INFO  2018-05-29 22:22:19,376 [8    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-29 22:22:19,703 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-29 22:22:22,734 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-29 22:22:22,791 [8    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-29 22:22:22,807 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 3368.3518ms
+INFO  2018-05-29 22:22:22,846 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-29 22:22:22,866 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-29 22:22:22,895 [13   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-29 22:22:22,915 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-29 22:22:23,007 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3675.6458ms 302 
+INFO  2018-05-29 22:22:28,054 [13   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-29 22:22:33,936 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.js  
+INFO  2018-05-29 22:22:34,041 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/photoswipe/dist/photoswipe.js was not modified
+INFO  2018-05-29 22:22:34,100 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 589.4632ms 304 application/javascript
+INFO  2018-05-29 22:22:34,149 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe-ui-default.js  
+INFO  2018-05-29 22:22:34,476 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 9622.0859ms
+INFO  2018-05-29 22:22:34,706 [15   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/photoswipe/dist/photoswipe-ui-default.js was not modified
+INFO  2018-05-29 22:22:34,875 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11879.9648ms 200 text/html; charset=utf-8
+INFO  2018-05-29 22:22:35,071 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.all.min.js  
+INFO  2018-05-29 22:22:35,084 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/sweetalert2/dist/sweetalert2.all.min.js was not modified
+INFO  2018-05-29 22:22:35,319 [15   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 694.4137ms 304 application/javascript
+INFO  2018-05-29 22:22:35,368 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 131.3921ms 304 application/javascript
+INFO  2018-05-29 22:22:40,209 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/SearchUsers?q=l  
+INFO  2018-05-29 22:22:40,236 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-29 22:22:40,273 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) with arguments (l) - ModelState is Valid
+INFO  2018-05-29 22:22:49,860 [13   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/SearchUsers.cshtml.
+INFO  2018-05-29 22:22:52,874 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) in 11892.1886ms
+INFO  2018-05-29 22:22:53,246 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12774.264ms 200 text/html; charset=utf-8
+INFO  2018-05-29 22:25:00,147 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/SearchUsers?q=allen  
+INFO  2018-05-29 22:25:00,162 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-29 22:25:00,176 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) with arguments (allen) - ModelState is Valid
+INFO  2018-05-29 22:25:07,882 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/SearchUsers.cshtml.
+INFO  2018-05-29 22:25:09,648 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.SearchUsers (GrapePhoto) in 8903.9929ms
+INFO  2018-05-29 22:25:09,989 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9799.2508ms 200 text/html; charset=utf-8

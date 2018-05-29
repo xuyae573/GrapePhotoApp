@@ -20,7 +20,7 @@ namespace GrapePhoto.Proxy
 
         User UpdateProfile(User user);
 
-        List<User> SerachUsersByUserId(string userId);
+        List<User> SerachUsers(string keyword);
 
         void FollowOtherUser(string userId, string otherUserId);
 

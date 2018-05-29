@@ -130,12 +130,7 @@ namespace GrapePhoto.Controllers
             });
         }
 
-        [HttpPost]
-        public JsonResult SearchUser(string userid)
-        {
-            var result = _accoutClient.SerachUsersByUserId(userid);
-            return Json(result);
-        }
+        
         [HttpPost]
         public JsonResult LikePost(string postId)
         {
