@@ -3,6 +3,7 @@
 {
   "Note": "Nice image",
   "ImgUrl": "http://dummy-url",
+  "ThumbUrl": "http://dummy-thumb-url",
   "UserId": "user2"
 }
 /post/feeds: get recent 3 posts which are posted the users followed by user1

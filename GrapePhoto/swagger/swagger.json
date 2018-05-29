@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2018-05-27T23:18:58Z",
+    "version": "2018-05-29T03:45:24Z",
     "title": "GrapePhotoFullAPI"
   },
   "host": "xwgwg2b0yi.execute-api.us-east-1.amazonaws.com",
@@ -481,6 +481,9 @@
           "type": "string"
         },
         "ImgUrl": {
+          "type": "string"
+        },
+        "ThumbUrl": {
           "type": "string"
         },
         "UserId": {
