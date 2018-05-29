@@ -26,5 +26,26 @@ namespace GrapePhoto.Controllers
             var result = _accountClient.GetAllFollowersUsersByUserId(userid);
             return Json(result);
         }
+
+
+
+
+        [HttpGet]
+        public JsonResult FollowOtherUser(string otherUserId)
+        {
+            var userid = HttpContext.User.Identity.Name;
+            var result = _accountClient.GetAllFollowersUsersByUserId(userid);
+            return Json(result);
+        }
+
+        [HttpGet]
+        public JsonResult UnfollowOtherUser(string otherUserId)
+        {
+            var userid = HttpContext.User.Identity.Name;
+            var result = _accountClient.GetAllFollowersUsersByUserId(userid);
+            return Json(result);
+        }
+
+
     }
 }

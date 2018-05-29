@@ -9,8 +9,8 @@
 }
 <div class="col-sm-6 col-lg-4">
     <div class="card">
-        <a href="@Model.Picture.Src" class="mb-0">
-            <img src="@Model.Picture.ThumbnailSrc" alt="@Model.Picture.AltAttribute" width="100%">
+        <a src="@Model.Picture.Src" data-width="@Model.Picture.Width" data-height="@Model.Picture.Height" class="mb-0">
+            <img src="@Model.Picture.ThumbnailSrc" class="grapephoto" alt="@Model.Picture.AltAttribute" width="100%">
         </a>
         <div class="d-flex align-items-center p-3">
             @if (hasAvatar)

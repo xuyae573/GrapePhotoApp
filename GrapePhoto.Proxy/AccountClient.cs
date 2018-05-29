@@ -36,6 +36,11 @@ namespace GrapePhoto.Proxy
             _client = new RestClient(_baseUri);
         }
 
+        public void FollowOtherUser(string userId, string otherUserId)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<User> GetAllFollowersUsersByUserId(string userId)
         {
             var request = new RestSharp.RestRequest(AccountAPI.Followers)
@@ -94,6 +99,7 @@ namespace GrapePhoto.Proxy
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
             var user = new User { UserName = userId };
+
             request.AddJsonBody(new
             {
                 Key = "UserId",
@@ -112,7 +118,34 @@ namespace GrapePhoto.Proxy
                 return null;
             }
         }
- 
+
+        public List<User> SerachUsersByUserId(string userId)
+        {
+            var request = new RestSharp.RestRequest(AccountAPI.SearchUsers)
+            {
+                JsonSerializer = new NewtonsoftJsonSerializer()
+            };
+            var user = new User { UserName = userId };
+
+            request.AddJsonBody(new
+            {
+                Key = "UserId",
+                Value = userId
+            });
+
+            IRestResponse response = _client.Post(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+            if (json.success)
+            {
+                var users = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
+                return users;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public SignInResult SignIn(SignInViewModel user)
         {
             var request = new RestSharp.RestRequest(AccountAPI.SignIn)
@@ -160,6 +193,11 @@ namespace GrapePhoto.Proxy
                 ErrorMessage = json.error,
                 user = user
             };
+        }
+
+        public void UnfollowOtherUser(string userId, string otherUserId)
+        {
+            throw new NotImplementedException();
         }
 
         public User UpdateProfile(User user)

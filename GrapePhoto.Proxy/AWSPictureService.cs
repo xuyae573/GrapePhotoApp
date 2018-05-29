@@ -193,6 +193,9 @@ namespace GrapePhoto.Proxy
                
                 using (MagickImage image = new MagickImage(picture.Bytes))
                 {
+                    picture.Width = image.Width;
+                    picture.Height = image.Height;
+
                     int width, height;
                     if (image.Width > image.Height)
                     {

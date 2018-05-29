@@ -97,6 +97,8 @@
                         TitleAttribute = post.Title,
                         PostDate = post.PostDate,
                         LikeCount = post.LikeCount,
+                        Width= post.Width,
+                        Height= post.Height,
                         Id = post.Id,
                         UserId = post.UserId,
                         AltAttribute = post.Title,

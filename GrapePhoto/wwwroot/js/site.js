@@ -16,28 +16,34 @@ require(['jquery'], function(){
  
 
 
-var requestAnimationFrame = window.requestAnimationFrame || 
-                            window.mozRequestAnimationFrame || 
-                            window.webkitRequestAnimationFrame || 
-                            window.msRequestAnimationFrame;
+require(['jquery', '../lib/photoswipe/dist/photoswipe.js', '../lib/photoswipe/dist/photoswipe-ui-default.js'],
+    function ($, PhotoSwipe, PhotoSwipeUI_Default) {
+        $(document).ready(function () {
+            $("img.grapephoto").click(function (e) {
+                var index = $(this).index();
+                var pswpElement = document.querySelectorAll('.pswp')[0];
+                var items = [];
+                $("img.grapephoto").each(function (index, value) {
+                    var imageLink = $(value).closest("a").attr("src");
+                    var w = $(this).parent("a").data("width");
+                    var h = $(this).parent("a").data("height");
+                    items.push({
+                        src: imageLink,
+                        w: w,
+                        h: h
+                    });
+                });
+                var options = {
+                    index: index,
+                    history: false,
+                    focus: false,
+                    showAnimationDuration: 0,
+                    hideAnimationDuration: 0
+                };
 
-function draw() {
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-    ctx.fillStyle = "#BBBBBB";
-    // Cubic curves example
-    ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fill();
-    requestAnimationFrame(draw)
-  }
-}
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            });
 
- 
+        });
+    });

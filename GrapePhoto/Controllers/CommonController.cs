@@ -11,6 +11,7 @@ using Amazon.S3;
 using GrapePhoto.Web.Models;
 using GrapePhoto.Models;
 using GrapePhoto.Helper;
+using GrapePhoto.Web.Models.Posts;
 
 namespace GrapePhoto.Controllers
 {
@@ -18,6 +19,7 @@ namespace GrapePhoto.Controllers
     {
         private IPictureService _pictureService;
         private IPostService _postService;
+        private IAccountClient _accoutClient;
 
         private IAccountClient _accountClient;
 
@@ -34,7 +36,7 @@ namespace GrapePhoto.Controllers
 
 
         [HttpPost]
-        public async Task<JsonResult>  AsyncUpload(string comments)
+        public JsonResult AsyncUpload(string comments)
         {
 
                 var pictureComments = comments != null ? comments.Trim() : "";
@@ -87,7 +89,9 @@ namespace GrapePhoto.Controllers
                     Title = comments,
                     ImgUrl = picture.Src,
                     ThumbUrl = picture.ThumbnailSrc,
-                    UserId = HttpContext.User.Identity.Name
+                    UserId = HttpContext.User.Identity.Name,
+                    Width = picture.Width,
+                    Height = picture.Height
                 };
 
                 _postService.AddPost(post);
@@ -116,5 +120,22 @@ namespace GrapePhoto.Controllers
 
                 });
         }
+
+        [HttpPost]
+        public JsonResult SearchUser(string userid)
+        {
+            var result = _accoutClient.SerachUsersByUserId(userid);
+            return Json(result);
+        }
+        [HttpPost]
+        public JsonResult LikePost(string postId)
+        {
+            var post = new LikePostDto() { PostId = postId };
+            var result = _postService.LikePost(post);
+            return Json(result);
+        }
+
+
+
     }
 }

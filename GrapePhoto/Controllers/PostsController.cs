@@ -12,6 +12,7 @@ namespace GrapePhoto.Controllers
 {
     public class PostsController : Controller
     {
+        
         public IActionResult Index()
         {
             //Get current user

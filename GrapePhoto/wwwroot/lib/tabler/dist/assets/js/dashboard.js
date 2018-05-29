@@ -8,7 +8,7 @@ shim: {
 'vector-map-de': ['vector-map', 'jquery'],
 'vector-map-world': ['vector-map', 'jquery'],
 'core': ['bootstrap', 'jquery'],
-'magnific-popup':['jquery']
+'photoswipe': ['photoswipeui']
 },
 paths: {
 'core': 'assets/js/core',
@@ -21,7 +21,8 @@ paths: {
 'vector-map-de': 'assets/js/vendors/jquery-jvectormap-de-merc',
 'vector-map-world': 'assets/js/vendors/jquery-jvectormap-world-mill',
 'circle-progress': 'assets/js/vendors/circle-progress.min',
- 'magnific-popup':'../../magnific-popup/dist/jquery.magnific-popup.min'
+    'photoswipe': '../../photoswipe/dist/photoswipe.min',
+    'photoswipeui': '../../photoswipe/dist/photoswipe-ui-default.min'
 }
 });
 window.tabler = {

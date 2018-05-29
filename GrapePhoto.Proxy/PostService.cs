@@ -141,7 +141,7 @@ namespace GrapePhoto.Proxy
 
         public PostDto LikePost(LikePostDto likePostDto)
         {
-            var request = new RestSharp.RestRequest(PostAPI.AddPost)
+            var request = new RestSharp.RestRequest(PostAPI.Like)
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
@@ -160,6 +160,11 @@ namespace GrapePhoto.Proxy
             {
                 return null;
             }
+        }
+
+        public PostDto UnlikePost(LikePostDto likePostDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

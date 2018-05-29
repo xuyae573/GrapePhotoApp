@@ -21,9 +21,14 @@ namespace GrapePhoto.Web.Models
         public DateTime PostDate { get; set; }
 
         public Stream PictureStream{ get; set; }
+
         public byte[] Bytes { get; set; }
 
         public string MimeType { get; set; }
+
+        public int Width { get; set; }
+        public int Height { get; set; }
+
 
         public string AltAttribute { get; set; }
  

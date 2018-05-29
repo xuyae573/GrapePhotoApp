@@ -12,12 +12,16 @@ namespace GrapePhoto.Proxy
     { 
         PostDto AddPost(PostDto postDto);
         PostDto LikePost(LikePostDto likePostDto);
+        PostDto UnlikePost(LikePostDto likePostDto);
 
         IPagedList<PostDto> GetFollowingPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue);
 
         IPagedList<PostDto> GetUserPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue);
 
         IPagedList<PostDto> GetPosts(string userId, int pageIndex = 0, int pageSize = int.MaxValue);
+
+
+
     }
 
 }

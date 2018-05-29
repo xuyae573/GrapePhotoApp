@@ -22,5 +22,8 @@ namespace GrapePhoto.Web.Models
         public DateTime PostDate { get; set; }
 
         public int LikeCount { get; set; }
+
+        public int Width { get; set; }
+        public int Height { get; set; }
     }
 }

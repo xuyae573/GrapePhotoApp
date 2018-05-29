@@ -35,14 +35,14 @@
     </div>
 </div>
 <script>
-        require(['jquery','bootstrap'], function () {
+        require(['jquery'], function () {
             $(document).ready(function () {
                 $('.btn-post').click(function () {
                     console.log("adding post.");
                     var formData = new FormData($("#addPostForm")[0]);
                     $.ajax({
                         method: 'post',
-                        url: 'Common/AsyncUpload',
+                        url: '@Url.Action("AsyncUpload","Common")',
                         data: formData,
                         processData: false,
                         contentType: false
