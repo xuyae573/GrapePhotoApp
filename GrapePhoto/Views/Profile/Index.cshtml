@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewData["Name"] = User.Identity.Name;
+    Layout = "~/Views/Shared/_LayoutWithLogoHeader.cshtml";
+    var x = 3;
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+
+
+        <div class="card">
+            <div class="card-body">
+                <div class="media">
+                    <span class="avatar avatar-xxl m-3 mr-5" style="background-image: url(https://scontent-sin6-2.cdninstagram.com/vp/8f425a265d195c855f2006a669d51ff6/5B9F708E/t51.2885-19/s150x150/12545291_1703852753218671_231309445_a.jpg)"></span>
+                    <div class="media-body">
+
+                        <div class="row">
+                            <h1 class="col-12">
+                                Xu Ya
+                                @if (x == 1)
+                                {
+                                    <button class="btn btn-outline-primary btn-sm ml-3"><span class="fe fe-user-plus"></span> Follow</button>
+                                }
+                                else if (x == 2)
+                                {
+                                    <button class="btn btn-success btn-sm ml-3"><i class="fe fe-user-check mr-2"></i>Following</button>
+                                }
+                                else if (x == 3)
+                                {
+                                    <a class="btn btn-secondary  btn-sm ml-3" href="@Url.Action("Edit")">Edit Profile</a>
+                                }
+                            </h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-8 h4">
+                                <a class="col-sm-2 col-lg-4">100</a><span class="font-weight-light">posts</span>
+                                <a class="col-sm-2 col-lg-4">50</a><span class="font-weight-light">followers</span>
+                                <a class="col-sm-2 col-lg-4">500</a><span class="font-weight-light">following</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12">
+
+    <div class="page-header">
+        <h1 class="page-title">
+            Posts
+        </h1>
+        <div class="page-options">
+            @Html.Partial("_AddPost")
+        </div>
+    </div>
+    <div class="row row-cards">
+
+       
+        <div class="col-sm-6 col-lg-4">
+            <div class="card">
+                <div class="hovereffect">
+                    <img src="@Url.Content("lib/tabler/dist/demo/photos/ilnur-kalimullin-218996-500.jpg")" alt="Photo by Alice Mason" class="rounded">
+                    <div class="overlay">
+                        <h2>Photo by Alice Mason</h2>
+                        <a class="info" href="#"><i class="fe fe-heart mr-1"></i>5k</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+            <div class="card">
+                <div class="hovereffect">
+                    <img src="@Url.Content("lib/tabler/dist/demo/photos/jakob-owens-224352-500.jpg")" alt="Photo by Rose Bradley" class="rounded">
+                    <div class="overlay">
+                        <h2>Photo by Rose Bradley</h2>
+                        <a class="info" href="#"><i class="fe fe-heart mr-1"></i>5</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-footer">
+        <button class="btn btn-outline-primary btn-block"><i class="fe fe-plus mr-2"></i>Load More</button>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    @*<script>
+        require(['jquery'], function () {
+            $(document).ready(function () {
+                $('.btn-post').click(function () {
+                    var formData = new FormData($("#addPostForm")[0]);
+                    $.ajax({
+                        method: 'post',
+                        url: 'Common/AsyncUpload',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (data) {
+
+                        }
+                    });
+
+                });
+            });
+        });
+    </script>*@
+}

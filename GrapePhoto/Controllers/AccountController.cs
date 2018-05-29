@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
-using GrapePhoto.Application;
-using GrapePhoto.Domain;
-using GrapePhoto.Models.Account;
+using GrapePhoto.Extensions;
+using GrapePhoto.Proxy;
+using GrapePhoto.Web.Models.Account;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -14,13 +18,13 @@ namespace GrapePhoto.Controllers
 {
     public class AccountController : Controller
     {
+        private IAccountClient _accountClient;
 
-        private IAccountService _accountService;
-
-        public AccountController(IAccountService accountService)
+        public AccountController(IAccountClient accountClient)
         {
-            _accountService = accountService;
+            _accountClient = accountClient;
         }
+ 
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -38,25 +42,47 @@ namespace GrapePhoto.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Login(SignInViewModel model,string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+ 
+            if (ModelState.IsValid)
+            {
+                var result = _accountClient.SignIn(model);
+                if (result.Succeed)
+                {
+                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserId) }, "Basic");
+                    var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                    await HttpContext.SignInAsync(claimsPrincipal);
+                    return RedirectToLocal(returnUrl);
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, result.ErrorMessage);
+                }
+            }
+            return View(model);
+        }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Register(SignUpViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                 _accountService.Insert(user);
-                //if (result.Succeeded)
-                //{
+                var result = _accountClient.SignUp(model);
 
-                //    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                //    var callbackUrl = Url.EmailConfirmationLink(user.Id, code, Request.Scheme);
-                //    await _emailSender.SendEmailConfirmationAsync(model.Email, callbackUrl);
-
-                //    await _signInManager.SignInAsync(user, isPersistent: false);
-                //    _logger.LogInformation("User created a new account with password.");
-                //    return RedirectToLocal(returnUrl);
-                //}
-                //AddErrors(result);
+                //SignIn and set session User
+                if (result.Succeed)
+                {
+                    var claimsIdentity = new ClaimsIdentity(new Claim[] { new Claim(ClaimTypes.Name, model.UserId) }, "Basic");
+                    var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                    await HttpContext.SignInAsync(claimsPrincipal);
+                    return RedirectToLocal(returnUrl);
+                }
+                ModelState.AddModelError(string.Empty, result.ErrorMessage);
             }
 
             // If we got this far, something failed, redisplay form
@@ -72,6 +98,26 @@ namespace GrapePhoto.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SignOut()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
+
+        private IActionResult RedirectToLocal(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction(nameof(HomeController.Index), "Home");
+            }
+        }
 
 
     }

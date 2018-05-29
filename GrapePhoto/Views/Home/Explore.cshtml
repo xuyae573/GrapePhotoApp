@@ -1,0 +1,22 @@
+﻿ 
+@model IndexViewModel
+
+<div class="row row-cards">
+    @foreach(var item in Model.Posts)
+    {
+        @Html.Partial("UserPhotosThreeColumnsTemplate", item)
+    }
+</div>
+
+@section Scripts{
+    <script>
+
+
+        require(['jquery'], function(){
+           $(document).ready(function () {
+                $("#explorelink").addClass("active");
+            });
+        });
+
+    </script>
+}
