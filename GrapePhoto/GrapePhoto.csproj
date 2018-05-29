@@ -5,9 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BusinessModelView\**" />
     <Compile Remove="Views\Test\**" />
+    <Content Remove="BusinessModelView\**" />
     <Content Remove="Views\Test\**" />
+    <EmbeddedResource Remove="BusinessModelView\**" />
     <EmbeddedResource Remove="Views\Test\**" />
+    <None Remove="BusinessModelView\**" />
     <None Remove="Views\Test\**" />
   </ItemGroup>
 
@@ -17,6 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
     <PackageReference Include="PusherServer" Version="4.1.0" />
   </ItemGroup>
