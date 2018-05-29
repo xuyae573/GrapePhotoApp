@@ -7,6 +7,7 @@ namespace GrapePhoto.Web.Models
 {
     public class PostDto
     {
+        [JsonProperty("PostId")] 
         public string Id { get; set; }
 
         [JsonProperty("Note")]

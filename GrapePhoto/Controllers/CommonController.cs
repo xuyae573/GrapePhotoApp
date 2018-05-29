@@ -140,6 +140,26 @@ namespace GrapePhoto.Controllers
         }
 
 
+        [HttpPost]
+        public JsonResult Follow(string id)
+        {
+
+            _accountClient.FollowOtherUser(HttpContext.User.Identity.Name, id);
+            return Json(new {
+                success = true
+            });
+        }
+
+        [HttpPost]
+        public JsonResult Unfollow(string id)
+        {
+            _accountClient.UnfollowOtherUser(HttpContext.User.Identity.Name, id);
+            return Json(new
+            {
+                success = true
+            });
+        }
+
 
     }
 }

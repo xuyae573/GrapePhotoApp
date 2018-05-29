@@ -8,7 +8,15 @@
 <li class="list-separated-item">
     <div class="row align-items-center">
         <div class="col-auto">
-            <span class="avatar avatar-md d-block" style="background-image: url('@Model.AvatarPicUrl')"></span>
+            @if (string.IsNullOrEmpty(Model.AvatarPicUrl))
+                {
+                    <div class="avatar avatar-md mr-3">@Model.UserId.Substring(0, 2).ToUpper()</div>
+            }
+            else
+            {
+                    <span class="avatar avatar-md d-block" style="background-image: url('@Model.AvatarPicUrl')"></span>
+            }
+
         </div>
         <div class="col">
             <div>
@@ -19,7 +27,7 @@
             <div class="item-action dropdown">
                 <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i class="fe fe-more-vertical"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a href="javascript:void(0)" class="dropdown-item"><i class="dropdown-icon fe fe-tag"></i> Unfollow </a>
+                    <a href="javascript:void(0)" class="unfollowaction dropdown-item" data-id="@Model.UserId"><i class="dropdown-icon fe fe-tag"></i> Unfollow </a>
                 </div>
             </div>
         </div>

@@ -14,6 +14,7 @@ namespace GrapePhoto.Proxy
     {
         public static string AddPost => $"/post/add";
         public static string GetRecentPost => $"/post/recent";
+        public static string GetUsersPost => $"/post/my";
         public static string Feed => $"/post/feeds";
 
         public static string Like => $"/post/like";
@@ -123,7 +124,7 @@ namespace GrapePhoto.Proxy
         {
             var items = new List<PostDto>();
 
-            var request = new RestSharp.RestRequest(PostAPI.GetRecentPost)
+            var request = new RestSharp.RestRequest(PostAPI.GetUsersPost)
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GrapePhoto.Models;
 using GrapePhoto.Proxy;
 using GrapePhoto.Web.Models.Account;
 using Microsoft.AspNetCore.Mvc;
@@ -11,17 +12,24 @@ namespace GrapePhoto.Controllers
     public class ProfileController : Controller
     {
         private IAccountClient _accountClient;
-        public ProfileController(IAccountClient accountClient)
+        private IPostService _postService;
+
+        public ProfileController(IAccountClient accountClient, IPostService postService)
         {
             _accountClient = accountClient;
+            _postService = postService;
         }
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
-            //Get Username and followers, following 
-
-            //load the posts by username
-
-            return View();
+            if (string.IsNullOrEmpty(id))
+            {
+                id = HttpContext.User.Identity.Name;
+            }
+            var indexModel = new ProfileIndexModel(_accountClient);
+            indexModel.User = _accountClient.GetUserByUserId(id);
+            indexModel.Posts = _postService.GetUserPostsByUserId(id);
+            
+            return View(indexModel);
         }
 
 

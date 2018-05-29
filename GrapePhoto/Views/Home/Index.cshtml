@@ -1,29 +1,66 @@
 ﻿@model IndexViewModel
-<div class="row">
-    <div class="col-lg-8">
-        @foreach (var item in Model.Posts)
-        {
-            @Html.Partial("_FollowingPost", item)
-        }
-    </div>
-    <div class="col-lg-4 parent-container" id="index-right">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Following</h3>
-            </div>
-            <div class="card-body o-auto" style="height: 30rem">
-                <ul class="list-unstyled list-separated">
-                    @foreach (var user in Model.FollowingUsers)
-                    {
-                        @Html.Partial("_FollowingUserItems", user)
-                    }
-                </ul>
+
+@if (Model.FollowingUsers.Any())
+{
+    <div class="row">
+        <div class="col-lg-8">
+            @foreach (var item in Model.Posts)
+            {
+                @Html.Partial("_FollowingPost", item)
+            }
+        </div>
+        <div class="col-lg-4 parent-container" id="index-right">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Following</h3>
+                </div>
+                <div class="card-body o-auto" style="height: 30rem">
+                    <ul class="list-unstyled list-separated">
+                        @foreach (var user in Model.FollowingUsers)
+                        {
+                            @Html.Partial("_FollowingUserItems", user)
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-primary">Find out that you didn't following anyone, here are some users for you</div>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Suggest Following</h3>
+        </div>
+        <div class="table-responsive">
+            <table class="table card-table table-striped table-vcenter">
+                <thead>
+                    <tr>
+                        <th colspan="2">User</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="avatar">BM</span></td>
+                        <td>Russell Gibson</td>
 
+                        <td><a href="#" class="btn btn-pill"><i class="fe fe-user-plus"></i> Follow</a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="avatar">BM</span></td>
+                        <td>Russell Gibson</td>
+
+                        <td><a href="#" class="btn btn-pill"><i class="fe fe-user-plus"></i> Follow</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
-</div>
+}
 
 @Html.Partial("_FloatingButton")
 @Html.Partial("_AddPostDialog")
@@ -51,25 +88,60 @@
                         success: function (data) {
                             $("#addpostcontent").removeClass("active");
                             if (data.success) {
-                               
+
                                 location.reload();
                             }
                             else {
                                 Swal('Oops...', data.message, 'error')
-                            
+
                             }
-                        }, //End of AJAX Success function  
+                        }, //End of AJAX Success function
 
                         failure: function (data) {
                             console.log(data);
-                        }, //End of AJAX failure function  
+                        }, //End of AJAX failure function
                         error: function (data) {
                             console.log(data);
-                        } //End of AJAX error function  
+                        } //End of AJAX error function
                     });
                 });
+
+                bindingUnfollowEvent();
             });
- 
+            function bindingUnfollowEvent() {
+
+                    $('.unfollowaction').click(function () {
+                    var url = '@Url.Action("Unfollow","Common")';
+
+                    var self = this;
+                    var followUserId = $(this).data("id");
+
+                    $.ajax({
+                        method: 'post',
+                        url: url,
+                        data: { id: followUserId },
+                        dataType: "json",
+                        success: function (data) {
+
+                            console.log(data);
+                            if (data.success) {
+                                location.reload();
+                            }
+                            else {
+                                Swal('Oops...', data.message, 'error')
+                            }
+                        }, //End of AJAX Success function
+
+                        failure: function (data) {
+                            console.log(data);
+                        }, //End of AJAX failure function
+                        error: function (data) {
+                            console.log(data);
+                        } //End of AJAX error function
+                    });
+                });
+
+              }
         });
 
         require(['jquery', '../lib/photoswipe/dist/photoswipe.js', '../lib/photoswipe/dist/photoswipe-ui-default.js'],

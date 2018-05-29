@@ -38,7 +38,13 @@ namespace GrapePhoto.Proxy
 
         public void FollowOtherUser(string userId, string otherUserId)
         {
-            var request = new RestSharp.RestRequest(AccountAPI.SearchUsers)
+            Follow(userId, otherUserId, 1);
+
+        }
+
+        private void Follow(string userId, string otherUserId, int flag)
+        {
+            var request = new RestSharp.RestRequest(AccountAPI.FollowingUser)
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
@@ -46,13 +52,13 @@ namespace GrapePhoto.Proxy
 
             request.AddJsonBody(new
             {
-                Key = "UserId",
-                Value = userId
+                Follower = userId,
+                Followee = otherUserId,
+                Follow = flag
             });
 
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
-          
         }
 
         public List<User> GetAllFollowersUsersByUserId(string userId)
@@ -61,7 +67,7 @@ namespace GrapePhoto.Proxy
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
-            var user = new User { UserName = userId };
+            
             request.AddJsonBody(new
             {
                UserId = userId
@@ -71,8 +77,9 @@ namespace GrapePhoto.Proxy
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
             if (json.success)
             {
-                var users = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
-                return users;
+                JArray js = JArray.Parse(json.result.ToString());
+                var list = js.Select(x => x["Follower"].ToString()).Select(x => GetUserByUserId(x)).ToList();
+                return list;
             }
             else
             {
@@ -98,9 +105,12 @@ namespace GrapePhoto.Proxy
 
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+
             if (json.success)
             {
-                followingUsers = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
+                JArray js =JArray.Parse(json.result.ToString());
+                var list =  js.Select(x => x["Followee"].ToString()).Select(x=> GetUserByUserId(x)).ToList();
+                followingUsers = list;
             }
 
             return followingUsers;
@@ -210,7 +220,7 @@ namespace GrapePhoto.Proxy
 
         public void UnfollowOtherUser(string userId, string otherUserId)
         {
-            throw new NotImplementedException();
+            Follow(userId, otherUserId, 0);
         }
 
         public User UpdateProfile(User user)

@@ -51,12 +51,10 @@
             $(document).ready(function () {
 
                 bindingFollowEvent();
-
                
             });
-
-
               function bindingFollowEvent() {
+                   $('.useraction').unbind("click");
                    $('.useraction').click(function () {
                     var url = "";
                     var isFollow = $(this).hasClass("follow");
@@ -74,14 +72,23 @@
                         data: { id: followUserId },
                         dataType: "json",
                         success: function (data) {
-                            $(this).closest(".userinfobody").removeClass("active");
+                            $(self).closest(".userinfobody").removeClass("active");
+                            console.log(data);
                             if (data.success) {
                                 if (isFollow) {
-                                    $(self).removeClass("follow").addClass("unfollow");
+                                    $(self).removeClass("follow").removeClass("btn-outline-primary")
+                                        .addClass("unfollow").addClass(" btn-secondary");
+
+                                    $(self).html('<span class="fe fe-user-minus"></span>Unfollow');
                                 }
                                 else {
-                                    $(self).removeClass("unfollow").addClass("follow");
+                                    $(self).removeClass("unfollow")
+                                        .removeClass("btn-secondary")
+                                        .addClass("btn-outline-primary")
+                                        .addClass("follow");
+                                    $(self).html('<span class="fe fe-user-plus"></span>Follow');
                                 }
+                                bindingFollowEvent();
                             }
                             else {
                                 Swal('Oops...', data.message, 'error')
