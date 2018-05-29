@@ -43,7 +43,7 @@
 
                         <div class="row">
                             <div class="col-sm-6 col-lg-8 h4">
-                                <a class="col-sm-2 col-lg-4">100</a><span class="font-weight-light">posts</span>
+                                <a class="col-sm-2 col-lg-4">@Model.Posts.Count()</a><span class="font-weight-light">posts</span>
                                 <a class="col-sm-2 col-lg-4">@Model.Followers</a><span class="font-weight-light">followers</span>
                                 <a class="col-sm-2 col-lg-4">@Model.Followees</a><span class="font-weight-light">following</span>
                             </div>
@@ -62,7 +62,10 @@
             Posts
         </h1>
         <div class="page-options">
-            @Html.Partial("_AddPost")
+            @if (Model.Relationship == Relationship.Self) {
+                @Html.Partial("_AddPost")
+            }
+        
         </div>
     </div>
     <div class="row row-cards">
@@ -72,7 +75,7 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="card">
                     <div class="hovereffect" data-src="@item.ImgUrl" data-width="@item.Width" data-height="@item.Height">
-                        <img src="@item.ThumbUrl")" alt="@item.Title" class="rounded">
+                        <img src="@item.ThumbUrl")" alt="@item.Title" class="rounded  grapephoto profile-post" >
                         <div class="overlay">
                             <h2>@item.Title</h2>
                             <a class="info" href="#"><i class="fe fe-heart mr-1"></i>@item.LikeCount</a>
@@ -128,6 +131,40 @@
                         });
                     });
 
+        });
+
+
+        require(['jquery', '../lib/photoswipe/dist/photoswipe.js', '../lib/photoswipe/dist/photoswipe-ui-default.js'],
+            function ($, PhotoSwipe, PhotoSwipeUI_Default) {
+                $(document).ready(function () {
+                    $("img.grapephoto").click(function (e) {
+                        var index = $(this).index();
+                        var pswpElement = document.querySelectorAll('.pswp')[0];
+                        var items = [];
+                        $("img.grapephoto").each(function (index, value) {
+                            var imageLink = $(value).closest("div").attr("src");
+                            var w = $(this).closest("div").data("width");
+                            var h = $(this).closest("div").data("height");
+
+                            items.push({
+                                src: imageLink,
+                                w: w,
+                                h: h
+                            });
+                        });
+                        var options = {
+                            index: index,
+                            history: false,
+                            focus: false,
+                            showAnimationDuration: 0,
+                            hideAnimationDuration: 0
+                        };
+
+                        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                        gallery.init();
+                    });
+
+                });
             });
 
     </script>

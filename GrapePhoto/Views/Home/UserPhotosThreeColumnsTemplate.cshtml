@@ -1,31 +1,29 @@
 ﻿@using GrapePhoto.Proxy
-@inject IAccountClient userManager
+ 
 @model PostViewModel
 @{
     Layout = null;
-    var user = userManager.GetUserByUserId(User.Identity.Name);
-    var hasAvatar = !string.IsNullOrEmpty(user?.AvatarPicUrl);
-    var nameCaptialLetter = user?.UserId.Substring(0, 2).ToUpper();
+  
 }
 <div class="col-sm-6 col-lg-4">
     <div class="card">
         <a src="@Model.Picture.Src" data-width="@Model.Picture.Width" data-height="@Model.Picture.Height" class="mb-0">
-            <img src="@Model.Picture.ThumbnailSrc" class="grapephoto" alt="@Model.Picture.AltAttribute" width="100%">
+            <img src="@Model.Picture.ThumbnailSrc" class="grapephoto profile-post" alt="@Model.Picture.AltAttribute" >
         </a>
         <div class="d-flex align-items-center p-3">
-            @if (hasAvatar)
+            @if (!string.IsNullOrEmpty(Model.User.AvatarPicUrl))
             {
-                <span class="avatar" style="background-image: url('@user.AvatarPicUrl' )">
+                <span class="avatar" style="background-image: url('@Model.User.AvatarPicUrl' )">
                   
                 </span>
             }
             else
             {
-                <span class="avatar avatar-azure mr-3">@nameCaptialLetter</span>
+                <span class="avatar avatar-azure mr-3">@Model.User.UserId.Substring(0,2).ToUpper()</span>
             }
                  
                     <div>
-                        <div>@Model.User.UserId</div>
+                        <a href="@Url.Action("Index","Profile", new { id = Model.User.UserId})">@Model.User.UserId</a>
                         <small class="d-block text-muted">@Model.Picture.PostDate.ToFriendlyDateTime()</small>
                     </div>
                     <div class="ml-auto text-muted">

@@ -28,22 +28,33 @@ namespace GrapePhoto.Models
         }
         public void SetRelationship(string currentUserId)
         {
+          
+            var currentUsersfollowers = _accountClient.GetAllFollowersUsersByUserId(currentUserId);
+            var currentUsersfollowee = _accountClient.GetAllFollowingUsersByUserId(currentUserId);
+        
+
+            if (User.UserId != currentUserId)
+            {
+                var usersFollowers = _accountClient.GetAllFollowersUsersByUserId(User.UserId);
+                var usersFollowees = _accountClient.GetAllFollowingUsersByUserId(User.UserId);
+                Followers = usersFollowers.Count();
+                Followees = usersFollowees.Count();
+            }
+            else
+            {
+                Followers = currentUsersfollowers.Count();
+                Followees = currentUsersfollowee.Count();
+            }
+      
+
             if (User.UserId == currentUserId)
             {
                 Relationship = Relationship.Self;
             }
             else
             {
-                var currentUsersfollowers = _accountClient.GetAllFollowersUsersByUserId(currentUserId);
-               
-                var currentUsersfollowee = _accountClient.GetAllFollowingUsersByUserId(currentUserId);
+                
 
-
-                var usersFollowers = _accountClient.GetAllFollowersUsersByUserId(User.UserId);
-                var usersFollowees = _accountClient.GetAllFollowingUsersByUserId(User.UserId);
-
-                Followers = usersFollowers.Count();
-                Followees = usersFollowees.Count();
 
                 if (currentUsersfollowers.Any(x => x.UserId == User.UserId) && currentUsersfollowee.Any(x => x.UserId == User.UserId))
                 {

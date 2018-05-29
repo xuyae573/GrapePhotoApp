@@ -28,7 +28,7 @@ namespace GrapePhoto.Controllers
             var indexModel = new ProfileIndexModel(_accountClient);
             indexModel.User = _accountClient.GetUserByUserId(id);
             indexModel.Posts = _postService.GetUserPostsByUserId(id);
-            
+            indexModel.SetRelationship(HttpContext.User.Identity.Name);
             return View(indexModel);
         }
 

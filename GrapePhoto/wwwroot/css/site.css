@@ -91,3 +91,8 @@
  .floatbutton:hover{
      color:white!important;
  }
+
+.profile-post {
+    width: 100%!important;
+    height: 300px!important;
+}

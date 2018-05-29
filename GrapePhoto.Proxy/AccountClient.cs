@@ -135,7 +135,11 @@ namespace GrapePhoto.Proxy
             if (json.success)
             {
                 var users = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
-                return users.First();
+                if (users.Any())
+                {
+                    return users.First();
+                }
+                return null;
             }
             else
             {

@@ -3,7 +3,7 @@
     Layout = null;
 }
 <div class="card ">
-    <a href="@Model.Picture.Src"><img class="card-img-top grapephoto" src="@Model.Picture.ThumbnailSrc" alt="And this isn&#39;t my nose. This is a false one."></a>
+    <a src="@Model.Picture.Src"  data-width="@Model.Picture.Width" data-height="@Model.Picture.Height"><img class="card-img-top grapephoto" src="@Model.Picture.ThumbnailSrc" alt="And this isn&#39;t my nose. This is a false one."></a>
     <div class="card-body d-flex flex-column">
         <h4>@Model.Picture.TitleAttribute</h4>
         <div class="d-flex align-items-center pt-5 mt-auto">
@@ -17,7 +17,7 @@
                     <div class="avatar avatar-md mr-3" style="background-image: url('@Model.User.AvatarPicUrl')"></div>
             }
             <div>
-                <a href="@Url.Action("Index","Profile", new { id = Model.User.Id})" class="text-default">@Model.User.UserId</a>
+                <a href="@Url.Action("Index","Profile", new { id = Model.User.UserId})" class="text-default">@Model.User.UserId</a>
                 <small class="d-block text-muted">@Model.Picture.PostDate.ToFriendlyDateTime()</small>
             </div>
             <div class="ml-auto text-muted">

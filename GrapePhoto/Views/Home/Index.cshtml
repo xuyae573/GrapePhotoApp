@@ -153,8 +153,8 @@ else
                         var items = [];
                         $("img.grapephoto").each(function (index, value) {
                             var imageLink = $(value).closest("a").attr("src");
-                            var w = $(this).parent("a").data("width");
-                            var h = $(this).parent("a").data("height");
+                            var w = $(value).closest("a").data("width");
+                            var h = $(value).closest("a").data("height");
                             items.push({
                                 src: imageLink,
                                 w: w,
