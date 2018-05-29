@@ -43,7 +43,7 @@ namespace GrapePhoto.Controllers
                     UserName = UserName,
                     Content = Content,
                     ImageUrl = @"http://news.bbcimg.co.uk/media/images/71977000/jpg/_71977649_71825880.jpg",
-                    Followers = new string[] { "liucao", "allen" }
+                   // Followers = new string[] { "liucao", "allen" }
                 };
 
 

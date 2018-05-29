@@ -74,7 +74,7 @@
             var username = document.getElementById("username").innerText;
             if (`${data.Followers}`.indexOf(username) > -1) {
                 var m = `${data.ImageUrl}`;
-                var followee = `${data.username}`
+                var followee = `${data.UserName}`
                 var b = `${followee} posted an image: <img src=\"${m}\"/>, comments:${data.Content}`;
                 toastr.info(b, " ");
             }
