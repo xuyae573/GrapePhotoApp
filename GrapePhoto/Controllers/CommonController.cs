@@ -86,6 +86,7 @@ namespace GrapePhoto.Controllers
                 {
                     Title = comments,
                     ImgUrl = picture.Src,
+                    ThumbUrl = picture.ThumbnailSrc,
                     UserId = HttpContext.User.Identity.Name
                 };
 

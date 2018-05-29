@@ -14,7 +14,7 @@ namespace GrapePhoto.Web.Models
 
         public string ImgUrl { get; set; }
 
-        public string ImgThumbUrl { get; set; }
+        public string ThumbUrl { get; set; }
 
         public string UserId { get; set; }
 

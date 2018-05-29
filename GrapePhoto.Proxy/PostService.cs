@@ -14,7 +14,7 @@ namespace GrapePhoto.Proxy
     {
         public static string AddPost => $"/post/add";
         public static string GetRecentPost => $"/post/recent";
-        public static string Feed => $"/post/Feed";
+        public static string Feed => $"/post/feeds";
 
         public static string Like => $"/post/like";
     }
@@ -44,15 +44,8 @@ namespace GrapePhoto.Proxy
 
             if (json.success)
             {
-                JObject jPostItem = JObject.Parse(json.result.ToString());
-                JArray itemArray = new JArray();
-                itemArray = (JArray)jPostItem["Items"];
-                foreach (var item in itemArray)
-                {
-                    postDto = item.ToObject<PostDto>();
-                }
-                
-                //postDto = JsonConvert.DeserializeObject<PostDto>();
+                postDto = JsonConvert.DeserializeObject<PostDto>(json.result.ToString());
+              
                 return postDto;
             }
             else
@@ -76,8 +69,8 @@ namespace GrapePhoto.Proxy
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
-
-            request.AddJsonBody(new { UserId = userId });
+            var limits = (pageIndex + 1) * pageSize;
+            request.AddJsonBody(new{ UserId = userId,Limit = limits});
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
             if (json.success)
@@ -100,8 +93,8 @@ namespace GrapePhoto.Proxy
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
-
-            request.AddJsonBody(new { UserId = userId });
+            var limits = (pageIndex + 1) * pageSize;
+            request.AddJsonBody(new { UserId = userId, Limit = limits });
 
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
@@ -110,7 +103,7 @@ namespace GrapePhoto.Proxy
             if (json.success)
             {
                 List<PostDto> items = new List<PostDto>();
-                //postDto = JsonConvert.DeserializeObject<PostDto>();
+                items = JsonConvert.DeserializeObject<List<PostDto>>(json.result.ToString());
                 return new PagedList<PostDto>(items, pageIndex, pageSize);
             }
             else
@@ -134,8 +127,9 @@ namespace GrapePhoto.Proxy
             {
                 JsonSerializer = new NewtonsoftJsonSerializer()
             };
-
-            request.AddJsonBody(new { UserId = userId });
+            var limits = (pageIndex + 1) * pageSize;
+            request.AddJsonBody(new { UserId = userId, Limit = limits });
+    
             IRestResponse response = _client.Post(request);
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
             if (json.success)

@@ -93,7 +93,7 @@
                     Picture = new Picture()
                     {
                         Src = post.ImgUrl,
-                        ThumbnailSrc = post.ImgUrl, // to do replace
+                        ThumbnailSrc = post.ThumbUrl,
                         TitleAttribute = post.Title,
                         PostDate = post.PostDate,
                         LikeCount = post.LikeCount,
