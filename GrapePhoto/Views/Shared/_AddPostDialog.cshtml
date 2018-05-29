@@ -8,24 +8,27 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Add Post</h5>
             </div>
-            <div class="modal-body">
-                <form id="addPostForm" method="post">
-                    <div class="form-group">
-                        <label class="form-label">Comments</label>
-                        <textarea rows="3" class="form-control" name="comments" placeholder="Here can be your description" value="Mike" style="margin-top: 0px; margin-bottom: 0px; height: 165px;"></textarea>
+            <div class="modal-body card-body">
+                <div class="dimmer" id="addpostcontent">
+                    <div class="loader"></div>
+                    <form id="addPostForm" method="post" class="dimmer-content">
+                        <div class="form-group">
+                            <label class="form-label">Comments</label>
+                            <textarea rows="1" class="form-control" name="comments" placeholder="Here can be your description" value="Mike" style="margin-top: 0px; margin-bottom: 0px; height: 165px;"></textarea>
 
-                    </div>
-                    <div class="form-group">
-                        <div class="form-label">Choose your Photo:</div>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="qqfile" onchange="previewImage(this,[300],4);">
-                            <label class="custom-file-label"></label>
-                            <div class="imagePreview"></div>
                         </div>
-                    </div>
-                    <div class="col-6 col-sm-4">
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <div class="form-label">Choose your Photo:</div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="qqfile" onchange="previewImage(this,[300],4);">
+                                <label class="custom-file-label"></label>
+                                <div class="imagePreview"></div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Close</button>
@@ -34,22 +37,35 @@
         </div>
     </div>
 </div>
-<script>
+@*<script>
         require(['jquery'], function () {
             $(document).ready(function () {
                 $('.btn-post').click(function () {
                     console.log("adding post.");
+                    var url = '@Url.Action("AsyncUpload","Common")';
                     var formData = new FormData($("#addPostForm")[0]);
                     $.ajax({
                         method: 'post',
-                        url: '@Url.Action("AsyncUpload","Common")',
+                        url: url,
                         data: formData,
+                        dataType: "application/json",
                         processData: false,
-                        contentType: false
-                    }).done(function(){
-                        window.location.refresh();
+                        contentType: false,
+                        success: function (data) {
+                            var d = JSON.parse(data.responseText);
+                            if (d.success) {
+                                location.reload();
+                            }
+                        }, //End of AJAX Success function  
+
+                        failure: function (data) {
+                            console.log(data);
+                        }, //End of AJAX failure function  
+                        error: function (data) {
+                            console.log(data);
+                        } //End of AJAX error function  
                     });
                 });
             });
         });
-</script>
+</script>*@

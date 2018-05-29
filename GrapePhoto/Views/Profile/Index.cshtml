@@ -60,7 +60,7 @@
     </div>
     <div class="row row-cards">
 
-       
+
         <div class="col-sm-6 col-lg-4">
             <div class="card">
                 <div class="hovereffect">
@@ -94,24 +94,45 @@
 
 
 @section Scripts{
-    @*<script>
-        require(['jquery'], function () {
-            $(document).ready(function () {
-                $('.btn-post').click(function () {
-                    var formData = new FormData($("#addPostForm")[0]);
-                    $.ajax({
-                        method: 'post',
-                        url: 'Common/AsyncUpload',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function (data) {
+    <script>
+            require(['jquery','../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
+                    $(document).ready(function () {
 
-                        }
+                        $('.btn-post').click(function () {
+                            console.log("adding post.");
+                            var url = '@Url.Action("AsyncUpload","Common")';
+                            var formData = new FormData($("#addPostForm")[0]);
+                            $("#addpostcontent").addClass("active");
+                            $.ajax({
+                                method: 'post',
+                                url: url,
+                                data: formData,
+                                dataType: "json",
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+                                    $("#addpostcontent").removeClass("active");
+                                    if (data.success) {
+
+                                        location.reload();
+                                    }
+                                    else {
+                                        Swal('Oops...', data.message, 'error')
+
+                                    }
+                                }, //End of AJAX Success function
+
+                                failure: function (data) {
+                                    console.log(data);
+                                }, //End of AJAX failure function
+                                error: function (data) {
+                                    console.log(data);
+                                } //End of AJAX error function
+                            });
+                        });
                     });
 
-                });
             });
-        });
-    </script>*@
+
+    </script>
 }

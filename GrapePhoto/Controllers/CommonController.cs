@@ -12,6 +12,7 @@ using GrapePhoto.Web.Models;
 using GrapePhoto.Models;
 using GrapePhoto.Helper;
 using GrapePhoto.Web.Models.Posts;
+using Newtonsoft.Json;
 
 namespace GrapePhoto.Controllers
 {
@@ -36,18 +37,24 @@ namespace GrapePhoto.Controllers
 
 
         [HttpPost]
-        public JsonResult AsyncUpload(string comments)
+        public async Task<string> AsyncUpload(string comments)
         {
-
-                var pictureComments = comments != null ? comments.Trim() : "";
-                var httpPostedFile = Request.Form.Files.FirstOrDefault();
+            var pictureComments = comments != null ? comments.Trim() : "";
+            if (string.IsNullOrEmpty(pictureComments))
+            {
+                return JsonConvert.SerializeObject(new
+                {
+                    success = false,
+                    message = "please enter your comments",
+                });
+            }
+            var httpPostedFile = Request.Form.Files.FirstOrDefault();
                 if (httpPostedFile == null)
                 {
-                    return Json(new
+                    return JsonConvert.SerializeObject(new
                     {
                         success = false,
                         message = "No file uploaded",
-                        downloadGuid = Guid.Empty,
                     });
                 }
 
@@ -83,7 +90,10 @@ namespace GrapePhoto.Controllers
                 };
 
                 _pictureService.InsertPicture(picture);
-
+                if (string.IsNullOrEmpty(comments))
+                {
+                    comments = " ";
+                }
                 var post = new PostDto()
                 {
                     Title = comments,
@@ -113,12 +123,11 @@ namespace GrapePhoto.Controllers
             await Channel.Trigger(m, "feed", "new_feed");
 
 
-            return Json(new
-                {
-                    success = true,
-                    result = picture,
-
-                });
+            return JsonConvert.SerializeObject(new
+            {
+                success = true,
+                message = "uploaded",
+            });
         }
 
         [HttpPost]

@@ -1,0 +1,32 @@
+﻿@using GrapePhoto.Web.Models.Account
+
+@model List<User> 
+ 
+
+<div class="row">
+    @if (Model.Any())
+    {
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="card">
+                <div class="card-body text-center">
+ 
+                <span class="avatar  avatar-azure avatar-lg ">@item.UserId.Substring(0, 2).ToUpper()</span>
+
+                <h3 class="mb-3">@item.UserId (@item.UserName)</h3>
+
+                <button class="btn btn-outline-primary btn-sm">
+                    <span class="fe fe-user-plus"></span> Follow
+                </button>
+                </div>
+                </div>
+            </div>
+        }}
+    else
+    {
+        <div class="alert alert-primary" role="alert">
+           @ViewBag.Message
+        </div>
+    }
+</div>

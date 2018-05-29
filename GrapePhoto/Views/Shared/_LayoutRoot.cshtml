@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,8 @@
     <meta name="MobileOptimized" content="320">
 
     <title>@ViewData["Title"] - GrapePhoto</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
     <script src="https://js.pusher.com/4.2/pusher.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
     <environment include="Development">
@@ -37,11 +34,10 @@
             border-radius: 3px;
         }
     </style>
-    <link href="~/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400'>
     <script src="~/lib/tabler/dist/assets/js/require.min.js" asp-append-version="true"></script>
@@ -55,6 +51,7 @@
     <link href="~/lib/floatingbutton/mfb.css" rel="stylesheet" />
     <link href="~/lib/photoswipe/dist/photoswipe.css" rel="stylesheet" />
     <link href="~/lib/photoswipe/dist/default-skin/default-skin.css" rel="stylesheet" />
+    <link href="~/lib/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -89,14 +86,17 @@
     <environment include="Development">
         <script src="~/js/html5.image.preview.js" asp-append-version="true"></script>
         <script src="~/lib/floatingbutton/mfb.js"></script>
+      
     </environment>
     <environment exclude="Development">
         <script src="~/js/site.min.js" asp-append-version="true"></script>
         <script src="~/js/html5.image.preview.min.js" asp-append-version="true"></script>
-
+        <script src="~/lib/sweetalert2/dist/sweetalert2.min.js"></script>
         <script src="~/lib/floatingbutton/mfb.js"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+   
 </body>
 </html>

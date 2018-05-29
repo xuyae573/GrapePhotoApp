@@ -83,7 +83,7 @@ namespace GrapePhoto
                 app.UseExceptionHandler("/Home/Error");
             }
             loggerFactory.AddLog4Net();
-         
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowCredentials().AllowAnyHeader().AllowAnyMethod());
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc(routes =>

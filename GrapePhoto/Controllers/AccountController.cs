@@ -119,6 +119,17 @@ namespace GrapePhoto.Controllers
             }
         }
 
-
+        [HttpGet]
+        public IActionResult SearchUsers(string q)
+        {
+            if (string.IsNullOrEmpty(q))
+            {
+                ViewBag.Message = "Please provide a keyword for searching";
+            }
+            ViewBag.SearchQuery = q;
+            var model=  _accountClient.SerachUsersByUserId(q);
+            if(!model.Any()) ViewBag.Message = "Not found";
+            return View(model);
+        }
     }
 }

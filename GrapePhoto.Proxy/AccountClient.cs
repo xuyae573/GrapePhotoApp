@@ -142,7 +142,7 @@ namespace GrapePhoto.Proxy
             }
             else
             {
-                return null;
+                return new List<User>();
             }
         }
 
