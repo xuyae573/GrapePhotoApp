@@ -5,15 +5,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BusinessModelView\**" />
+    <Compile Remove="Views\Test\**" />
+    <Content Remove="BusinessModelView\**" />
+    <Content Remove="Views\Test\**" />
+    <EmbeddedResource Remove="BusinessModelView\**" />
+    <EmbeddedResource Remove="Views\Test\**" />
+    <None Remove="BusinessModelView\**" />
+    <None Remove="Views\Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\TestController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AWSSDK.Core" Version="3.3.22.5" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.5" />
     <PackageReference Include="AWSSDK.S3" Version="3.3.18.2" />
     <PackageReference Include="BuildBundlerMinifier" Version="2.8.391" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+ 
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="PusherServer" Version="4.1.0" />
+ 
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.4" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.1.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+  
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
+ 
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "_LayoutRoot";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Send a Post</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+@{
+    Layout = "_LayoutRoot";
+}
+<div class="page-single">
+    <div class="container">
+        <div class="row">
+            <div class="col col-login mx-auto">
+                <div class="text-center mb-6">
+                    <img src='@Url.Content("/images/logo.jpg")' class="h-8" alt="">
+                </div>
+                <div>
+                    <form action="/Posts/Create" method="post">
+                        UserName: <input type="text" id="UserName" name="UserName" value="" /><br />
+                        Message: <input type="text" id="Content" name="Content" value="" /><br />
+                        <input type="submit" name="BtnSave" value="Save Post" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
