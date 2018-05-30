@@ -100,35 +100,18 @@
                         TitleAttribute = post.Title,
                         PostDate = post.PostDate,
                         LikeCount = post.LikeCount,
-                        Width= post.Width,
-                        Height= post.Height,
+                        Width = post.Width,
+                        Height = post.Height,
                         Id = post.Id,
                         UserId = post.UserId,
-                        AltAttribute = post.Title,
+                        AltAttribute = post.Title
                     },
-                    User = this._accountService.GetUserByUserId(post.UserId),                   
+                    User = this._accountService.GetUserByUserId(post.UserId),
+                    IsLike = post.Liked == 1
                 };
                 list.Add(model1);
             }
         }
         #endregion 
-
-        [HttpPost]
-        public JsonResult LikePost(string id,string buttonName)
-        {
-            string[] ids = id.Split("_");
-            var post = new LikePostDto() { PostId = ids[0], UserId = HttpContext.User.Identity.Name, IsLike = false };
-            if (buttonName == "Like")
-                post.IsLike = true;
-            else
-                post.IsLike = false;
-
-            var result = _postService.LikePost(post);
-            return Json(new
-            {
-                success = true
-            });
-        }
-
     }
 }

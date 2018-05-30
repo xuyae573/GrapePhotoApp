@@ -11,7 +11,7 @@ namespace GrapePhoto.Proxy
     public interface IPostService
     { 
         PostDto AddPost(PostDto postDto);
-        List<PostDto> LikePost(LikePostDto likePostDto);
+        PostDto LikePost(LikePostDto likePostDto);
         PostDto UnlikePost(LikePostDto likePostDto);
 
         IPagedList<PostDto> GetFollowingPostsByUserId(string userId, int pageIndex = 0, int pageSize = int.MaxValue);

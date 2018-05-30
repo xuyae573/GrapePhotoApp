@@ -141,7 +141,7 @@ namespace GrapePhoto.Proxy
             return new PagedList<PostDto>(items, pageIndex, pageSize);
         }
 
-        public List<PostDto> LikePost(LikePostDto likePostDto)
+        public PostDto LikePost(LikePostDto likePostDto)
         {
             var request = new RestSharp.RestRequest(PostAPI.Like)
             {
@@ -155,7 +155,7 @@ namespace GrapePhoto.Proxy
 
             if (json.success)
             {
-               var postDto = JsonConvert.DeserializeObject<List<PostDto>>(json.result.ToString());
+               var postDto = JsonConvert.DeserializeObject<PostDto>(json.result.ToString());
                return postDto;
             }
             else

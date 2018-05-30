@@ -1,0 +1,18 @@
+﻿@model PostViewModel
+@{
+    Layout = null;
+}
+@if (Model.IsLike)
+{
+    <a class="like-button liked" data-postid="@Model.Picture.Id">
+        <i class="fa fa-heart mr-1 text-danger"></i>
+        <span id="likecount">@Model.Picture.LikeCount</span>
+    </a>
+}
+else
+{
+    <a class="like-button" data-postid="@Model.Picture.Id">
+        <i class="fa fa-heart-o mr-1"></i>
+        <span id="likecount">@Model.Picture.LikeCount</span>
+    </a>
+}

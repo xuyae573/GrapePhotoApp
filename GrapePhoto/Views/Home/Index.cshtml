@@ -149,6 +149,7 @@ else
                 $(document).ready(function () {
                     $("img.grapephoto").click(function (e) {
                         var index = $(this).index();
+                        console.log(index);
                         var pswpElement = document.querySelectorAll('.pswp')[0];
                         var items = [];
                         $("img.grapephoto").each(function (index, value) {

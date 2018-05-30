@@ -96,3 +96,6 @@
     width: 100%!important;
     height: 300px!important;
 }
+.like-button{
+    cursor:pointer;
+}
