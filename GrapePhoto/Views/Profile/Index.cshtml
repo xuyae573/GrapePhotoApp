@@ -20,7 +20,7 @@
                     }
                     else
                     {
-                     <span class="avatar  avatar-xxl  avatar-azure m-3 mr-5">@Model.User.UserName.Substring(0, 2) </span>
+                     <span class="avatar  avatar-xxl  avatar-azure m-3 mr-5">@Model.User.UserName.Substring(0, 2).ToUpper() </span>
                     }
                     <div class="media-body">
                         <div class="row">
@@ -139,6 +139,7 @@
                 $(document).ready(function () {
                     $("div.hovereffect").click(function (e) {
                         var index = $(this).index();
+                        console.log(index);
                         var pswpElement = document.querySelectorAll('.pswp')[0];
                         var items = [];
                         $("div.hovereffect").each(function (index, value) {

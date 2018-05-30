@@ -28,10 +28,13 @@ require(['jquery'], function () {
                 success: function (result) {
                     if (result.success) {
                         if (likeAlready) {
-                            $(self).removeClass("liked").removeClass("bg-pink");
+                            $(self).removeClass("liked");
+                            $(self).find(".fa-heart").removeClass("fa-heart").removeClass("text-danger").addClass("fa-heart-o");
                         } else {
-                            $(self).addClass("liked").addClass("bg-pink");
+                            $(self).addClass("liked");
+                            $(self).find(".fa-heart-o").removeClass("fa-heart-o").addClass("text-danger").addClass("fa-heart");
                         }
+                        $(self).find("#likecount").html(result.count);
                         LikeFunction();
                     }
                 }

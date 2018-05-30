@@ -100,13 +100,14 @@
                         TitleAttribute = post.Title,
                         PostDate = post.PostDate,
                         LikeCount = post.LikeCount,
-                        Width= post.Width,
-                        Height= post.Height,
+                        Width = post.Width,
+                        Height = post.Height,
                         Id = post.Id,
                         UserId = post.UserId,
-                        AltAttribute = post.Title,
+                        AltAttribute = post.Title
                     },
-                    User = this._accountService.GetUserByUserId(post.UserId),                   
+                    User = this._accountService.GetUserByUserId(post.UserId),
+                    IsLike = post.Liked == 1
                 };
                 list.Add(model1);
             }

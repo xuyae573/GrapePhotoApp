@@ -160,7 +160,8 @@ namespace GrapePhoto.Controllers
             var result = _postService.LikePost(post);
             return Json(new
             {
-                success = true
+                success = true,
+                count = result.LikeCount
             });
         }
         [HttpPost]
@@ -170,7 +171,8 @@ namespace GrapePhoto.Controllers
             var result = _postService.LikePost(post);
             return Json(new
             {
-                success = true
+                success = true,
+                count = result.LikeCount
             });
         }
     }
