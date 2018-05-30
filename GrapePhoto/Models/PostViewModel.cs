@@ -11,5 +11,6 @@ namespace GrapePhoto.Models
     {
         public Picture Picture { get; set; }
         public User User { get; set; }
+        public bool IsLike { get; set; }
     }
 }

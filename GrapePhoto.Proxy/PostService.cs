@@ -18,6 +18,7 @@ namespace GrapePhoto.Proxy
         public static string Feed => $"/post/feeds";
 
         public static string Like => $"/post/like";
+        public static string GetPostById => $"/post/full";
     }
 
     public class PostService : IPostService
@@ -140,7 +141,7 @@ namespace GrapePhoto.Proxy
             return new PagedList<PostDto>(items, pageIndex, pageSize);
         }
 
-        public PostDto LikePost(LikePostDto likePostDto)
+        public List<PostDto> LikePost(LikePostDto likePostDto)
         {
             var request = new RestSharp.RestRequest(PostAPI.Like)
             {
@@ -154,7 +155,7 @@ namespace GrapePhoto.Proxy
 
             if (json.success)
             {
-               var postDto = JsonConvert.DeserializeObject<PostDto>(json.result.ToString());
+               var postDto = JsonConvert.DeserializeObject<List<PostDto>>(json.result.ToString());
                return postDto;
             }
             else
@@ -166,6 +167,24 @@ namespace GrapePhoto.Proxy
         public PostDto UnlikePost(LikePostDto likePostDto)
         {
             throw new NotImplementedException();
+        }
+        public PostDto GetPostById(string postId)
+        {
+            var items = new PostDto();
+
+            var request = new RestSharp.RestRequest(PostAPI.GetPostById)
+            {
+                JsonSerializer = new NewtonsoftJsonSerializer()
+            };
+            request.AddJsonBody(new { PostId = postId });
+
+            IRestResponse response = _client.Post(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+            if (json.success)
+            {
+                items = JsonConvert.DeserializeObject<PostDto>(json.result.ToString());
+            }
+            return items;
         }
     }
 }

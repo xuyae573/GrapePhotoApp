@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PusherServer;
 using GrapePhoto.Models;
+using GrapePhoto.Web.Models.Posts;
 
 namespace GrapePhoto.Helper
 {

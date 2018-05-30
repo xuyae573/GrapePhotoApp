@@ -123,6 +123,7 @@ namespace GrapePhoto.Controllers
             await Channel.Trigger(m, "feed", "new_feed");
 
 
+
             return JsonConvert.SerializeObject(new
             {
                 success = true,
@@ -131,13 +132,7 @@ namespace GrapePhoto.Controllers
         }
 
         
-        [HttpPost]
-        public JsonResult LikePost(string postId)
-        {
-            var post = new LikePostDto() { PostId = postId };
-            var result = _postService.LikePost(post);
-            return Json(result);
-        }
+
 
 
         [HttpPost]
