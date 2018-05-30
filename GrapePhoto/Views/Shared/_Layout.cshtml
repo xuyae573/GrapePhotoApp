@@ -1,6 +1,9 @@
+@using GrapePhoto.Proxy
 @{
     Layout = "_LayoutRoot";
+    var user = userManager.GetUserByUserId(User.Identity.Name);
 }
+@inject IAccountClient userManager
 <div class="header py-4">
     <div class="container">
         <div class="d-flex">
@@ -37,7 +40,7 @@
                     </li>
                 </ul>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -45,8 +48,8 @@
     <div class="container">
         @RenderBody()
     </div>
-    <span id="username" style="visibility: hidden">liucao</span>
 
+    <span id="currentUsername" style="visibility: hidden">@user.UserId</span>
     <script>
         const pusher = new Pusher('c5705e0b64eddb898170', {
             cluster: 'ap1'
@@ -71,7 +74,7 @@
                 "showMethod": "fadeIn",
                 "hideMethod": "fadeOut"
             };
-            var username = document.getElementById("username").innerText;
+            var username = document.getElementById("currentUsername").innerText;
             if (`${data.Followers}`.indexOf(username) > -1) {
                 var m = `${data.ImageUrl}`;
                 var followee = `${data.UserName}`
@@ -87,4 +90,3 @@
 @section Scripts{
     @RenderSection("Scripts", required: false)
 }
- 

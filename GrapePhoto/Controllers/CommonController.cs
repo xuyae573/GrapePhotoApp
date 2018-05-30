@@ -110,15 +110,13 @@ namespace GrapePhoto.Controllers
             var result = _accountClient.GetAllFollowersUsersByUserId(HttpContext.User.Identity.Name.ToString());
             var followerList = result.Select(o => o.UserId).ToList();
 
-            followerList.Add("liucao123");
-            followerList.Add("allen");
 
             var m = new Message()
             {
                 UserName = HttpContext.User.Identity.Name.ToString(),
                 Content = comments,
                 ImageUrl = picture.Src,
-                Followers = followerList//new string[] { "liucao", "allen" }
+                Followers = followerList
             };
             await Channel.Trigger(m, "feed", "new_feed");
 
