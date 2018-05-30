@@ -94,8 +94,13 @@
 
 .profile-post {
     width: 100%!important;
-    height: 300px!important;
+    height: 180px!important;
 }
 .like-button{
     cursor:pointer;
+}
+
+.grapephoto {
+   background-size:contain;
+    
 }

@@ -14788,3 +14788,543 @@ INFO  2018-05-31 00:41:56,407 [20   ] tion.Cookies.CookieAuthenticationHandler -
 INFO  2018-05-31 00:41:56,642 [20   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 703.506ms 404 
 INFO  2018-05-31 00:41:56,692 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 898.2743ms 200 application/javascript
 INFO  2018-05-31 00:41:56,708 [26   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 724.0158ms 200 application/javascript
+INFO  2018-05-31 01:01:17,468 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 DEBUG http://localhost:61684/  0
+INFO  2018-05-31 01:01:17,468 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-31 01:01:17,613 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 234.5806ms 200 
+INFO  2018-05-31 01:01:18,368 [9    ] uthorization.DefaultAuthorizationService - Authorization failed for user: (null).
+INFO  2018-05-31 01:01:18,391 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+INFO  2018-05-31 01:01:18,417 [9    ] Microsoft.AspNetCore.Mvc.ChallengeResult - Executing ChallengeResult with authentication schemes ().
+INFO  2018-05-31 01:01:18,450 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was challenged.
+INFO  2018-05-31 01:01:18,465 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 108.0523ms
+INFO  2018-05-31 01:01:18,518 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Account/Login/?ReturnUrl=%2F  
+INFO  2018-05-31 01:01:18,525 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1121.0196ms 302 
+INFO  2018-05-31 01:01:18,690 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (/) - ModelState is Valid
+INFO  2018-05-31 01:01:25,226 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+INFO  2018-05-31 01:01:27,057 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 7963.8334ms
+INFO  2018-05-31 01:01:27,182 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8571.0827ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:01:27,224 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/site.js?v=dXcxvaawXRVCfaVEGKtsHCD8RLHXqlTWHaJGcHv1Eqs  
+INFO  2018-05-31 01:01:27,245 [13   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/site.js was not modified
+INFO  2018-05-31 01:01:27,276 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:01:27,324 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:01:27,359 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 129.1812ms 304 application/javascript
+INFO  2018-05-31 01:01:27,396 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/html5.image.preview.js?v=JrA_piVeJlkxUq90kuo41sOdaST7lUu4s3fCV9c777E  
+INFO  2018-05-31 01:01:27,405 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/html5.image.preview.js was not modified
+INFO  2018-05-31 01:01:27,431 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 595.3517ms 304 text/css
+INFO  2018-05-31 01:01:27,445 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 140.2249ms 304 application/javascript
+INFO  2018-05-31 01:01:31,057 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Account/Login?returnUrl=%2F application/x-www-form-urlencoded 215
+INFO  2018-05-31 01:01:31,076 [9    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:01:31,413 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.AccountController.Login (GrapePhoto) with arguments (GrapePhoto.Web.Models.Account.SignInViewModel, /) - ModelState is Valid
+INFO  2018-05-31 01:01:33,732 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies signed in.
+INFO  2018-05-31 01:01:33,740 [9    ] Core.Mvc.Internal.RedirectResultExecutor - Executing RedirectResult, redirecting to /.
+INFO  2018-05-31 01:01:33,747 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.AccountController.Login (GrapePhoto) in 2645.081ms
+INFO  2018-05-31 01:01:33,764 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2843.1111ms 302 
+INFO  2018-05-31 01:01:33,795 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-31 01:01:33,812 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:01:33,826 [13   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-31 01:01:33,835 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-31 01:01:38,311 [13   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-31 01:01:45,588 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 11614.2293ms
+INFO  2018-05-31 01:01:45,737 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11825.0077ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:01:51,938 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Common/Follow application/x-www-form-urlencoded; charset=UTF-8 8
+INFO  2018-05-31 01:01:51,945 [13   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:01:51,954 [13   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:01:51,967 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.CommonController.Follow (GrapePhoto) with arguments (allen) - ModelState is Valid
+INFO  2018-05-31 01:01:58,705 [13   ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value { success = True }.
+INFO  2018-05-31 01:01:58,720 [13   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.CommonController.Follow (GrapePhoto) in 6757.381ms
+INFO  2018-05-31 01:01:58,733 [13   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6795.3537ms 200 application/json; charset=utf-8
+INFO  2018-05-31 01:02:04,907 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Common/Follow application/x-www-form-urlencoded; charset=UTF-8 14
+INFO  2018-05-31 01:02:04,916 [9    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:02:04,922 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:02:04,933 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.CommonController.Follow (GrapePhoto) with arguments (tchen003NUS) - ModelState is Valid
+INFO  2018-05-31 01:02:12,839 [9    ] matters.Json.Internal.JsonResultExecutor - Executing JsonResult, writing value { success = True }.
+INFO  2018-05-31 01:02:12,862 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.CommonController.Follow (GrapePhoto) in 7916.9109ms
+INFO  2018-05-31 01:02:12,884 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7970.2097ms 200 application/json; charset=utf-8
+INFO  2018-05-31 01:02:29,082 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/home/Index  
+INFO  2018-05-31 01:02:29,089 [9    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:02:29,100 [9    ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-31 01:02:29,116 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-31 01:03:04,044 [9    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-31 01:03:12,652 [9    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 43060.4891ms
+INFO  2018-05-31 01:03:13,251 [9    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 43585.1377ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:03:24,441 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/tchen003NUS  
+INFO  2018-05-31 01:03:24,452 [8    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:03:24,471 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (tchen003NUS) - ModelState is Valid
+INFO  2018-05-31 01:03:38,294 [8    ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:03:40,916 [8    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 16256.214ms
+INFO  2018-05-31 01:03:41,026 [8    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 16509.4577ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:03:44,462 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-31 01:03:44,495 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:03:44,508 [10   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-31 01:03:44,516 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-31 01:04:11,102 [10   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-31 01:04:13,889 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 29080.1631ms
+INFO  2018-05-31 01:04:14,322 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 29447.0234ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:04:54,400 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:04:54,413 [10   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:04:54,426 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:05:04,251 [10   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:05:05,879 [10   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 11362.9753ms
+INFO  2018-05-31 01:05:05,997 [10   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11501.389ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:06:54,696 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Common/AsyncUpload multipart/form-data; boundary=----WebKitFormBoundaryoamLygOCBuGJDJJ7 136257
+INFO  2018-05-31 01:06:54,776 [19   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:06:54,837 [19   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:06:55,313 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) with arguments () - ModelState is Valid
+INFO  2018-05-31 01:06:55,359 [27   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-31 01:06:55,373 [27   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) in 498.3639ms
+INFO  2018-05-31 01:06:55,615 [27   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 698.5306ms 200 text/plain; charset=utf-8
+INFO  2018-05-31 01:07:15,573 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Common/AsyncUpload multipart/form-data; boundary=----WebKitFormBoundaryw5BECm4pGY2Veizk 136274
+INFO  2018-05-31 01:07:15,673 [25   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:07:15,698 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:07:15,755 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) with arguments (beautiful t-shirt) - ModelState is Valid
+INFO  2018-05-31 01:07:35,649 [25   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-31 01:07:35,661 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) in 19951.2174ms
+INFO  2018-05-31 01:07:36,066 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 20306.5924ms 200 text/plain; charset=utf-8
+INFO  2018-05-31 01:07:36,160 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:07:36,193 [25   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:07:36,206 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:07:47,054 [25   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:07:48,417 [25   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 12071.3954ms
+INFO  2018-05-31 01:07:48,468 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12296.0433ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:07:48,523 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/site.js?v=dXcxvaawXRVCfaVEGKtsHCD8RLHXqlTWHaJGcHv1Eqs  
+INFO  2018-05-31 01:07:48,531 [25   ] NetCore.StaticFiles.StaticFileMiddleware - The file /js/site.js was not modified
+INFO  2018-05-31 01:07:48,904 [25   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 17.0809ms 304 application/javascript
+INFO  2018-05-31 01:07:53,965 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/default-skin/default-skin.svg  
+INFO  2018-05-31 01:07:54,181 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /lib/photoswipe/dist/default-skin/default-skin.svg was not modified
+INFO  2018-05-31 01:07:54,250 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 277.8131ms 304 image/svg+xml
+INFO  2018-05-31 01:08:26,225 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Common/AsyncUpload multipart/form-data; boundary=----WebKitFormBoundaryDYHJGnKmcqrRgV5c 136054
+INFO  2018-05-31 01:08:26,291 [4    ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:08:26,375 [4    ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:08:26,428 [4    ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) with arguments (images) - ModelState is Valid
+INFO  2018-05-31 01:08:35,964 [19   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-31 01:08:35,970 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) in 9588.3066ms
+INFO  2018-05-31 01:08:36,178 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 9888.9375ms 200 text/plain; charset=utf-8
+INFO  2018-05-31 01:08:36,342 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:08:36,353 [19   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:08:36,360 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:08:48,283 [19   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:08:50,667 [19   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 13368.946ms
+INFO  2018-05-31 01:08:51,876 [19   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14353.0631ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:10:18,834 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:10:18,847 [38   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:10:18,863 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:10:28,234 [38   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:10:29,503 [38   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 10465.6104ms
+INFO  2018-05-31 01:10:29,620 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10732.1967ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:10:30,807 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:10:30,822 [4    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:10:30,875 [4    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 98.6044ms 200 image/x-icon
+INFO  2018-05-31 01:10:38,543 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js.map  
+INFO  2018-05-31 01:10:38,784 [38   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:10:39,406 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js.map  
+INFO  2018-05-31 01:10:40,244 [39   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map'
+INFO  2018-05-31 01:10:40,504 [39   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css.map  
+INFO  2018-05-31 01:10:40,919 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 468.7655ms 404 
+INFO  2018-05-31 01:10:41,032 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css.map  
+INFO  2018-05-31 01:10:41,106 [39   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+INFO  2018-05-31 01:10:41,178 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2542.6212ms 200 text/plain
+INFO  2018-05-31 01:10:41,214 [38   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css.map'
+INFO  2018-05-31 01:10:41,301 [38   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 267.1687ms 200 text/plain
+INFO  2018-05-31 01:10:42,314 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 806.6302ms 200 text/plain
+INFO  2018-05-31 01:11:05,300 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:11:05,350 [42   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:11:05,367 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:11:15,148 [42   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:11:16,290 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 10919.2811ms
+INFO  2018-05-31 01:11:16,320 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11050.5473ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:11:18,303 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.css  
+INFO  2018-05-31 01:11:18,680 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/jquery/dist/jquery.min.js  
+INFO  2018-05-31 01:11:18,883 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/css/dashboard.css  
+INFO  2018-05-31 01:11:19,019 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe.css'
+INFO  2018-05-31 01:11:20,185 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css  
+INFO  2018-05-31 01:11:20,658 [45   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\jquery\dist\jquery.min.js'
+INFO  2018-05-31 01:11:20,717 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:11:20,819 [47   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css'
+INFO  2018-05-31 01:11:20,901 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css  
+INFO  2018-05-31 01:11:21,096 [48   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/css/dashboard.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\css\dashboard.css'
+INFO  2018-05-31 01:11:21,316 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3789.8525ms 200 application/javascript
+INFO  2018-05-31 01:11:21,391 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2963.2729ms 200 text/css
+INFO  2018-05-31 01:11:21,411 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1879.3828ms 200 text/css
+INFO  2018-05-31 01:11:21,873 [42   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+INFO  2018-05-31 01:11:22,569 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js  
+INFO  2018-05-31 01:11:22,633 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4455.4244ms 200 text/css
+INFO  2018-05-31 01:11:22,639 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-31 01:11:23,431 [41   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:11:23,784 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5247.8559ms 200 text/css
+INFO  2018-05-31 01:11:23,840 [50   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js'
+INFO  2018-05-31 01:11:24,074 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/require.min.js?v=VXI-ZPQrF1FBmAN5miFlH9z6n7HfAlNEoH9bYZ_AkVU  
+INFO  2018-05-31 01:11:25,266 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/default-skin/default-skin.css  
+INFO  2018-05-31 01:11:26,142 [45   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.min.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.min.css'
+INFO  2018-05-31 01:11:26,532 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/require.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\require.min.js'
+INFO  2018-05-31 01:11:26,928 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2465.6931ms 200 application/javascript
+INFO  2018-05-31 01:11:27,223 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2838.7335ms 200 application/javascript
+INFO  2018-05-31 01:11:28,025 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js.map  
+INFO  2018-05-31 01:11:28,075 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/default-skin/default-skin.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\default-skin\default-skin.css'
+INFO  2018-05-31 01:11:28,512 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4443.9514ms 200 text/css
+INFO  2018-05-31 01:11:29,666 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/dashboard.js?v=OBGuNQOndU60uKvkeL8hkG1uS5I1JQ62586o97WJAzU  
+INFO  2018-05-31 01:11:29,700 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 6564.4039ms 200 text/css
+INFO  2018-05-31 01:11:29,783 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/site.js?v=dXcxvaawXRVCfaVEGKtsHCD8RLHXqlTWHaJGcHv1Eqs  
+INFO  2018-05-31 01:11:30,350 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.js?v=f3I1azUOsV_w63jg1hg2mi8G4Fpu_GyGUu9MidA6D_w  
+INFO  2018-05-31 01:11:30,361 [48   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map'
+INFO  2018-05-31 01:11:30,376 [50   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/dashboard.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\dashboard.js'
+INFO  2018-05-31 01:11:30,587 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5566.2526ms 200 text/css
+INFO  2018-05-31 01:11:30,772 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\js\site.js'
+INFO  2018-05-31 01:11:30,896 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2475.9129ms 200 application/javascript
+INFO  2018-05-31 01:11:30,992 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4760.7987ms 200 text/plain
+INFO  2018-05-31 01:11:31,040 [45   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.js'
+INFO  2018-05-31 01:11:31,135 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2321.6317ms 200 application/javascript
+INFO  2018-05-31 01:11:31,246 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff?t=1501841394106  
+INFO  2018-05-31 01:11:31,832 [50   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:11:31,862 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2160.906ms 200 application/javascript
+INFO  2018-05-31 01:11:31,867 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/images/logo.jpg  
+INFO  2018-05-31 01:11:31,892 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css.map  
+INFO  2018-05-31 01:11:31,914 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/html5.image.preview.js?v=JrA_piVeJlkxUq90kuo41sOdaST7lUu4s3fCV9c777E  
+INFO  2018-05-31 01:11:31,962 [41   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css.map  
+INFO  2018-05-31 01:11:32,011 [50   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\fonts\feather\feather-webfont.woff'
+INFO  2018-05-31 01:11:32,046 [48   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/logo.jpg'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\images\logo.jpg'
+INFO  2018-05-31 01:11:32,064 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css.map'
+INFO  2018-05-31 01:11:32,644 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 487.9535ms 200 text/plain
+INFO  2018-05-31 01:11:32,726 [43   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/html5.image.preview.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\js\html5.image.preview.js'
+INFO  2018-05-31 01:11:32,741 [45   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js  
+INFO  2018-05-31 01:11:32,989 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 899.3097ms 200 image/jpeg
+INFO  2018-05-31 01:11:33,838 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 971.9457ms 200 application/font-woff
+INFO  2018-05-31 01:11:35,341 [45   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\vendors\jquery-3.2.1.min.js'
+INFO  2018-05-31 01:11:35,845 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1691.9014ms 200 application/javascript
+INFO  2018-05-31 01:11:36,057 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe-ui-default.js  
+INFO  2018-05-31 01:11:36,110 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.all.min.js  
+INFO  2018-05-31 01:11:37,850 [41   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+INFO  2018-05-31 01:11:38,680 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js  
+INFO  2018-05-31 01:11:39,171 [48   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe-ui-default.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe-ui-default.js'
+INFO  2018-05-31 01:11:39,217 [50   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.all.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.all.min.js'
+INFO  2018-05-31 01:11:39,285 [47   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4099.3854ms 200 application/javascript
+INFO  2018-05-31 01:11:39,394 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\vendors\bootstrap.bundle.min.js'
+INFO  2018-05-31 01:11:39,720 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.js  
+INFO  2018-05-31 01:11:41,976 [48   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 5358.5785ms 200 application/javascript
+INFO  2018-05-31 01:11:42,065 [50   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3046.4124ms 200 application/javascript
+INFO  2018-05-31 01:11:42,080 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 8481.9942ms 200 text/plain
+INFO  2018-05-31 01:11:42,188 [43   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3964.7636ms 200 application/javascript
+INFO  2018-05-31 01:11:43,023 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js.map  
+INFO  2018-05-31 01:11:43,053 [42   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe.js'
+INFO  2018-05-31 01:11:43,098 [49   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:11:43,223 [49   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1438.7601ms 404 
+INFO  2018-05-31 01:11:43,241 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 7864.1088ms 200 application/javascript
+INFO  2018-05-31 01:12:45,536 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:12:45,601 [51   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:12:45,622 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:12:56,796 [51   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:12:58,738 [51   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 12649.7433ms
+INFO  2018-05-31 01:12:58,847 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13440.9286ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:12:58,863 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/css/dashboard.css  
+INFO  2018-05-31 01:12:58,877 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/css/dashboard.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\css\dashboard.css'
+INFO  2018-05-31 01:12:58,949 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/require.min.js?v=VXI-ZPQrF1FBmAN5miFlH9z6n7HfAlNEoH9bYZ_AkVU  
+INFO  2018-05-31 01:12:58,971 [53   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/require.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\require.min.js'
+INFO  2018-05-31 01:12:59,109 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 244.6417ms 200 application/javascript
+INFO  2018-05-31 01:12:59,126 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css  
+INFO  2018-05-31 01:12:59,171 [53   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css'
+INFO  2018-05-31 01:12:59,233 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css  
+INFO  2018-05-31 01:12:59,247 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 70.3466ms 200 text/css
+INFO  2018-05-31 01:12:59,268 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.css  
+INFO  2018-05-31 01:12:59,293 [53   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe.css'
+INFO  2018-05-31 01:12:59,358 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 47.3962ms 200 text/css
+INFO  2018-05-31 01:12:59,432 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/default-skin/default-skin.css  
+INFO  2018-05-31 01:12:59,443 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+INFO  2018-05-31 01:12:59,472 [53   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/default-skin/default-skin.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\default-skin\default-skin.css'
+INFO  2018-05-31 01:12:59,502 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 81.9019ms 200 text/css
+INFO  2018-05-31 01:12:59,527 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/jquery/dist/jquery.min.js  
+INFO  2018-05-31 01:12:59,587 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\jquery\dist\jquery.min.js'
+INFO  2018-05-31 01:12:59,675 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-31 01:12:59,822 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 221.9316ms 200 application/javascript
+INFO  2018-05-31 01:12:59,831 [53   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.min.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.min.css'
+INFO  2018-05-31 01:13:00,001 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 256.0517ms 200 text/css
+INFO  2018-05-31 01:13:00,256 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js  
+INFO  2018-05-31 01:13:00,341 [57   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1032.1726ms 200 text/css
+INFO  2018-05-31 01:13:00,369 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1387.253ms 200 text/css
+INFO  2018-05-31 01:13:00,377 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:13:00,418 [55   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:13:00,423 [42   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js'
+INFO  2018-05-31 01:13:00,724 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 395.7891ms 200 application/javascript
+INFO  2018-05-31 01:13:01,335 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/html5.image.preview.js?v=JrA_piVeJlkxUq90kuo41sOdaST7lUu4s3fCV9c777E  
+INFO  2018-05-31 01:13:01,407 [60   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/images/logo.jpg  
+INFO  2018-05-31 01:13:01,422 [60   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/logo.jpg'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\images\logo.jpg'
+INFO  2018-05-31 01:13:01,477 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/dashboard.js?v=OBGuNQOndU60uKvkeL8hkG1uS5I1JQ62586o97WJAzU  
+INFO  2018-05-31 01:13:01,490 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js.map  
+INFO  2018-05-31 01:13:01,524 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 411.0379ms 200 text/css
+INFO  2018-05-31 01:13:01,531 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.js?v=f3I1azUOsV_w63jg1hg2mi8G4Fpu_GyGUu9MidA6D_w  
+INFO  2018-05-31 01:13:01,537 [60   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 325.3795ms 200 image/jpeg
+INFO  2018-05-31 01:13:01,561 [58   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/dashboard.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\dashboard.js'
+INFO  2018-05-31 01:13:01,564 [59   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map'
+INFO  2018-05-31 01:13:01,649 [60   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff?t=1501841394106  
+INFO  2018-05-31 01:13:01,695 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1074.6859ms 200 application/javascript
+INFO  2018-05-31 01:13:01,715 [60   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:13:01,734 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 506.1967ms 200 text/plain
+INFO  2018-05-31 01:13:01,784 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/site.js?v=dXcxvaawXRVCfaVEGKtsHCD8RLHXqlTWHaJGcHv1Eqs  
+INFO  2018-05-31 01:13:01,881 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.js'
+INFO  2018-05-31 01:13:01,916 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css.map  
+INFO  2018-05-31 01:13:01,933 [60   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\fonts\feather\feather-webfont.woff'
+INFO  2018-05-31 01:13:02,237 [60   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 391.1831ms 200 application/font-woff
+INFO  2018-05-31 01:13:02,253 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css.map  
+INFO  2018-05-31 01:13:02,356 [55   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\js\site.js'
+INFO  2018-05-31 01:13:02,542 [59   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css.map'
+INFO  2018-05-31 01:13:02,625 [42   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/html5.image.preview.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\js\html5.image.preview.js'
+INFO  2018-05-31 01:13:02,660 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 798.1886ms 200 text/plain
+INFO  2018-05-31 01:13:02,928 [58   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+INFO  2018-05-31 01:13:02,938 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 784.1308ms 200 application/javascript
+INFO  2018-05-31 01:13:02,941 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 735.2911ms 200 application/javascript
+INFO  2018-05-31 01:13:03,029 [57   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.all.min.js  
+INFO  2018-05-31 01:13:03,042 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.js  
+INFO  2018-05-31 01:13:03,091 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1536.4726ms 200 application/javascript
+INFO  2018-05-31 01:13:03,179 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe-ui-default.js  
+INFO  2018-05-31 01:13:03,209 [59   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe.js'
+INFO  2018-05-31 01:13:03,219 [57   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.all.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.all.min.js'
+INFO  2018-05-31 01:13:03,423 [57   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 273.406ms 200 application/javascript
+INFO  2018-05-31 01:13:03,516 [55   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe-ui-default.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe-ui-default.js'
+INFO  2018-05-31 01:13:03,671 [60   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1590.9363ms 200 text/plain
+INFO  2018-05-31 01:13:03,696 [59   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 338.8391ms 200 application/javascript
+INFO  2018-05-31 01:13:03,722 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js  
+INFO  2018-05-31 01:13:03,749 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 568.6787ms 200 application/javascript
+INFO  2018-05-31 01:13:03,795 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\vendors\jquery-3.2.1.min.js'
+INFO  2018-05-31 01:13:03,942 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 736.5943ms 200 application/javascript
+INFO  2018-05-31 01:13:04,117 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js  
+INFO  2018-05-31 01:13:04,133 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\vendors\bootstrap.bundle.min.js'
+INFO  2018-05-31 01:13:04,182 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.7563ms 200 application/javascript
+INFO  2018-05-31 01:13:04,276 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js.map  
+INFO  2018-05-31 01:13:04,281 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/core.js  
+INFO  2018-05-31 01:13:04,326 [55   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/core.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\core.js'
+INFO  2018-05-31 01:13:04,352 [53   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:13:04,419 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 107.0921ms 200 application/javascript
+INFO  2018-05-31 01:13:04,435 [53   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 167.0681ms 404 
+INFO  2018-05-31 01:13:31,067 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:13:31,086 [42   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:13:31,092 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:13:41,314 [42   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:13:42,845 [42   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 11619.2311ms
+INFO  2018-05-31 01:13:42,885 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11802.975ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:13:43,044 [63   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:13:43,072 [63   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:13:43,829 [63   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 501.8774ms 200 text/css
+INFO  2018-05-31 01:13:44,326 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:13:44,332 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:13:44,391 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 51.2566ms 200 image/x-icon
+INFO  2018-05-31 01:14:06,272 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:14:06,644 [42   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:14:06,733 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 488.1894ms 304 text/css
+INFO  2018-05-31 01:14:06,750 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js.map  
+INFO  2018-05-31 01:14:06,763 [42   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:14:06,800 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js.map  
+INFO  2018-05-31 01:14:06,855 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map'
+INFO  2018-05-31 01:14:07,074 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css.map  
+INFO  2018-05-31 01:14:07,231 [51   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css.map'
+INFO  2018-05-31 01:14:07,258 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 281.5535ms 200 text/plain
+INFO  2018-05-31 01:14:07,268 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 50.3677ms 404 
+INFO  2018-05-31 01:14:07,286 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css.map  
+INFO  2018-05-31 01:14:07,294 [42   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+INFO  2018-05-31 01:14:07,462 [42   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 763.376ms 200 text/plain
+INFO  2018-05-31 01:14:07,508 [51   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 220.2589ms 200 text/plain
+INFO  2018-05-31 01:16:54,020 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:16:54,042 [67   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:16:54,075 [67   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:17:05,505 [67   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:17:06,847 [67   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 12701.3249ms
+INFO  2018-05-31 01:17:07,530 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12952.5813ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:17:07,759 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/jquery/dist/jquery.min.js  
+INFO  2018-05-31 01:17:07,785 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/require.min.js?v=VXI-ZPQrF1FBmAN5miFlH9z6n7HfAlNEoH9bYZ_AkVU  
+INFO  2018-05-31 01:17:07,910 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css  
+INFO  2018-05-31 01:17:07,944 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:17:08,047 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/require.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\require.min.js'
+INFO  2018-05-31 01:17:08,436 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 712.1201ms 200 application/javascript
+INFO  2018-05-31 01:17:08,492 [67   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\jquery\dist\jquery.min.js'
+INFO  2018-05-31 01:17:08,826 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css  
+INFO  2018-05-31 01:17:08,865 [71   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+INFO  2018-05-31 01:17:08,877 [69   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:17:08,911 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css'
+INFO  2018-05-31 01:17:09,032 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 268.9249ms 200 text/css
+INFO  2018-05-31 01:17:09,329 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.css  
+INFO  2018-05-31 01:17:09,376 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe.css'
+INFO  2018-05-31 01:17:09,421 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js  
+INFO  2018-05-31 01:17:09,442 [67   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js'
+INFO  2018-05-31 01:17:09,495 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 190.7546ms 200 text/css
+INFO  2018-05-31 01:17:09,544 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/default-skin/default-skin.css  
+INFO  2018-05-31 01:17:09,567 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/default-skin/default-skin.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\default-skin\default-skin.css'
+INFO  2018-05-31 01:17:09,593 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 32.518ms 200 text/css
+INFO  2018-05-31 01:17:09,664 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/css/dashboard.css  
+INFO  2018-05-31 01:17:09,681 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/css/dashboard.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\css\dashboard.css'
+INFO  2018-05-31 01:17:09,756 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 123.2909ms 200 text/css
+INFO  2018-05-31 01:17:09,983 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2032.5306ms 200 application/javascript
+INFO  2018-05-31 01:17:10,123 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 684.3062ms 200 application/javascript
+INFO  2018-05-31 01:17:10,328 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.min.css  
+INFO  2018-05-31 01:17:10,396 [67   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.min.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.min.css'
+INFO  2018-05-31 01:17:10,670 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/js/bootstrap.min.js.map  
+INFO  2018-05-31 01:17:10,935 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.min.js.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map'
+INFO  2018-05-31 01:17:11,104 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 888.3983ms 200 text/plain
+INFO  2018-05-31 01:17:11,545 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3935.2679ms 200 text/css
+INFO  2018-05-31 01:17:11,673 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 425.7661ms 200 text/css
+INFO  2018-05-31 01:17:11,728 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/dashboard.js?v=OBGuNQOndU60uKvkeL8hkG1uS5I1JQ62586o97WJAzU  
+INFO  2018-05-31 01:17:11,797 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 4397.9249ms 200 text/css
+INFO  2018-05-31 01:17:11,979 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.js?v=f3I1azUOsV_w63jg1hg2mi8G4Fpu_GyGUu9MidA6D_w  
+INFO  2018-05-31 01:17:12,703 [67   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.js'
+INFO  2018-05-31 01:17:13,026 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/dashboard.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\dashboard.js'
+INFO  2018-05-31 01:17:13,674 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1497.6562ms 200 application/javascript
+INFO  2018-05-31 01:17:14,493 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/floatingbutton/mfb.css.map  
+INFO  2018-05-31 01:17:14,748 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/floatingbutton/mfb.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\floatingbutton\mfb.css.map'
+INFO  2018-05-31 01:17:15,172 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/html5.image.preview.js?v=JrA_piVeJlkxUq90kuo41sOdaST7lUu4s3fCV9c777E  
+INFO  2018-05-31 01:17:15,247 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1171.272ms 200 application/javascript
+INFO  2018-05-31 01:17:15,555 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 866.3013ms 200 text/plain
+INFO  2018-05-31 01:17:15,570 [69   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/html5.image.preview.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\js\html5.image.preview.js'
+INFO  2018-05-31 01:17:15,604 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js  
+INFO  2018-05-31 01:17:15,619 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/vendors/jquery-3.2.1.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\vendors\jquery-3.2.1.min.js'
+INFO  2018-05-31 01:17:15,749 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 113.6201ms 200 application/javascript
+INFO  2018-05-31 01:17:15,765 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1640.1643ms 200 application/javascript
+INFO  2018-05-31 01:17:15,815 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js  
+INFO  2018-05-31 01:17:16,002 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/bootstrap/dist/css/bootstrap.css.map  
+INFO  2018-05-31 01:17:16,048 [67   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map'
+INFO  2018-05-31 01:17:16,068 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/images/logo.jpg  
+INFO  2018-05-31 01:17:16,099 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/images/logo.jpg'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\images\logo.jpg'
+INFO  2018-05-31 01:17:16,122 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/js/site.js?v=dXcxvaawXRVCfaVEGKtsHCD8RLHXqlTWHaJGcHv1Eqs  
+INFO  2018-05-31 01:17:16,184 [69   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\vendors\bootstrap.bundle.min.js'
+INFO  2018-05-31 01:17:16,304 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 109.5615ms 200 image/jpeg
+INFO  2018-05-31 01:17:16,497 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/vendors/bootstrap.bundle.min.js.map  
+INFO  2018-05-31 01:17:16,532 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 445.9399ms 200 application/javascript
+INFO  2018-05-31 01:17:16,645 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff?t=1501841394106  
+INFO  2018-05-31 01:17:16,804 [71   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:17:16,904 [72   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:17:17,004 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/tabler/dist/assets/js/core.js  
+INFO  2018-05-31 01:17:17,136 [77   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1327.164ms 200 text/plain
+INFO  2018-05-31 01:17:17,194 [74   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/js/core.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\js\core.js'
+INFO  2018-05-31 01:17:17,211 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 483.8571ms 404 
+INFO  2018-05-31 01:17:17,247 [71   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/tabler/dist/assets/fonts/feather/feather-webfont.woff'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\tabler\dist\assets\fonts\feather\feather-webfont.woff'
+INFO  2018-05-31 01:17:18,218 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 703.122ms 200 application/font-woff
+INFO  2018-05-31 01:17:18,342 [67   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\js\site.js'
+INFO  2018-05-31 01:17:18,941 [74   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 479.2586ms 200 application/javascript
+INFO  2018-05-31 01:17:20,114 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe-ui-default.js  
+INFO  2018-05-31 01:17:20,894 [76   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/sweetalert2/dist/sweetalert2.all.min.js  
+INFO  2018-05-31 01:17:20,911 [75   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/photoswipe.js  
+INFO  2018-05-31 01:17:20,916 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe-ui-default.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe-ui-default.js'
+INFO  2018-05-31 01:17:20,950 [76   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/sweetalert2/dist/sweetalert2.all.min.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\sweetalert2\dist\sweetalert2.all.min.js'
+INFO  2018-05-31 01:17:20,964 [75   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/photoswipe.js'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\photoswipe.js'
+INFO  2018-05-31 01:17:21,001 [76   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1448.2427ms 200 application/javascript
+INFO  2018-05-31 01:17:21,156 [75   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1386.6788ms 200 application/javascript
+INFO  2018-05-31 01:17:21,286 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1278.9568ms 200 application/javascript
+INFO  2018-05-31 01:17:21,512 [67   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 3387.5015ms 200 application/javascript
+INFO  2018-05-31 01:17:37,150 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/lib/photoswipe/dist/default-skin/default-skin.svg  
+INFO  2018-05-31 01:17:37,166 [71   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/lib/photoswipe/dist/default-skin/default-skin.svg'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\lib\photoswipe\dist\default-skin\default-skin.svg'
+INFO  2018-05-31 01:17:37,836 [71   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 261.792ms 200 image/svg+xml
+INFO  2018-05-31 01:18:45,583 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 POST http://localhost:61684/Common/AsyncUpload multipart/form-data; boundary=----WebKitFormBoundarygRZCdpUMA22mrQ5f 170238
+INFO  2018-05-31 01:18:45,642 [79   ] pNetCore.Cors.Infrastructure.CorsService - Policy execution successful.
+INFO  2018-05-31 01:18:45,695 [79   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:18:45,845 [79   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) with arguments (have a nice day) - ModelState is Valid
+INFO  2018-05-31 01:18:56,196 [79   ] etCore.Mvc.Internal.ObjectResultExecutor - Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
+INFO  2018-05-31 01:18:56,214 [79   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.CommonController.AsyncUpload (GrapePhoto) in 10497.499ms
+INFO  2018-05-31 01:18:56,523 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10945.1648ms 200 text/plain; charset=utf-8
+INFO  2018-05-31 01:18:56,570 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:18:56,582 [79   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:18:56,590 [79   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:19:08,055 [79   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:19:09,383 [79   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 12634.7336ms
+INFO  2018-05-31 01:19:09,575 [83   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:19:09,600 [83   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:19:10,224 [83   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 218.4441ms 304 text/css
+INFO  2018-05-31 01:19:10,383 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 12995.1155ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:19:32,885 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:19:32,900 [72   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:19:32,918 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:19:41,961 [72   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:19:43,163 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 10140.0347ms
+INFO  2018-05-31 01:19:43,221 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:19:43,259 [79   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:19:43,265 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 10294.6385ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:19:43,287 [80   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 101.3684ms 200 text/css
+INFO  2018-05-31 01:19:44,494 [76   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:19:44,546 [76   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:19:44,581 [76   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 108.3485ms 200 image/x-icon
+INFO  2018-05-31 01:19:59,835 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:19:59,876 [72   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:19:59,895 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:20:11,638 [72   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:20:13,747 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 13639.095ms
+INFO  2018-05-31 01:20:13,799 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 13948.0068ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:20:13,842 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:20:13,858 [79   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:20:13,883 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 102.3562ms 304 text/css
+INFO  2018-05-31 01:20:15,164 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:20:15,180 [79   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:20:15,221 [79   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 31.188ms 200 image/x-icon
+INFO  2018-05-31 01:20:46,900 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:20:46,908 [72   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:20:46,921 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:20:59,596 [72   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:21:01,782 [72   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 14275.9313ms
+INFO  2018-05-31 01:21:02,351 [70   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:21:02,632 [70   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:21:04,121 [70   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 1318.0253ms 200 text/css
+INFO  2018-05-31 01:21:05,137 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 15330.0166ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:21:05,426 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:21:05,492 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:21:05,611 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 307.4652ms 200 image/x-icon
+INFO  2018-05-31 01:21:33,258 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:21:33,283 [69   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:21:33,292 [69   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:21:43,733 [69   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:21:45,168 [69   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 11771.9425ms
+INFO  2018-05-31 01:21:45,388 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11946.1534ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:21:45,414 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:21:45,445 [72   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:21:45,468 [72   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 90.0167ms 200 text/css
+INFO  2018-05-31 01:21:46,699 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:21:46,707 [66   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:21:46,755 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 44.412ms 200 image/x-icon
+INFO  2018-05-31 01:22:05,376 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:22:05,400 [66   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:22:05,423 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:22:15,173 [66   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:22:16,635 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 11000.7085ms
+INFO  2018-05-31 01:22:16,678 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 11281.7484ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:22:16,710 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:22:16,738 [69   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\css\site.css'
+INFO  2018-05-31 01:22:17,210 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 111.6044ms 200 text/css
+INFO  2018-05-31 01:22:17,915 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:22:17,923 [66   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:22:17,939 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 37.5737ms 200 image/x-icon
+INFO  2018-05-31 01:23:47,588 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/Profile/Index/xuyae573  
+INFO  2018-05-31 01:23:47,603 [66   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:23:47,617 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) with arguments (xuyae573) - ModelState is Valid
+INFO  2018-05-31 01:24:00,143 [66   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Profile/Index.cshtml.
+INFO  2018-05-31 01:24:02,269 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.ProfileController.Index (GrapePhoto) in 14458.6299ms
+INFO  2018-05-31 01:24:02,362 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 14697.6901ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:24:02,395 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:24:02,409 [69   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:24:02,437 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 146.1349ms 304 text/css
+INFO  2018-05-31 01:24:03,584 [58   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:24:03,597 [58   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:24:03,627 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 37.9388ms 200 image/x-icon
+INFO  2018-05-31 01:24:49,248 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/  
+INFO  2018-05-31 01:24:49,276 [69   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:24:49,286 [69   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-31 01:24:49,297 [69   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Index (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-31 01:25:17,040 [69   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+INFO  2018-05-31 01:25:19,658 [69   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Index (GrapePhoto) in 30017.444ms
+INFO  2018-05-31 01:25:19,778 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:25:19,824 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 30439.3891ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:25:19,926 [66   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:25:20,116 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 453.8357ms 304 text/css
+INFO  2018-05-31 01:25:25,267 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/home/explore  
+INFO  2018-05-31 01:25:25,278 [55   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:25:25,294 [55   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-31 01:25:25,305 [55   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-31 01:26:13,581 [55   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
+INFO  2018-05-31 01:26:16,970 [55   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) in 51430.9664ms
+INFO  2018-05-31 01:26:16,994 [55   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 51722.7492ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:26:17,008 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:26:17,018 [69   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:26:17,041 [69   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 106.8428ms 304 text/css
+INFO  2018-05-31 01:26:37,135 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/home/explore  
+INFO  2018-05-31 01:26:37,151 [66   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Cookies was successfully authenticated.
+INFO  2018-05-31 01:26:37,167 [66   ] uthorization.DefaultAuthorizationService - Authorization was successful for user: xuyae573.
+INFO  2018-05-31 01:26:37,185 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executing action method GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) with arguments ((null)) - ModelState is Valid
+INFO  2018-05-31 01:27:24,623 [66   ] ViewFeatures.Internal.ViewResultExecutor - Executing ViewResult, running view at path /Views/Home/Explore.cshtml.
+INFO  2018-05-31 01:27:28,659 [66   ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GrapePhoto.Controllers.HomeController.Explore (GrapePhoto) in 50746.9213ms
+INFO  2018-05-31 01:27:28,732 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/css/site.css  
+INFO  2018-05-31 01:27:28,832 [52   ] NetCore.StaticFiles.StaticFileMiddleware - The file /css/site.css was not modified
+INFO  2018-05-31 01:27:29,783 [52   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 226.918ms 304 text/css
+INFO  2018-05-31 01:27:31,619 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 51547.7817ms 200 text/html; charset=utf-8
+INFO  2018-05-31 01:27:32,035 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request starting HTTP/1.1 GET http://localhost:61684/favicon.ico  
+INFO  2018-05-31 01:27:32,129 [66   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\wwwroot\favicon.ico'
+INFO  2018-05-31 01:27:32,220 [66   ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 295.2178ms 200 image/x-icon
