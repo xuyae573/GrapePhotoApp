@@ -1,4 +1,5 @@
 ﻿@model IndexViewModel
+@using GrapePhoto.Views.Shared.ViewComponents
 
 @if (Model.FollowingUsers.Any())
 {
@@ -28,38 +29,7 @@
 }
 else
 {
-    <div class="alert alert-primary">Find out that you didn't following anyone, here are some users for you</div>
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Suggest Following</h3>
-        </div>
-        <div class="table-responsive">
-            <table class="table card-table table-striped table-vcenter">
-                <thead>
-                    <tr>
-                        <th colspan="2">User</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="avatar">BM</span></td>
-                        <td>Russell Gibson</td>
-
-                        <td><a href="#" class="btn btn-pill"><i class="fe fe-user-plus"></i> Follow</a></td>
-                    </tr>
-                    <tr>
-                        <td><span class="avatar">BM</span></td>
-                        <td>Russell Gibson</td>
-
-                        <td><a href="#" class="btn btn-pill"><i class="fe fe-user-plus"></i> Follow</a></td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-    </div>
-
+    @await Component.InvokeAsync(typeof(PopularUserComponent), new { numberOfItems = 11 })
 }
 
 @Html.Partial("_FloatingButton")
@@ -176,5 +146,69 @@ else
 
                 });
             });
+
+
+          require(['jquery', '../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
+
+                    
+                         function bindingFollowEvent() {
+                               $('.useraction').unbind("click");
+                               $('.useraction').click(function () {
+                                var url = "";
+                                var isFollow = $(this).hasClass("follow");
+                                if (isFollow) {
+                                    url = '@Url.Action("Follow","Common")';
+                                } else {
+                                    url = '@Url.Action("Unfollow","Common")';
+                                }
+                                var self = this;
+                                var followUserId = $(this).data("id");
+         
+                                $.ajax({
+                                    method: 'post',
+                                    url: url,
+                                    data: { id: followUserId },
+                                    dataType: "json",
+                                    success: function (data) {
+                                
+                                        console.log(data);
+                                        if (data.success) {
+                                            if (isFollow) {
+                                                $(self).removeClass("follow")
+                                                    .addClass("unfollow");
+
+                                                $(self).html('<span class="fe fe-user-minus  mr-2"></span>Unfollow');
+                                          
+                                                Swal('', "Followed sucessful", 'success')
+                                            }
+                                            else {
+                                                $(self).removeClass("unfollow")
+                                                    .addClass("follow");
+                                                $(self).html('<span class="fe fe-user-plus  mr-2"></span>Follow');
+                                                Swal('', "Unfollow sucessful", 'success');
+                                            }
+                               
+                                            bindingFollowEvent();
+                                        }
+                                        else {
+                                            Swal('Oops...', data.message, 'error')
+                                        }
+                                    }, //End of AJAX Success function  
+
+                                    failure: function (data) {
+                                        console.log(data);
+                                    }, //End of AJAX failure function  
+                                    error: function (data) {
+                                        console.log(data);
+                                    } //End of AJAX error function  
+                                });
+                            });
+
+                          } 
+                    $(document).ready(function () {
+                        bindingFollowEvent();
+                    });
+
+        });
     </script>
 }

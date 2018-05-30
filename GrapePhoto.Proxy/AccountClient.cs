@@ -23,6 +23,8 @@ namespace GrapePhoto.Proxy
 
         public static string Followee => $"/user/followee";
         public static string Followers => $"/user/follower";
+
+        public static string PopularUsers => $"/user/top";
     }
 
     public class AccountClient : IAccountClient
@@ -239,6 +241,27 @@ namespace GrapePhoto.Proxy
             var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
             
             return user;
+        }
+
+        public List<User> GetPopularUsers(int returnRecordsCount)
+        {
+            var request = new RestSharp.RestRequest(AccountAPI.PopularUsers)
+            {
+                JsonSerializer = new NewtonsoftJsonSerializer()
+            };
+            request.AddJsonBody(new {
+                Limit = returnRecordsCount
+            });
+
+            IRestResponse response = _client.Post(request);
+            var json = JsonConvert.DeserializeObject<GenericAPIResponse>(response.Content);
+
+            if (json.success)
+            {
+                var users = JsonConvert.DeserializeObject<List<User>>(json.result.ToString());
+                return users;
+            }
+            return new List<User>();
         }
     }
 }

@@ -28,24 +28,24 @@
                                 @Model.User.UserName
                                 @if (Model.Relationship== Relationship.Unfollowed)
                                 {
-                                   <button class="btn btn-outline-primary btn-sm ml-3"><span class="fe fe-user-plus"></span> Follow</button>
+                                   <button class="btn btn-outline-primary useraction btn-sm ml-3 follow" data-id="@Model.User.UserId"><span class="fe fe-user-plus  mr-2"></span> Follow</button>
                                 }
                                 else if (Model.Relationship == Relationship.Following || Model.Relationship == Relationship.FollowingEachOther)
                                 {
-                                   <button class="btn btn-success btn-sm ml-3"><i class="fe fe-user-check mr-2"></i>Unfollow</button>
+                                   <button class="btn btn-success useraction btn-sm ml-3 unfollow" data-id="@Model.User.UserId"><i class="fe fe-user-minus mr-2"></i>Unfollow</button>
                                 }
                                 else if (Model.Relationship == Relationship.Self)
                                 {
-                                    <a class="btn btn-secondary  btn-sm ml-3" href="@Url.Action("Edit")">Edit Profile</a>
+                                    <a class="btn btn-secondary btn-sm ml-3" href="@Url.Action("Edit")">Edit Profile</a>
                                 }
                             </h1>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-6 col-lg-8 h4">
-                                <a class="col-sm-2 col-lg-4">@Model.Posts.Count()</a><span class="font-weight-light">posts</span>
-                                <a class="col-sm-2 col-lg-4">@Model.Followers</a><span class="font-weight-light">followers</span>
-                                <a class="col-sm-2 col-lg-4">@Model.Followees</a><span class="font-weight-light">following</span>
+                                <a class="col-sm-2 col-lg-4" id="userPostsCount">@Model.Posts.Count()</a><span class="font-weight-light">posts</span>
+                                <a class="col-sm-2 col-lg-4" id="userfollowers">@Model.Followers</a><span class="font-weight-light">followers</span>
+                                <a class="col-sm-2 col-lg-4" id="userfollowees">@Model.Followees</a><span class="font-weight-light">following</span>
                             </div>
 
                         </div>
@@ -96,7 +96,66 @@
 
 @section Scripts{
     <script>
-            require(['jquery','../../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
+        require(['jquery', '../../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
+
+                    
+                         function bindingFollowEvent() {
+                               $('.useraction').unbind("click");
+                               $('.useraction').click(function () {
+                                var url = "";
+                                var isFollow = $(this).hasClass("follow");
+                                if (isFollow) {
+                                    url = '@Url.Action("Follow","Common")';
+                                } else {
+                                    url = '@Url.Action("Unfollow","Common")';
+                                }
+                                var self = this;
+                                var followUserId = $(this).data("id");
+                                var currentFollwers = parseInt($("#userfollowers").html());
+                                $.ajax({
+                                    method: 'post',
+                                    url: url,
+                                    data: { id: followUserId },
+                                    dataType: "json",
+                                    success: function (data) {
+                                
+                                        console.log(data);
+                                        if (data.success) {
+                                            if (isFollow) {
+                                                $(self).removeClass("follow").removeClass("btn-outline-primary")
+                                                    .addClass("unfollow").addClass("btn-success");
+
+                                                $(self).html('<span class="fe fe-user-minus  mr-2"></span>Unfollow');
+                                                currentFollwers += 1;
+                                                Swal('', "Followed sucessful", 'success')
+                                            }
+                                            else {
+                                                $(self).removeClass("unfollow")
+                                                    .removeClass("btn-success")
+                                                    .addClass("btn-outline-primary")
+                                                    .addClass("follow");
+                                                $(self).html('<span class="fe fe-user-plus  mr-2"></span>Follow');
+                                                currentFollwers -= 1;
+                                                Swal('', "Unfollow sucessful", 'success');
+                                            }
+                                            $("#userfollowers").html(currentFollwers);
+                                            bindingFollowEvent();
+                                        }
+                                        else {
+                                            Swal('Oops...', data.message, 'error')
+                                        }
+                                    }, //End of AJAX Success function  
+
+                                    failure: function (data) {
+                                        console.log(data);
+                                    }, //End of AJAX failure function  
+                                    error: function (data) {
+                                        console.log(data);
+                                    } //End of AJAX error function  
+                                });
+                            });
+
+                          } 
                     $(document).ready(function () {
                         $('.btn-post').click(function () {
                             console.log("adding post.");
@@ -129,6 +188,10 @@
                                 } //End of AJAX error function
                             });
                         });
+
+
+                        bindingFollowEvent();
+
                     });
 
         });

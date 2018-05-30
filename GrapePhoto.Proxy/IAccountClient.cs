@@ -26,6 +26,8 @@ namespace GrapePhoto.Proxy
 
         void UnfollowOtherUser(string userId, string otherUserId);
 
+        List<User> GetPopularUsers(int returnRecordsCount);
+
     }
 
 }

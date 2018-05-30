@@ -20,8 +20,6 @@ namespace GrapePhoto.Controllers
     {
         private IPictureService _pictureService;
         private IPostService _postService;
-        private IAccountClient _accoutClient;
-
         private IAccountClient _accountClient;
 
         public CommonController(IPictureService pictureService, IPostService postService, IAccountClient accountClient)

@@ -13,6 +13,7 @@
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.Threading.Tasks;
+    using System.Linq;
 
     [Authorize]
     public class HomeController : Controller
@@ -112,6 +113,8 @@
                 list.Add(model1);
             }
         }
+
+    
         #endregion 
     }
 }
