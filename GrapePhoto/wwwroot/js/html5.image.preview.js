@@ -1,9 +1,5 @@
 /*!
- * == HTML5 Image Preview ==
- * Created By: Tomas Dostal
- * Version: 1.0 (05-12-2012)
- * Documentation: http://tomasdostal.com/projects/html5ImagePreview
- *
+ * == HTML5 Image Preview == Xu Ya updated by 30 May 2018
  * HTML structure:
  *	<div>
  *		<input type="file" name="imagefile" onchange="previewImage(this,{256,128,64},5)">

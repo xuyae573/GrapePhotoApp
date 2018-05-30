@@ -73,7 +73,9 @@
 
     <script src="~/lib/tabler/dist/assets/js/dashboard.js" asp-append-version="true"></script>
     <script src="~/lib/floatingbutton/mfb.js" asp-append-version="true"></script>
-
+    <script type="text/javascript">
+        window.appRootUrl = "@Url.Content("~")";
+    </script>
 
     <environment include="Development">
         <script src="~/js/site.js" asp-append-version="true"></script>
@@ -86,8 +88,8 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
- 
 
- 
+
+
 </body>
 </html>

@@ -112,23 +112,5 @@
             }
         }
         #endregion 
-
-        [HttpPost]
-        public JsonResult LikePost(string id,string buttonName)
-        {
-            string[] ids = id.Split("_");
-            var post = new LikePostDto() { PostId = ids[0], UserId = HttpContext.User.Identity.Name, IsLike = false };
-            if (buttonName == "Like")
-                post.IsLike = true;
-            else
-                post.IsLike = false;
-
-            var result = _postService.LikePost(post);
-            return Json(new
-            {
-                success = true
-            });
-        }
-
     }
 }

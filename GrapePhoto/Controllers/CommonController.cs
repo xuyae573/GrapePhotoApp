@@ -153,6 +153,25 @@ namespace GrapePhoto.Controllers
             });
         }
 
-
+        [HttpPost]
+        public JsonResult LikePost(string postId)
+        {
+            var post = new LikePostDto() { PostId = postId, UserId = HttpContext.User.Identity.Name, IsLike = true };
+            var result = _postService.LikePost(post);
+            return Json(new
+            {
+                success = true
+            });
+        }
+        [HttpPost]
+        public JsonResult DislikePost(string postId)
+        {
+            var post = new LikePostDto() { PostId = postId, UserId = HttpContext.User.Identity.Name, IsLike = false };
+            var result = _postService.LikePost(post);
+            return Json(new
+            {
+                success = true
+            });
+        }
     }
 }
