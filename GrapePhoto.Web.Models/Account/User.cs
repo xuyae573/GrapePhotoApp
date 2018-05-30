@@ -14,6 +14,8 @@ namespace GrapePhoto.Web.Models.Account
 
         public string UserId { get; set; }
 
+        public string Password { get; set; }
+
         public string AvatarPicUrl { get; set; }
 
       

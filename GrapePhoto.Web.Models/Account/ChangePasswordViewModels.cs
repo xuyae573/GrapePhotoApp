@@ -23,7 +23,7 @@ namespace GrapePhoto.Web.Models.Account
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]
-        [Compare("Password", ErrorMessage = "The password and confrimion password do not match")]
+        [Compare("NewPassword", ErrorMessage = "The password and confrimion password do not match")]
         public string ConfirmedPassword { get; set; }
 
         public string StatusMessage { get; set; }

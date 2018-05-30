@@ -350,7 +350,6 @@ D:\GrapePhotoApp.git\trunk\GrapePhoto\bin\Debug\netcoreapp2.0\GrapePhoto.Infrast
 D:\GrapePhotoApp.git\trunk\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.csproj.CopyComplete
 D:\GrapePhotoApp.git\trunk\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.dll
 D:\GrapePhotoApp.git\trunk\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.pdb
-C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.csprojResolveAssemblyReference.cache
 C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.csproj.CoreCompileInputs.cache
 C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.AssemblyInfoInputs.cache
 C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.AssemblyInfo.cs
@@ -367,3 +366,4 @@ C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\bin\Debug\netcore
 C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\bin\Debug\netcoreapp2.0\GrapePhoto.Proxy.pdb
 C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\bin\Debug\netcoreapp2.0\GrapePhoto.Web.Models.pdb
 C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.csproj.CopyComplete
+C:\Users\XuYa\source\repos\GrapePhoto\GrapePhotoApp\GrapePhoto\obj\Debug\netcoreapp2.0\GrapePhoto.csprojAssemblyReference.cache

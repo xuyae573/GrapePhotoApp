@@ -96,7 +96,7 @@
 
 @section Scripts{
     <script>
-            require(['jquery','../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
+            require(['jquery','../../lib/sweetalert2/dist/sweetalert2.all.min.js'], function ($, Swal) {
                     $(document).ready(function () {
                         $('.btn-post').click(function () {
                             console.log("adding post.");
@@ -134,18 +134,21 @@
         });
 
 
-        require(['jquery', '../lib/photoswipe/dist/photoswipe.js', '../lib/photoswipe/dist/photoswipe-ui-default.js'],
+        require(['jquery', '../../lib/photoswipe/dist/photoswipe.js', '../../lib/photoswipe/dist/photoswipe-ui-default.js'],
             function ($, PhotoSwipe, PhotoSwipeUI_Default) {
                 $(document).ready(function () {
-                    $("img.grapephoto").click(function (e) {
+                    $("div.hovereffect").click(function (e) {
                         var index = $(this).index();
                         var pswpElement = document.querySelectorAll('.pswp')[0];
                         var items = [];
-                        $("img.grapephoto").each(function (index, value) {
-                            var imageLink = $(value).closest("div").attr("src");
-                            var w = $(this).closest("div").data("width");
-                            var h = $(this).closest("div").data("height");
+                        $("div.hovereffect").each(function (index, value) {
+                            var imageLink = $(this).data("src");
+                            
+                            var w = $(this).data("width");
+                            var h = $(this).data("height");
 
+                            console.log(w);
+                            console.log(h);
                             items.push({
                                 src: imageLink,
                                 w: w,

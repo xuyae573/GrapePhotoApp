@@ -54,7 +54,7 @@
         </span>
     </a>
     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-        <a class="dropdown-item" href="@Url.Action("Index","Profile")">
+        <a class="dropdown-item" href="@Url.Action("Index","Profile", new { id = user.UserId})">
             <i class="dropdown-icon fe fe-user"></i> Profile
         </a>
         <a class="dropdown-item" href="@Url.Action("ChangePassword","Profile")">

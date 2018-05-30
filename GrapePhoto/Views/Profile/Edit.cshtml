@@ -1,4 +1,4 @@
-﻿
+﻿@model GrapePhoto.Web.Models.Account.User
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_LayoutWithLogoHeader.cshtml";
@@ -9,39 +9,43 @@
 <div class="row">
     <div class="col-lg-4">
         <div class="card">
-           
-          
                 <ul class="list-group">
                     <li class="list-group-item active"><a href="#"><i class="fe fe-settings mr-3"></i>Edit Profile</a></li>
                     <li class="list-group-item"><a href="ChangePassword"><i class="fa fa-key mr-3"></i> Change Password</a></li>
-                   
                 </ul>
-         
         </div>
     </div>
     <div class="col-lg-8">
+        @if (ViewBag.Message != null)
+        {
+        <div class="alert alert-success alert-dismissible" role="alert" >
+            <button type="button" class="close" data-dismiss="alert"></button>
+            <i class="fe fe-check mr-2" aria-hidden="true"></i> @ViewBag.Message
+        </div>
+        }
         <form class="card" method="post">
             <div class="card-body">
                 <h3 class="card-title">Edit Profile</h3>
                 <div class="row">
                     <div class="col-sm-12 col-md-12">
                         <div class="form-group">
-                            <label class="form-label">Username</label>
-                            <input type="text" class="form-control" placeholder="Username" value="">
+                            <label class="form-label" asp-for="UserName"></label>
+                            <input asp-for="UserName" class="form-control">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12">
                         <div class="form-group">
-                            <label class="form-label">Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <label class="form-label" asp-for="Email"></label>
+                            <input type="email" asp-for="Email" class="form-control">
                         </div>
                     </div>
                 </div>
+                <div asp-validation-summary="All" class="text-danger"></div>
             </div>
             <div class="card-footer text-right">
                 <button type="submit" class="btn btn-primary">Update Profile</button>
             </div>
         </form>
-     
+
     </div>
 </div>
