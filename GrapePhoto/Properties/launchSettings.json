@@ -2,6 +2,10 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/GrapePhoto",
+      "sslPort": 0
+    },
     "iisExpress": {
       "applicationUrl": "http://localhost:61684/",
       "sslPort": 0
@@ -16,10 +20,10 @@
       }
     },
     "GrapePhoto": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "QA"
       },
       "applicationUrl": "http://localhost:61687/"
     }
