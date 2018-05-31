@@ -56,31 +56,35 @@
         });
         const channel = pusher.subscribe('feed');
         channel.bind('new_feed', function (data) {
-
-            toastr.options = {
-                "closeButton": true,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "positionClass": "toast-bottom-right",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": "500",
-                "hideDuration": "1000",
-                "timeOut": "5000",
-                "extendedTimeOut": "1000",
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            };
             var username = document.getElementById("currentUsername").innerText;
             if (`${data.Followers}`.indexOf(username) > -1) {
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "500",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
                 var m = `${data.ImageUrl}`;
                 var followee = `${data.UserName}`
                 var b = `${followee} posted an image: <img src=\"${m}\"/>, comments:${data.Content}`;
                 toastr.info(b, " ");
             }
+            else { 
+                channel.unsubscribe('new_feed');
+
+            }
+
         });
     </script>
 

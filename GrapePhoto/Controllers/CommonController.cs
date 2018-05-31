@@ -105,7 +105,7 @@ namespace GrapePhoto.Controllers
                 _postService.AddPost(post);
 
 
-            var result = _accountClient.GetAllFollowingUsersByUserId(HttpContext.User.Identity.Name.ToString());
+            var result = _accountClient.GetAllFollowersUsersByUserId(HttpContext.User.Identity.Name.ToString());
             var followerList = result.Select(o => o.UserId).ToList();
 
 
