@@ -116,6 +116,8 @@ namespace GrapePhoto.Controllers
                 ImageUrl = picture.Src,
                 Followers = followerList
             };
+
+            if(followerList.Count>=1)
             await Channel.Trigger(m, "feed", "new_feed");
 
 
