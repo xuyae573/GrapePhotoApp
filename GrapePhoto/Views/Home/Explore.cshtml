@@ -21,7 +21,7 @@
             function ($, PhotoSwipe, PhotoSwipeUI_Default) {
                 $(document).ready(function () {
                     $("img.grapephoto").click(function (e) {
-                        var index = $(this).index();
+                        var index = $('img.grapephoto').index(this);
 
                         var pswpElement = document.querySelectorAll('.pswp')[0];
                         var items = [];

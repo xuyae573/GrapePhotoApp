@@ -13,14 +13,14 @@
   },
   "profiles": {
     "IIS Express": {
-      "commandName": "Executable",
+      "commandName": "IIS",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "QA"
       }
     },
     "GrapePhoto": {
-      "commandName": "IIS",
+      "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "QA"

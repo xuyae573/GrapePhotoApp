@@ -86,16 +86,16 @@
         transition-delay: .2s;
     }
 
+.profile-post {
+    width: 100% !important;
+    height: 167px;
+}
 
-
- .floatbutton:hover{
+.floatbutton:hover{
      color:white!important;
  }
 
-.profile-post {
-    width: 100%!important;
-    height: 167px!important;
-}
+
 .like-button{
     cursor:pointer;
 }
@@ -103,4 +103,17 @@
 .grapephoto {
    background-size:contain;
     
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .profile-post
+    {
+        height: 167px !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+      .profile-post{
+        height: 249px !important;
+    }
 }

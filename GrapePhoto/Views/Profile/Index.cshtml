@@ -201,7 +201,7 @@
             function ($, PhotoSwipe, PhotoSwipeUI_Default) {
                 $(document).ready(function () {
                     $("div.hovereffect").click(function (e) {
-                        var index = $(this).index();
+                        var index = $("div.hovereffect").index(this);
                         console.log(index);
                         var pswpElement = document.querySelectorAll('.pswp')[0];
                         var items = [];
